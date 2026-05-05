@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry | Paanthera — Blue Ocean Global</title>
+  <meta name="description" content="Send a product enquiry to Paanthera. Bulk orders, custom designs, export pricing — our team responds within 24 hours.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="../Logos/Panthera Color Png.png">
+  <style>
+    /* ─── ENQUIRY FORM STYLES (shared across all pages) ─── */
+    .enq-hero {
+      padding: 160px 0 72px;
+      background: var(--black);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .enq-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 30% 60%, rgba(200,16,46,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .enq-layout {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 1024px) { .enq-layout { grid-template-columns: 1fr; } }
+
+    /* Form card */
+    .enq-card {
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 48px;
+    }
+    @media (max-width: 600px) { .enq-card { padding: 28px 20px; } }
+
+    .enq-form { display: flex; flex-direction: column; gap: 20px; }
+    .enq-row { display: grid; gap: 20px; }
+    .enq-row-2 { grid-template-columns: 1fr 1fr; }
+    @media (max-width: 640px) { .enq-row-2 { grid-template-columns: 1fr; } }
+
+    .enq-field { display: flex; flex-direction: column; gap: 7px; }
+
+    .enq-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white2);
+    }
+    .enq-req { color: var(--red); }
+
+    .enq-input {
+      background: var(--mid);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--white2);
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      padding: 12px 16px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      width: 100%;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .enq-input::placeholder { color: #555; }
+    .enq-input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,169,110,0.12);
+    }
+    .enq-input.enq-invalid {
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(200,16,46,0.1);
+    }
+    .enq-select { cursor: pointer; }
+    .enq-textarea { resize: vertical; min-height: 130px; }
+
+    /* Phone row */
+    .enq-phone-wrap { display: flex; gap: 10px; }
+    .enq-code { width: 110px; flex-shrink: 0; padding-right: 8px; }
+    .enq-phone-num { flex: 1; }
+
+    /* Error messages */
+    .enq-error {
+      font-size: 0.72rem;
+      color: var(--red);
+      min-height: 16px;
+    }
+
+    /* Submit row */
+    .enq-submit-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .enq-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--red);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      flex-shrink: 0;
+    }
+    .enq-btn:hover:not(:disabled) { background: #a50d25; transform: translateY(-1px); }
+    .enq-btn:disabled { opacity: 0.65; cursor: not-allowed; }
+    .enq-btn-text, .enq-btn-loading { display: flex; align-items: center; gap: 8px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spin { animation: spin 0.8s linear infinite; }
+
+    .enq-privacy {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: var(--grey);
+    }
+
+    /* Status messages */
+    .enq-status {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 24px;
+      border-radius: 12px;
+      margin-top: 8px;
+    }
+    .enq-status svg { flex-shrink: 0; margin-top: 2px; }
+    .enq-status p { margin: 4px 0 0; font-size: 0.88rem; color: var(--grey); }
+    .enq-status a { color: var(--gold); text-decoration: underline; }
+    .enq-success { background: rgba(34,197,94,0.07); border: 1px solid rgba(34,197,94,0.25); color: #4ade80; }
+    .enq-success strong { color: #4ade80; font-size: 0.95rem; }
+    .enq-error-box { background: rgba(200,16,46,0.07); border: 1px solid rgba(200,16,46,0.25); color: var(--red); }
+    .enq-error-box strong { color: var(--red); font-size: 0.95rem; }
+
+    /* Sidebar info cards */
+    .enq-info-stack { display: flex; flex-direction: column; gap: 20px; position: sticky; top: 100px; }
+    .enq-info-card {
+      background: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 24px;
+    }
+    .enq-info-card h4 {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .enq-info-card p {
+      font-size: 0.85rem;
+      color: var(--grey);
+      line-height: 1.7;
+    }
+    .enq-info-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+    .enq-info-card li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: var(--grey);
+    }
+    .enq-info-card li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .enq-wa-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: #fff;
+      border-radius: 10px;
+      padding: 12px 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 16px;
+      transition: background 0.2s;
+    }
+    .enq-wa-btn:hover { background: #1ebe5d; }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════ NAVBAR ══════════════════ -->
+  <nav class="navbar scrolled" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" aria-label="Paanthera Home">
+        <img src="../Logos/Paanthera mix.png" alt="Paanthera" class="nav-logo" onerror="this.src='../Logos/Panthera Color Png.png'">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="enquiry.html" class="active">Enquire</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#" class="btn btn-gold" data-wa-general>WhatsApp</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" role="navigation">
+    <a href="index.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="about.html">About Us</a>
+    <a href="faq.html">FAQ</a>
+    <a href="enquiry.html">Send Enquiry</a>
+    <a href="#" data-wa-general class="btn btn-gold" style="text-align:center;margin-top:8px">Inquire on WhatsApp</a>
+  </div>
+
+  <!-- ══════════════════ HERO ══════════════════ -->
+  <header class="enq-hero" aria-labelledby="enq-page-heading">
+    <div class="container">
+      <div class="subheading fade-up" style="margin-bottom:14px">Get in Touch</div>
+      <h1 id="enq-page-heading" class="fade-up delay-1" style="font-family:var(--font-serif);font-size:clamp(2.4rem,5vw,4rem);font-weight:600;color:var(--white);line-height:1.1;max-width:16ch">
+        Send Us Your<br><em>Enquiry</em>
+      </h1>
+      <div class="gold-line fade-up delay-2" style="margin-top:28px"></div>
+      <p class="fade-up delay-3" style="color:var(--grey);font-size:1.05rem;max-width:52ch;margin-top:20px;line-height:1.75">
+        Fill in the form below and our team will come back to you within <strong style="color:var(--white2)">24 hours</strong> with pricing, availability, and customisation details.
+      </p>
+    </div>
+  </header>
+
+  <!-- ══════════════════ FORM SECTION ══════════════════ -->
+  <section class="section" aria-labelledby="enq-form-heading">
+    <div class="container">
+      <div class="enq-layout">
+
+        <!-- Form -->
+        <div>
+          <div style="margin-bottom:32px">
+            <h2 id="enq-form-heading" style="font-family:var(--font-serif);font-size:1.8rem;color:var(--white);margin-bottom:8px">Product Enquiry Form</h2>
+            <p style="color:var(--grey);font-size:0.9rem">Fields marked <span style="color:var(--red)">*</span> are required.</p>
+          </div>
+          <div class="enq-card">
+            <div id="enquiry-form-container"></div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="enq-info-stack fade-up delay-2">
+
+          <div class="enq-info-card">
+            <h4>Why Choose Paanthera?</h4>
+            <ul>
+              <li>Export-grade quality, India-manufactured</li>
+              <li>MOQ from just 200 pieces per style</li>
+              <li>Full customisation — logo, colour, labels</li>
+              <li>Proven export track record to South Africa</li>
+              <li>25+ products across 4 categories</li>
+              <li>International shipping &amp; documentation</li>
+            </ul>
+          </div>
+
+          <div class="enq-info-card">
+            <h4>Prefer WhatsApp?</h4>
+            <p>Message us directly for the fastest response. Our team is available for bulk order queries and customisation requests.</p>
+            <a href="#" data-wa-general class="enq-wa-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+
+          <div class="enq-info-card">
+            <h4>Response Time</h4>
+            <p>We typically respond to all enquiries within <strong style="color:var(--white2)">24 hours</strong>, Monday–Saturday.<br><br>
+            For urgent matters, WhatsApp is the fastest route — we respond within a few hours.</p>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../Logos/Panthera white Png.png" alt="Paanthera" class="footer-logo" onerror="this.src='../Logos/Panthera Color Png.png'">
+          <p style="margin-bottom:6px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold)">Blue Ocean Global</p>
+          <p>India's premium export-grade activewear manufacturer. Supplying quality jerseys, sportswear, and casual wear to wholesalers across South Africa and international markets.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Product Catalog</a></li>
+            <li><a href="about.html">About Paanthera</a></li>
+            <li><a href="faq.html">FAQ &amp; Support</a></li>
+            <li><a href="enquiry.html">Send Enquiry</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul role="list">
+            <li><a href="faq.html?tab=terms">Terms &amp; Conditions</a></li>
+            <li><a href="faq.html?tab=privacy">Privacy Policy</a></li>
+            <li><a href="faq.html?tab=tos">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Get In Touch</h4>
+          <p>Bulk orders &amp; custom inquiries welcome.</p>
+          <a href="https://wa.me/917387427007" target="_blank" rel="noopener" class="footer-wa">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            +91 73874 27007
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Paanthera — Blue Ocean Global. All rights reserved.</p>
+        <p>Manufactured in India · Exported Globally · <a href="catalog.html">Browse Catalog</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════ SCRIPTS ══════════════════ -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/enquiry.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check for ?product= param to pre-select a product
+      const params = new URLSearchParams(window.location.search);
+      const preProduct = params.get('product') || '';
+      renderEnquiryForm('enquiry-form-container', {
+        productName: decodeURIComponent(preProduct),
+        sourcePage:  'enquiry.html',
+      });
+    });
+  </script>
+</body>
+</html>

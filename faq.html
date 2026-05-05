@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ &amp; Legal | Paanthera — Blue Ocean Global</title>
+  <meta name="description" content="Frequently asked questions, terms and conditions, privacy policy, and terms of service for Paanthera by Blue Ocean Global.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="../Logos/Panthera Color Png.png">
+  <style>
+    /* ─── FAQ PAGE STYLES ─── */
+    .faq-hero {
+      padding: 160px 0 80px;
+      background: var(--black);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .faq-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 70% 40%, rgba(200,16,46,0.07) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    /* Tab navigation */
+    .faq-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 52px;
+    }
+    .faq-tab {
+      padding: 10px 22px;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      background: transparent;
+      color: var(--grey);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: var(--font-sans);
+    }
+    .faq-tab:hover,
+    .faq-tab.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: #fff;
+    }
+    .faq-tab.active-gold {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--black);
+    }
+
+    /* Panels */
+    .faq-panel { display: none; }
+    .faq-panel.active { display: block; }
+
+    /* Accordion */
+    .faq-list {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 22px 0;
+      cursor: pointer;
+      user-select: none;
+      list-style: none;
+    }
+    .faq-question::-webkit-details-marker { display: none; }
+    .faq-question h4 {
+      font-family: var(--font-sans);
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--white2);
+      line-height: 1.45;
+      margin: 0;
+      flex: 1;
+      transition: color 0.2s;
+    }
+    .faq-item[open] .faq-question h4 { color: var(--gold); }
+    .faq-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.25s;
+      color: var(--grey);
+    }
+    .faq-item[open] .faq-icon {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--black);
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      padding: 0 0 24px;
+      color: var(--grey);
+      font-size: 0.92rem;
+      line-height: 1.8;
+      max-width: 720px;
+    }
+
+    /* Category labels */
+    .faq-category-label {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--red);
+      background: rgba(200,16,46,0.08);
+      border: 1px solid rgba(200,16,46,0.2);
+      border-radius: 4px;
+      padding: 3px 8px;
+      margin-bottom: 20px;
+    }
+    .faq-category-label.gold {
+      color: var(--gold);
+      background: rgba(201,169,110,0.08);
+      border-color: rgba(201,169,110,0.2);
+    }
+
+    /* Legal sections */
+    .legal-section {
+      max-width: 820px;
+      margin: 0 auto 56px;
+    }
+    .legal-section h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .legal-section p {
+      color: var(--grey);
+      font-size: 0.92rem;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .legal-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    /* Still have questions CTA */
+    .faq-cta-box {
+      max-width: 820px;
+      margin: 48px auto 0;
+      background: var(--mid);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .faq-cta-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--red), var(--gold));
+    }
+    .faq-cta-box h3 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .faq-cta-box p {
+      color: var(--grey);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .faq-cta-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+      .faq-cta-box { padding: 36px 24px; }
+      .faq-cta-box h3 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════ NAVBAR ══════════════════ -->
+  <nav class="navbar scrolled" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" aria-label="Paanthera Home">
+        <img src="../Logos/Paanthera mix.png" alt="Paanthera" class="nav-logo" onerror="this.src='../Logos/Panthera Color Png.png'">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#" class="btn btn-gold" data-wa-general>Inquire Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" role="navigation">
+    <a href="index.html">Home</a>
+    <a href="catalog.html">Catalog</a>
+    <a href="about.html">About Us</a>
+    <a href="faq.html">FAQ</a>
+    <a href="#" data-wa-general class="btn btn-gold" style="text-align:center;margin-top:8px">Inquire on WhatsApp</a>
+  </div>
+
+  <!-- ══════════════════ HERO ══════════════════ -->
+  <header class="faq-hero" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="subheading fade-up" style="margin-bottom:14px">Support &amp; Legal</div>
+      <h1 id="faq-heading" class="fade-up delay-1" style="font-family:var(--font-serif);font-size:clamp(2.4rem,5vw,4rem);font-weight:600;color:var(--white);line-height:1.1;max-width:14ch">
+        Frequently Asked<br><em>Questions</em>
+      </h1>
+      <div class="gold-line fade-up delay-2" style="margin-top:28px"></div>
+      <p class="fade-up delay-3" style="color:var(--grey);font-size:1.05rem;max-width:52ch;margin-top:20px;line-height:1.75">
+        Everything you need to know about our products, processes, and policies — answered clearly and directly.
+      </p>
+    </div>
+  </header>
+
+  <!-- ══════════════════ MAIN CONTENT ══════════════════ -->
+  <section class="section" aria-label="FAQ and Legal">
+    <div class="container">
+
+      <!-- Tab Navigation -->
+      <div class="faq-tabs" role="tablist" aria-label="FAQ sections">
+        <button class="faq-tab active" data-panel="general" role="tab" aria-selected="true">General</button>
+        <button class="faq-tab" data-panel="bulk" role="tab" aria-selected="false">Bulk &amp; Wholesale</button>
+        <button class="faq-tab" data-panel="terms" role="tab" aria-selected="false">Terms &amp; Conditions</button>
+        <button class="faq-tab" data-panel="privacy" role="tab" aria-selected="false">Privacy Policy</button>
+        <button class="faq-tab" data-panel="tos" role="tab" aria-selected="false">Terms of Service</button>
+      </div>
+
+      <!-- ─── PANEL: General FAQ ─── -->
+      <div id="panel-general" class="faq-panel active" role="tabpanel">
+        <div class="faq-category-label">General Questions</div>
+        <div class="faq-list">
+
+          <details class="faq-item fade-up">
+            <summary class="faq-question">
+              <h4>Are your clothes good quality?</h4>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              Yes. We use premium fabrics and conduct thorough quality checks on every product before shipping. Our manufacturing process is held to international export standards, ensuring that every piece you receive — from stitching to finishing — reflects the quality that Paanthera stands for.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up delay-1">
+            <summary class="faq-question">
+              <h4>What sizes do you offer?</h4>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              We offer a full size range: <strong style="color:var(--white2)">S, M, L, XL, and XXL</strong> across all standard products. Custom sizes are also available on request for bulk orders. Please contact us with your specific size requirements and we'll advise accordingly.
+            </div>
+          </details>
+
+        </div>
+
+        <!-- Still have questions CTA -->
+        <div class="faq-cta-box fade-up delay-3" style="margin-top:52px">
+          <h3>Still Have Questions?</h3>
+          <p>Our team is ready to help. Reach out directly on WhatsApp for the fastest response — we typically reply within a few hours.</p>
+          <div class="faq-cta-btns">
+            <a href="#" data-wa-general class="btn btn-gold">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              Chat on WhatsApp
+            </a>
+            <a href="catalog.html" class="btn btn-outline">Browse Catalog</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── PANEL: Bulk & Wholesale ─── -->
+      <div id="panel-bulk" class="faq-panel" role="tabpanel">
+        <div class="faq-category-label">Bulk &amp; Wholesale</div>
+        <div class="faq-list">
+
+          <details class="faq-item fade-up">
+            <summary class="faq-question">
+              <h4>Do you accept bulk or wholesale orders?</h4>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              Yes — bulk and wholesale orders are our speciality. We work with wholesalers, sports clubs, retailers, and distributors across global markets. Whether you need 200 pieces or 20,000, we have the production capacity and export infrastructure to deliver consistently.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up delay-1">
+            <summary class="faq-question">
+              <h4>What is your Minimum Order Quantity (MOQ)?</h4>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              Our MOQ varies by product type — typically starting from <strong style="color:var(--white2)">200 pieces per style</strong>. For custom orders with specific branding, colours, or labels, the MOQ may differ. Please contact us directly with your product requirements and we'll provide a tailored quote.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up delay-2">
+            <summary class="faq-question">
+              <h4>What are your production timelines for bulk orders?</h4>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              Production timelines vary depending on the quantity, customisation complexity, and current production schedule. We ensure timely delivery with consistent quality at every stage. Once your order is confirmed, we'll provide a precise timeline and keep you updated throughout production.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up delay-2">
+            <summary class="faq-question">
+              <h4>Do you offer custom designs?</h4>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              Yes. We offer comprehensive customisation options for businesses: custom colours, chest logo printing, back branding, sleeve prints, custom tags, private labelling, and more. Share your artwork and requirements and our team will guide you through the process.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up delay-3">
+            <summary class="faq-question">
+              <h4>What payment terms do you offer for bulk orders?</h4>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              Payment terms are flexible and tailored to the order size and our working relationship. Our team will walk you through the available options — including advance payment structures and milestone-based payments for larger orders. Reach out to discuss terms that work for both parties.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up delay-3">
+            <summary class="faq-question">
+              <h4>Do you handle international shipping for bulk orders?</h4>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              Yes. We manage end-to-end international shipping with proper packaging, export documentation, and logistics coordination. We have an established export track record, particularly to South Africa, and are equipped to handle customs requirements for multiple international markets.
+            </div>
+          </details>
+
+          <details class="faq-item fade-up delay-4">
+            <summary class="faq-question">
+              <h4>What about quality assurance for bulk production?</h4>
+              <span class="faq-icon" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </span>
+            </summary>
+            <div class="faq-answer">
+              Quality is built into every stage of our process. We follow strict quality checks from fabric procurement through cutting, stitching, finishing, and final inspection — ensuring consistency in sizing, colour, and construction across every piece in your order. Our goal is zero surprises when your shipment arrives.
+            </div>
+          </details>
+
+        </div>
+
+        <!-- Still have questions CTA -->
+        <div class="faq-cta-box fade-up" style="margin-top:52px">
+          <h3>Ready to Place a Bulk Order?</h3>
+          <p>Get in touch directly — our team will respond with pricing, availability, and a tailored proposal for your requirements.</p>
+          <div class="faq-cta-btns">
+            <a href="#" data-wa-general class="btn btn-gold">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              Enquire Now on WhatsApp
+            </a>
+            <a href="catalog.html" class="btn btn-outline">View Full Catalog</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── PANEL: Terms & Conditions ─── -->
+      <div id="panel-terms" class="faq-panel" role="tabpanel">
+        <div class="faq-category-label gold">Legal</div>
+
+        <div class="legal-section fade-up">
+          <h3>Terms &amp; Conditions</h3>
+          <p>Welcome to <strong style="color:var(--white2)">PAANTHERA</strong>. By accessing or using our website, you agree to comply with our terms and policies. All products displayed are subject to availability, and we reserve the right to update pricing, specifications, or content without prior notice.</p>
+          <p>We strive to ensure accurate product representation; however, slight variations in colour, texture, or finish may occur due to screen settings or manufacturing processes. Unauthorised use of our content, designs, or brand identity is strictly prohibited.</p>
+          <p>By placing an order, you confirm that all provided information is accurate and that you agree to our policies regarding payments, shipping, and returns.</p>
+        </div>
+
+        <hr class="legal-divider">
+
+        <!-- Still have questions CTA -->
+        <div class="faq-cta-box fade-up">
+          <h3>Still Have Questions?</h3>
+          <p>For any queries about our terms or policies, reach out to us directly — we're happy to clarify anything.</p>
+          <div class="faq-cta-btns">
+            <a href="#" data-wa-general class="btn btn-gold">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              Contact Us on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── PANEL: Privacy Policy ─── -->
+      <div id="panel-privacy" class="faq-panel" role="tabpanel">
+        <div class="faq-category-label gold">Legal</div>
+
+        <div class="legal-section fade-up">
+          <h3>Privacy Policy</h3>
+          <p>At <strong style="color:var(--white2)">PAANTHERA</strong>, we value your privacy and are committed to protecting your personal information with the highest level of confidentiality. Any data collected — including contact details and transaction information — is used solely to process orders, improve customer experience, and communicate relevant updates.</p>
+          <p>We do not sell, trade, or share your personal information with third parties, except where required for order fulfilment or legal compliance. All transactions are handled through secure systems to ensure data protection.</p>
+          <p>By using our website, you consent to our privacy practices designed to safeguard your information.</p>
+        </div>
+
+        <hr class="legal-divider">
+
+        <div class="faq-cta-box fade-up">
+          <h3>Questions About Your Data?</h3>
+          <p>If you have any concerns about how your information is handled, please contact us directly.</p>
+          <div class="faq-cta-btns">
+            <a href="#" data-wa-general class="btn btn-gold">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              Get in Touch
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ─── PANEL: Terms of Service ─── -->
+      <div id="panel-tos" class="faq-panel" role="tabpanel">
+        <div class="faq-category-label gold">Legal</div>
+
+        <div class="legal-section fade-up">
+          <h3>Terms of Service</h3>
+          <p>By using our services, you agree to engage with <strong style="color:var(--white2)">PAANTHERA</strong> in a lawful and respectful manner. Our services are intended for legitimate purchasing and business purposes only. Any misuse of the platform — including fraudulent activity or unauthorised access — will result in immediate action.</p>
+          <p>We reserve the right to modify, suspend, or discontinue any part of our services at our discretion to maintain quality and operational standards. While we aim for uninterrupted access, we do not guarantee that the website will always be error-free or continuously available.</p>
+          <p>Your continued use of our services signifies your acceptance of these terms and our commitment to delivering a reliable and premium experience.</p>
+        </div>
+
+        <hr class="legal-divider">
+
+        <div class="faq-cta-box fade-up">
+          <h3>Need Clarification?</h3>
+          <p>Our team is always available to clarify any aspect of our terms before you commit to a partnership.</p>
+          <div class="faq-cta-btns">
+            <a href="#" data-wa-general class="btn btn-gold">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+              Speak to Our Team
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="../Logos/Panthera white Png.png" alt="Paanthera" class="footer-logo" onerror="this.src='../Logos/Panthera Color Png.png'">
+          <p style="margin-bottom:6px;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold)">Blue Ocean Global</p>
+          <p>India's premium export-grade activewear manufacturer. Supplying quality jerseys, sportswear, and casual wear to wholesalers across South Africa and international markets.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalog.html">Product Catalog</a></li>
+            <li><a href="about.html">About Paanthera</a></li>
+            <li><a href="faq.html">FAQ &amp; Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul role="list">
+            <li><a href="faq.html?tab=terms">Terms &amp; Conditions</a></li>
+            <li><a href="faq.html?tab=privacy">Privacy Policy</a></li>
+            <li><a href="faq.html?tab=tos">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Get In Touch</h4>
+          <p>Bulk orders &amp; custom inquiries welcome.</p>
+          <a href="https://wa.me/917387427007" target="_blank" rel="noopener" class="footer-wa">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            +91 73874 27007
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Paanthera — Blue Ocean Global. All rights reserved.</p>
+        <p>Manufactured in India · Exported Globally · <a href="catalog.html">Browse Catalog</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════ SCRIPTS ══════════════════ -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Tab switching
+    const tabs  = document.querySelectorAll('.faq-tab');
+    const panels = document.querySelectorAll('.faq-panel');
+
+    function activateTab(panelId) {
+      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+      panels.forEach(p => p.classList.remove('active'));
+      const btn = document.querySelector(`[data-panel="${panelId}"]`);
+      const panel = document.getElementById(`panel-${panelId}`);
+      if (btn)   { btn.classList.add('active'); btn.setAttribute('aria-selected','true'); }
+      if (panel) { panel.classList.add('active'); reObserveFadeUps(); }
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => activateTab(tab.dataset.panel));
+    });
+
+    // Support ?tab= URL param for direct linking from footer
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const tab = params.get('tab');
+      if (tab) activateTab(tab);
+    });
+  </script>
+</body>
+</html>
