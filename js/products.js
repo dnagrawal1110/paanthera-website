@@ -2,6 +2,7 @@ const PRODUCTS = [
   // ─── POLYESTER SUBLIMATION ───────────────────────────────────────────
   {
     id: "round-neck-poly-sub-gym-full",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-gym-p1.png",
     name: "Round Neck Poly Sublimation Gym Full Sleeve",
     shortName: "Poly Sub Gym Tee – Full Sleeve",
     category: "polyester",
@@ -40,6 +41,7 @@ const PRODUCTS = [
   },
   {
     id: "round-neck-poly-sub-gym-half",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-gym-p2.png",
     name: "Round Neck Poly Sublimation Gym Half Sleeve",
     shortName: "Poly Sub Gym Tee – Half Sleeve",
     category: "polyester",
@@ -78,6 +80,7 @@ const PRODUCTS = [
   },
   {
     id: "round-neck-poly-sub-jersey-half",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p2.png",
     name: "Round Neck Poly Sublimation Jersey Half Sleeve",
     shortName: "Poly Sub Jersey – Round Neck",
     category: "polyester",
@@ -116,6 +119,7 @@ const PRODUCTS = [
   },
   {
     id: "collar-poly-sub-sports-half-v1",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p3.png",
     name: "Collar Poly Sublimation Sports Half Sleeve",
     shortName: "Polo Sub Sports Jersey I",
     category: "polyester",
@@ -154,6 +158,7 @@ const PRODUCTS = [
   },
   {
     id: "collar-poly-sub-sports-half-v2",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p2.png",
     name: "Collar Poly Sublimation Sports Half Sleeve II",
     shortName: "Polo Sub Sports Jersey II",
     category: "polyester",
@@ -192,6 +197,7 @@ const PRODUCTS = [
   },
   {
     id: "vneck-poly-sub-jersey-half",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p3.png",
     name: "V-Neck Poly Sublimation Jersey Half Sleeve",
     shortName: "V-Neck Poly Sub Jersey",
     category: "polyester",
@@ -232,6 +238,7 @@ const PRODUCTS = [
   // ─── POLYESTER PLAIN ──────────────────────────────────────────────────
   {
     id: "round-neck-poly-plain-half",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-gym-p1.png",
     name: "Round Neck Polyester Half Sleeve Plain",
     shortName: "Poly Plain Tee – Round Neck",
     category: "polyester",
@@ -270,6 +277,7 @@ const PRODUCTS = [
   },
   {
     id: "round-neck-poly-gym-plain-half",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-gym-p2.png",
     name: "Round Neck Half Sleeve Gym Poly Plain",
     shortName: "Gym Poly Plain – Half Sleeve",
     category: "polyester",
@@ -308,6 +316,7 @@ const PRODUCTS = [
   },
   {
     id: "round-neck-poly-gym-full",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-gym-p3.png",
     name: "Round Neck Poly Full Sleeve Plain Gym",
     shortName: "Gym Poly Plain – Full Sleeve",
     category: "polyester",
@@ -346,6 +355,7 @@ const PRODUCTS = [
   },
   {
     id: "vneck-poly-jersey-half",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p2.png",
     name: "V-Neck Poly Jersey Half Sleeve",
     shortName: "V-Neck Poly Plain Jersey",
     category: "polyester",
@@ -384,6 +394,7 @@ const PRODUCTS = [
   },
   {
     id: "round-neck-poly-deep-green",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-gym-p3.png",
     name: "Polyester Half Sleeve Round Neck Jersey – Deep Green",
     shortName: "Deep Green Poly Jersey",
     category: "polyester",
@@ -422,6 +433,7 @@ const PRODUCTS = [
   },
   {
     id: "collar-sports-half-v1",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p2.png",
     name: "Collar Sports Wear Half Sleeve",
     shortName: "Sports Polo Jersey I",
     category: "polyester",
@@ -460,6 +472,7 @@ const PRODUCTS = [
   },
   {
     id: "collar-sports-half-v2",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p3.png",
     name: "Collar Sports Wear Half Sleeve II",
     shortName: "Sports Polo Jersey II",
     category: "polyester",
@@ -498,6 +511,7 @@ const PRODUCTS = [
   },
   {
     id: "collar-sports-half-v3",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p2.png",
     name: "Collar Sports Wear Half Sleeve III",
     shortName: "Sports Polo Jersey III",
     category: "polyester",
@@ -538,6 +552,7 @@ const PRODUCTS = [
   // ─── COTTON T-SHIRTS ──────────────────────────────────────────────────
   {
     id: "cotton-round-half",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-half-p1.png",
     name: "Cotton Half Sleeve T-Shirt Round Neck",
     shortName: "Cotton Round Neck Tee – Half Sleeve",
     category: "cotton",
@@ -576,6 +591,7 @@ const PRODUCTS = [
   },
   {
     id: "cotton-round-full",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-full-p1.png",
     name: "Cotton T-Shirt Round Neck Full Sleeve",
     shortName: "Cotton Round Neck Tee – Full Sleeve",
     category: "cotton",
@@ -614,6 +630,7 @@ const PRODUCTS = [
   },
   {
     id: "cotton-round-casual-half",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-half-p3.png",
     name: "Round Neck Cotton T-Shirt Casual Half Sleeve",
     shortName: "Cotton Casual Tee – Round Neck",
     category: "cotton",
@@ -652,6 +669,7 @@ const PRODUCTS = [
   },
   {
     id: "cotton-collar-half",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-polo-half-p1.png",
     name: "Cotton Collar Half Sleeve T-Shirt",
     shortName: "Cotton Polo Tee – Half Sleeve",
     category: "cotton",
@@ -690,6 +708,7 @@ const PRODUCTS = [
   },
   {
     id: "cotton-casual-full",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-full-p2.png",
     name: "Cotton Casual Full Sleeve (CCSF)",
     shortName: "Cotton Casual Full Sleeve",
     category: "cotton",
@@ -728,6 +747,7 @@ const PRODUCTS = [
   },
   {
     id: "cotton-casual-full-olive",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-full-p3.png",
     name: "Cotton Casual Full Sleeve – Olive Green",
     shortName: "Cotton Casual Full Sleeve (Olive)",
     category: "cotton",
@@ -768,6 +788,7 @@ const PRODUCTS = [
   // ─── SHORTS ───────────────────────────────────────────────────────────
   {
     id: "cotton-shorts-gym",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/shorts-p2.png",
     name: "Cotton Shorts Gym",
     shortName: "Cotton Gym Shorts",
     category: "shorts",
@@ -806,6 +827,7 @@ const PRODUCTS = [
   },
   {
     id: "cotton-shorts-plain",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/shorts-p3.png",
     name: "Cotton Shorts Plain",
     shortName: "Cotton Plain Shorts",
     category: "shorts",
@@ -844,6 +866,7 @@ const PRODUCTS = [
   },
   {
     id: "poly-sub-sports-shorts",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/shorts-p2.png",
     name: "Poly Sublimation Sports Shorts",
     shortName: "Poly Sub Sports Shorts",
     category: "shorts",
@@ -884,6 +907,7 @@ const PRODUCTS = [
   // ─── TROUSERS ─────────────────────────────────────────────────────────
   {
     id: "cotton-casual-trouser",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/trousers-p1.png",
     name: "Cotton Casual Trouser (CCT)",
     shortName: "Cotton Casual Trouser",
     category: "trousers",
@@ -922,6 +946,7 @@ const PRODUCTS = [
   },
   {
     id: "cotton-poly-sports-trouser",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/trousers-p2.png",
     name: "Cotton Polyester Sports Trouser (CPST)",
     shortName: "Cotton-Poly Sports Trouser",
     category: "trousers",
