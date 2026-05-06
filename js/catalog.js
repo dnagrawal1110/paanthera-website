@@ -9,6 +9,7 @@ let activeSleeve     = 'all';
 
 function getFilteredProducts() {
   return PRODUCTS.filter(p => {
+    if (p.category === 'trousers') return false;   // hidden category
     if (activeCategory !== 'all' && p.category !== activeCategory) return false;
     if (activeSubcat   !== 'all' && p.subcategory !== activeSubcat) return false;
     if (activeCollar   !== 'all' && p.collar !== activeCollar) return false;
@@ -17,13 +18,15 @@ function getFilteredProducts() {
   });
 }
 
+const VISIBLE_PRODUCTS = PRODUCTS.filter(p => p.category !== 'trousers');
+
 function renderCatalog() {
   const grid  = document.getElementById('catalog-grid');
   const count = document.getElementById('catalog-count');
   if (!grid) return;
 
   const filtered = getFilteredProducts();
-  count && (count.innerHTML = `Showing <strong>${filtered.length}</strong> of ${PRODUCTS.length} products`);
+  count && (count.innerHTML = `Showing <strong>${filtered.length}</strong> of ${VISIBLE_PRODUCTS.length} products`);
 
   if (filtered.length === 0) {
     grid.innerHTML = `
@@ -137,7 +140,7 @@ function updateSubFilters() {
 function updateTabCounts() {
   document.querySelectorAll('[data-cat-tab]').forEach(tab => {
     const cat = tab.dataset.catTab;
-    const count = cat === 'all' ? PRODUCTS.length : PRODUCTS.filter(p => p.category === cat).length;
+    const count = cat === 'all' ? VISIBLE_PRODUCTS.length : VISIBLE_PRODUCTS.filter(p => p.category === cat).length;
     const badge = tab.querySelector('.filter-count');
     if (badge) badge.textContent = count;
   });

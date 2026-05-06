@@ -26,7 +26,7 @@
       </ul>
 
       <div class="nav-cta">
-        <a href="enquiry.html" class="btn btn-gold">Inquire Now</a>
+        <a href="enquiry.html" class="btn btn-gold">Enquire Now</a>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -67,17 +67,17 @@
         </h1>
         <p class="hero-sub">
           Premium polyester jerseys and sportswear for wholesalers, sports clubs, and retailers
-          across South Africa and international markets. MOQ 200 pieces, fully customisable.
+          across African Countries and international markets. MOQ 200 pieces, fully customisable.
         </p>
         <div class="hero-ctas">
           <a href="catalog.html" class="btn btn-primary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 6h16M4 10h16M4 14h10"/></svg>
             View Full Catalog
           </a>
-          <a href="#" class="btn btn-gold" data-wa-general>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-            Inquire on WhatsApp
-          </a>
+          <button class="btn btn-gold" id="hero-enquire-btn" onclick="openEnquiryModal()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Send Enquiry
+          </button>
         </div>
         <div class="hero-scroll" aria-hidden="true">
           <div class="scroll-line"></div>
@@ -110,7 +110,7 @@
           <div class="stat-label">Export Markets</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">100<span style="font-size:1.8rem">%</span></div>
+          <div class="stat-num"><span style="color:var(--gold)">100</span><span style="font-size:1.8rem">%</span></div>
           <div class="stat-label">Customisable</div>
         </div>
       </div>
@@ -133,7 +133,6 @@
         <a href="catalog.html?cat=polyester" class="sub-filter-btn">Polyester Jerseys</a>
         <a href="catalog.html?cat=cotton" class="sub-filter-btn">Cotton T-Shirts</a>
         <a href="catalog.html?cat=shorts" class="sub-filter-btn">Shorts</a>
-        <a href="catalog.html?cat=trousers" class="sub-filter-btn">Trousers</a>
       </div>
 
       <div class="products-grid" id="featured-grid">
@@ -142,7 +141,7 @@
 
       <div class="fade-up" style="text-align:center;margin-top:48px">
         <a href="catalog.html" class="btn btn-outline">
-          View All 25 Products
+          View All 23 Products
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -277,7 +276,6 @@
             <li><a href="catalog.html?cat=polyester">Polyester Jerseys</a></li>
             <li><a href="catalog.html?cat=cotton">Cotton T-Shirts</a></li>
             <li><a href="catalog.html?cat=shorts">Shorts</a></li>
-            <li><a href="catalog.html?cat=trousers">Trousers</a></li>
           </ul>
           <h4 style="margin-top:20px">Legal</h4>
           <ul role="list">
@@ -306,6 +304,82 @@
     </div>
   </footer>
 
+  <!-- ══════════════════ QUICK ENQUIRY MODAL ══════════════════ -->
+  <div id="enquiry-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display:none;position:fixed;inset:0;z-index:9000;align-items:center;justify-content:center;padding:16px">
+    <!-- Backdrop -->
+    <div id="modal-backdrop" onclick="closeEnquiryModal()" style="position:absolute;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px)"></div>
+    <!-- Card -->
+    <div style="position:relative;z-index:1;background:var(--dark);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:20px;padding:40px 36px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto">
+      <!-- Close -->
+      <button onclick="closeEnquiryModal()" aria-label="Close" style="position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;color:var(--grey);padding:4px;line-height:1">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <!-- Header -->
+      <div style="margin-bottom:28px">
+        <div class="subheading" style="margin-bottom:8px">Get in Touch</div>
+        <h2 id="modal-title" style="font-family:var(--font-serif);font-size:1.7rem;color:var(--white);line-height:1.2;margin:0">Send Us an Enquiry</h2>
+      </div>
+      <!-- Form -->
+      <form id="modal-enq-form" novalidate>
+        <!-- Full Name -->
+        <div style="margin-bottom:18px">
+          <label for="mq-name" style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white2);margin-bottom:7px">Full Name <span style="color:var(--red)">*</span></label>
+          <input id="mq-name" name="name" type="text" placeholder="John Smith" required
+            style="width:100%;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.92rem;padding:12px 16px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;box-sizing:border-box">
+          <div id="mq-name-err" style="font-size:0.72rem;color:var(--red);min-height:16px;margin-top:4px"></div>
+        </div>
+        <!-- Contact Number -->
+        <div style="margin-bottom:18px">
+          <label for="mq-phone" style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white2);margin-bottom:7px">Contact Number <span style="color:var(--red)">*</span></label>
+          <div style="display:flex;gap:10px">
+            <input id="mq-code" name="countryCode" type="text" placeholder="+27" value=""
+              style="width:90px;flex-shrink:0;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.92rem;padding:12px 14px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;box-sizing:border-box">
+            <input id="mq-phone" name="phone" type="tel" placeholder="71 234 5678" required
+              style="flex:1;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.92rem;padding:12px 16px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;box-sizing:border-box">
+          </div>
+          <div id="mq-phone-err" style="font-size:0.72rem;color:var(--red);min-height:16px;margin-top:4px"></div>
+        </div>
+        <!-- Email -->
+        <div style="margin-bottom:18px">
+          <label for="mq-email" style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white2);margin-bottom:7px">Email Address <span style="color:var(--red)">*</span></label>
+          <input id="mq-email" name="email" type="email" placeholder="john@example.com" required
+            style="width:100%;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.92rem;padding:12px 16px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;box-sizing:border-box">
+          <div id="mq-email-err" style="font-size:0.72rem;color:var(--red);min-height:16px;margin-top:4px"></div>
+        </div>
+        <!-- Location -->
+        <div style="margin-bottom:18px">
+          <label for="mq-location" style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white2);margin-bottom:7px">Location / Country <span style="color:var(--red)">*</span></label>
+          <input id="mq-location" name="location" type="text" placeholder="Johannesburg, South Africa" required
+            style="width:100%;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.92rem;padding:12px 16px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;box-sizing:border-box">
+          <div id="mq-location-err" style="font-size:0.72rem;color:var(--red);min-height:16px;margin-top:4px"></div>
+        </div>
+        <!-- Message -->
+        <div style="margin-bottom:24px">
+          <label for="mq-message" style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white2);margin-bottom:7px">Message</label>
+          <textarea id="mq-message" name="message" rows="4" placeholder="Tell us about your requirements — product, quantity, customisation…"
+            style="width:100%;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.92rem;padding:12px 16px;outline:none;resize:vertical;transition:border-color 0.2s,box-shadow 0.2s;box-sizing:border-box"></textarea>
+        </div>
+        <!-- Status -->
+        <div id="mq-status" style="display:none;border-radius:10px;padding:14px 18px;margin-bottom:18px;font-size:0.88rem;line-height:1.6"></div>
+        <!-- Submit -->
+        <button type="submit" id="mq-submit" class="btn btn-gold" style="width:100%;justify-content:center;font-size:0.92rem">
+          <span id="mq-btn-text">Send Enquiry</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <style>
+    #enquiry-modal.open { display:flex !important; }
+    #enquiry-modal input:focus, #enquiry-modal textarea:focus {
+      border-color: var(--gold) !important;
+      box-shadow: 0 0 0 3px rgba(201,169,110,0.12) !important;
+    }
+    #enquiry-modal input.invalid, #enquiry-modal textarea.invalid {
+      border-color: var(--red) !important;
+    }
+  </style>
+
   <!-- ══════════════════ SCRIPTS ══════════════════ -->
   <script src="js/products.js"></script>
   <script src="js/main.js"></script>
@@ -318,7 +392,7 @@
         PRODUCTS.find(p => p.id === 'vneck-poly-sub-jersey-half'),
         PRODUCTS.find(p => p.id === 'cotton-collar-half'),
         PRODUCTS.find(p => p.id === 'poly-sub-sports-shorts'),
-        PRODUCTS.find(p => p.id === 'cotton-poly-sports-trouser'),
+        PRODUCTS.find(p => p.id === 'cotton-shorts-gym'),
       ].filter(Boolean);
 
       document.getElementById('featured-grid').innerHTML =
@@ -336,6 +410,83 @@
         };
         mq.addEventListener('change', updateGrid);
         updateGrid();
+      }
+    });
+  </script>
+  <script>
+    // ─── Quick Enquiry Modal ───────────────────────────────────
+    const MODAL_SHEET_URL = 'https://script.google.com/macros/s/AKfycbz2bTRvtxoMdMHbWIPjbbUOkNmJqavXESRbeRqyJX0OyDD-eecLD7ItkBAnZZMLiBLa/exec';
+
+    function openEnquiryModal() {
+      const m = document.getElementById('enquiry-modal');
+      m.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('mq-name').focus();
+    }
+    function closeEnquiryModal() {
+      const m = document.getElementById('enquiry-modal');
+      m.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    // Close on Escape
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeEnquiryModal(); });
+
+    // Form submission
+    document.getElementById('modal-enq-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      // Clear errors
+      ['name','phone','email','location'].forEach(f => {
+        document.getElementById('mq-'+f+'-err').textContent = '';
+        document.getElementById('mq-'+f).classList.remove('invalid');
+      });
+      const status = document.getElementById('mq-status');
+      status.style.display = 'none';
+
+      // Values
+      const name     = document.getElementById('mq-name').value.trim();
+      const code     = document.getElementById('mq-code').value.trim();
+      const phone    = document.getElementById('mq-phone').value.trim();
+      const email    = document.getElementById('mq-email').value.trim();
+      const location = document.getElementById('mq-location').value.trim();
+      const message  = document.getElementById('mq-message').value.trim();
+
+      // Validation
+      let valid = true;
+      if (!name) { document.getElementById('mq-name-err').textContent = 'Name is required.'; document.getElementById('mq-name').classList.add('invalid'); valid = false; }
+      if (!phone) { document.getElementById('mq-phone-err').textContent = 'Phone number is required.'; document.getElementById('mq-phone').classList.add('invalid'); valid = false; }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById('mq-email-err').textContent = 'A valid email is required.'; document.getElementById('mq-email').classList.add('invalid'); valid = false; }
+      if (!location) { document.getElementById('mq-location-err').textContent = 'Location is required.'; document.getElementById('mq-location').classList.add('invalid'); valid = false; }
+      if (!valid) return;
+
+      const btn = document.getElementById('mq-submit');
+      const btnText = document.getElementById('mq-btn-text');
+      btn.disabled = true;
+      btnText.textContent = 'Sending…';
+
+      try {
+        const fullPhone = code ? code + ' ' + phone : phone;
+        const payload = new FormData();
+        payload.append('fullName', name);
+        payload.append('phone', fullPhone);
+        payload.append('email', email);
+        payload.append('location', location);
+        payload.append('message', message || '(no message)');
+        payload.append('product', 'General Enquiry');
+        payload.append('orderQty', '');
+        payload.append('source', 'Homepage Popup');
+        payload.append('timestamp', new Date().toISOString());
+
+        await fetch(MODAL_SHEET_URL, { method: 'POST', body: payload });
+
+        status.style.cssText = 'display:block;background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.25);color:#4ade80;border-radius:10px;padding:14px 18px;margin-bottom:18px;font-size:0.88rem;line-height:1.6';
+        status.innerHTML = '<strong>Enquiry sent!</strong> Our team will get back to you within 24 hours.';
+        this.reset();
+      } catch (err) {
+        status.style.cssText = 'display:block;background:rgba(200,16,46,0.07);border:1px solid rgba(200,16,46,0.25);color:var(--red);border-radius:10px;padding:14px 18px;margin-bottom:18px;font-size:0.88rem;line-height:1.6';
+        status.innerHTML = '<strong>Something went wrong.</strong> Please try again or contact us on WhatsApp.';
+      } finally {
+        btn.disabled = false;
+        btnText.textContent = 'Send Enquiry';
       }
     });
   </script>
