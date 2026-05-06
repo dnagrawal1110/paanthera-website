@@ -55,7 +55,17 @@ function updateSubFilters() {
   let collarOpts = [];
   let sleeveOpts = [];
 
-  if (activeCategory === 'polyester' || activeCategory === 'all') {
+  if (activeCategory === 'shirts') {
+    collarOpts = [
+      { val: 'all', label: 'All Collars' },
+      { val: 'button-down', label: 'Button-Down' }
+    ];
+    sleeveOpts = [
+      { val: 'all', label: 'All Sleeves' },
+      { val: 'half', label: 'Half Sleeve' },
+      { val: 'full', label: 'Full Sleeve' }
+    ];
+  } else if (activeCategory === 'polyester' || activeCategory === 'all') {
     subCatOpts = [
       { val: 'all', label: 'All Types' },
       { val: 'sublimation', label: 'Sublimation' },

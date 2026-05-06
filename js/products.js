@@ -1,986 +1,944 @@
 const PRODUCTS = [
-  // ─── POLYESTER SUBLIMATION ───────────────────────────────────────────
+
+  // ─── POLYESTER GYM WEAR ──────────────────────────────────────────────────
   {
-    id: "round-neck-poly-sub-gym-full",
+    id: "poly-gym-solid",
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-gym-p1.png",
-    name: "Round Neck Poly Sublimation Gym Full Sleeve",
-    shortName: "Poly Sub Gym Tee – Full Sleeve",
+    name: "Men's Performance Gym T-Shirt – Solid Design",
+    shortName: "Poly Gym Tee – Solid (Charcoal)",
     category: "polyester",
-    subcategory: "sublimation",
+    subcategory: "plain",
     collar: "round-neck",
-    sleeve: "full",
+    sleeve: "half",
     material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "Custom Sublimation Colors Available",
+    gsm: "170 GSM",
+    fit: "Slim Athletic Fit",
+    color: "Charcoal Black Solid",
     moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Gym Wear, Training, Sports Activities, Fitness Use",
+    occasion: "Gym, Training, Running, Sports Activities",
     features: [
-      "Lightweight polyester fabric engineered for peak performance",
-      "Breathable and quick-dry material for superior sweat management",
-      "Slim fit design that enhances athletic body shape",
-      "Stretchable fabric allows full range of motion during workouts",
-      "Round neck design for a clean and functional look",
-      "Full sleeves suitable for outdoor training and all-weather use",
-      "Durable stitching for regular gym and sports use",
-      "Sublimation-ready surface — supports vibrant, all-over custom prints"
+      "Ultra-lightweight polyester fabric for high-performance activities",
+      "Breathable and quick-dry material for efficient sweat management",
+      "Body-contouring athletic fit for enhanced movement",
+      "Minimal solid design for a clean and professional look",
+      "Mesh-texture zones for improved ventilation (side panels)",
+      "Durable stitching for intensive usage",
+      "Smooth surface suitable for branding and customization",
+      "Round neck design for comfort during workouts"
     ],
-    description: "Built for athletes who demand more from their gear. This full-sleeve gym jersey combines lightweight polyester construction with sublimation-ready technology, giving teams and brands the freedom to create bold, all-over custom designs. The slim athletic fit and quick-dry performance fabric make it the go-to choice for serious training wear, fitness collections, and bulk export orders.",
+    description: "This men's performance gym T-shirt is engineered for high-intensity training and active lifestyles, offering maximum comfort, breathability, and durability. Made from lightweight polyester fabric, it ensures quick-dry performance and efficient sweat control during workouts. The charcoal black solid design with subtle texture detailing delivers a clean, professional look, making it suitable for both gym wear and active casual use. Ideal for fitness brands, resellers, and bulk buyers.",
     customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options (full sublimation range)",
-      "Custom tags and labels"
+      "Chest logo customization (print / heat transfer)",
+      "Custom colour options for bulk orders",
+      "Packaging customization (on request)"
     ],
     industryUse: {
-      clubs: "Suitable for training kits and fitness programs",
-      teams: "Ideal for practice wear and sports activities",
-      resellers: "Strong product for gymwear and activewear categories"
+      clubs: "Ideal for gym and training collections",
+      teams: "Resellers: High-demand activewear category",
+      resellers: "Suitable for Africa & global export markets"
     }
   },
   {
-    id: "round-neck-poly-sub-gym-half",
+    id: "poly-gym-camo",
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-gym-p2.png",
-    name: "Round Neck Poly Sublimation Gym Half Sleeve",
-    shortName: "Poly Sub Gym Tee – Half Sleeve",
+    name: "Men's Performance Gym T-Shirt – Camo Texture Design",
+    shortName: "Poly Gym Tee – Camo (Olive Green)",
     category: "polyester",
-    subcategory: "sublimation",
+    subcategory: "plain",
     collar: "round-neck",
     sleeve: "half",
     material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "Custom Sublimation Colors Available",
+    gsm: "170 GSM",
+    fit: "Slim Athletic Fit",
+    color: "Olive Green with Subtle Camo Texture",
     moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Gym Wear, Training, Sports Activities, Fitness Use",
+    occasion: "Gym, Training, Running, Sports Activities",
     features: [
-      "Lightweight polyester fabric designed for performance and active use",
-      "Breathable and quick-dry material for sweat management",
-      "Slim fit design enhances athletic body shape",
-      "Stretchable fabric allows ease of movement during workouts",
-      "Round neck design for a clean and functional look",
-      "Half sleeves suitable for intense training sessions",
-      "Durable stitching for regular gym and sports use",
-      "Smooth surface suitable for sublimation printing and branding"
+      "Ultra-lightweight polyester fabric for high-performance workouts",
+      "Breathable and quick-dry material for efficient sweat control",
+      "Slim athletic fit enhances body movement and flexibility",
+      "Subtle camo texture adds depth without heavy design",
+      "Clean, minimal styling with strong premium appeal",
+      "Mesh ventilation zones for improved airflow",
+      "Durable stitching for long-term intensive use",
+      "Smooth surface suitable for branding and customization"
     ],
-    description: "This men's gym t-shirt is designed for performance, comfort, and a modern athletic look. Made from lightweight polyester fabric, it offers breathability, quick-dry functionality, and flexibility for intense workouts. The slim fit and stretchable fabric ensure a structured, body-contouring profile. Ideal for gyms, sports teams, and bulk buyers — perfect for training wear, fitness collections, and customized activewear.",
+    description: "This men's performance gym T-shirt is designed for high-intensity training and active lifestyles, delivering maximum comfort, breathability, and durability. The olive green base combined with a subtle camo texture design creates a modern, rugged look that appeals to fitness and sportswear markets. The minimal design maintains a premium feel while ensuring versatility across gym and casual wear segments. Ideal for fitness brands, resellers, and bulk buyers.",
     customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options (full sublimation range)",
-      "Custom tags and labels"
+      "Chest logo customization (print / heat transfer)",
+      "Custom colour options for bulk orders",
+      "Packaging customization (on request)"
     ],
     industryUse: {
-      clubs: "Suitable for training kits and fitness programs",
-      teams: "Ideal for practice wear and sports activities",
-      resellers: "Strong product for gymwear and activewear categories"
+      clubs: "Ideal for gym and training collections",
+      teams: "High-demand activewear category",
+      resellers: "Suitable for Africa & global export markets"
     }
   },
   {
-    id: "round-neck-poly-sub-jersey-half",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p2.png",
-    name: "Round Neck Poly Sublimation Jersey Half Sleeve",
-    shortName: "Poly Sub Jersey – Round Neck",
+    id: "poly-gym-motivational",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-gym-p3.png",
+    name: "Men's Performance Gym T-Shirt – Motivational Print Design",
+    shortName: "Poly Gym Tee – Motivational (Steel Grey)",
     category: "polyester",
-    subcategory: "sublimation",
+    subcategory: "plain",
     collar: "round-neck",
     sleeve: "half",
     material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "Custom Sublimation Colors Available",
+    gsm: "170 GSM",
+    fit: "Slim Athletic Fit",
+    color: "Steel Grey with Dark Panel Detailing",
     moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Sports, Teamwear, Training, Athletic Events",
+    occasion: "Gym, Training, Running, Sports Activities",
     features: [
-      "Premium polyester jersey construction for team and sport use",
-      "Sublimation-ready for vibrant all-over print capability",
-      "Breathable and moisture-wicking performance fabric",
-      "Slim athletic fit for professional appearance",
-      "Round crew neck — versatile and team-wear ready",
-      "Half sleeve design optimised for sporting activities",
-      "Reinforced stitching at stress points for durability",
-      "Smooth hand-feel ideal for custom printing"
+      "Ultra-lightweight polyester fabric for high-performance workouts",
+      "Breathable and quick-dry material for effective sweat control",
+      "Slim athletic fit enhances flexibility and movement",
+      "Motivational back print adds strong visual identity",
+      "Panel-structured design improves body contour appearance",
+      "Mesh ventilation zones for better airflow",
+      "Durable stitching for long-term intensive use",
+      "Smooth surface suitable for branding and customization"
     ],
-    description: "A versatile sublimation jersey built for sports teams and bulk uniform buyers. The round neck design offers a classic athletic look, while the sublimation-compatible polyester enables unlimited colour and pattern customisation. Whether for football, cricket, or fitness clubs — this jersey delivers professional results at export-competitive pricing.",
+    description: "This men's performance gym T-shirt is engineered for high-intensity training and active lifestyles, delivering superior comfort, breathability, and durability. The steel grey base combined with structured panel detailing and motivational back print creates a powerful and modern look, making it highly appealing in the fitness and activewear segment. The slim athletic fit enhances movement while maintaining a strong, performance-driven silhouette. Ideal for fitness brands, resellers, and bulk buyers.",
     customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options (full sublimation range)",
-      "Custom tags and labels"
+      "Front logo customization (print / heat transfer)",
+      "Back text customization (quotes, branding)",
+      "Custom colour and panel variations",
+      "Packaging customization (on request)"
     ],
     industryUse: {
-      clubs: "Perfect for sport club uniforms and team kits",
-      teams: "Standard training and match-day jersey",
-      resellers: "High-demand product for sports retail and wholesale"
-    }
-  },
-  {
-    id: "collar-poly-sub-sports-half-v1",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p3.png",
-    name: "Collar Poly Sublimation Sports Half Sleeve",
-    shortName: "Polo Sub Sports Jersey I",
-    category: "polyester",
-    subcategory: "sublimation",
-    collar: "polo-collar",
-    sleeve: "half",
-    material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "Dark Green with Contrast Tipping Detail",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Sports Activities, Training, Casual Wear, Teamwear",
-    features: [
-      "Lightweight polyester fabric designed for performance and active use",
-      "Breathable and quick-dry material for effective sweat management",
-      "Slim fit design for a modern athletic look",
-      "Polo collar with button placket for a smart sporty appearance",
-      "Contrast tipping on collar and sleeve cuffs for premium finish",
-      "Half sleeves suitable for training and active environments",
-      "Durable stitching suitable for regular sports use",
-      "Smooth fabric surface suitable for sublimation and logo customization"
-    ],
-    description: "This sports polo t-shirt is designed for performance, comfort, and a refined athletic look. Made from lightweight polyester, it offers breathability, quick-dry performance, and flexibility for sports and training. The dark green combined with contrast tipping delivers a premium, professional appearance — ideal for teams, clubs, and bulk buyers wanting high-quality customisable sportswear.",
-    customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options (full sublimation range)",
-      "Custom tags and labels"
-    ],
-    industryUse: {
-      clubs: "Suitable for team uniforms and sports events",
-      teams: "Ideal for training and coordinated apparel",
-      resellers: "Strong product for sportswear and activewear categories"
-    }
-  },
-  {
-    id: "collar-poly-sub-sports-half-v2",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p2.png",
-    name: "Collar Poly Sublimation Sports Half Sleeve II",
-    shortName: "Polo Sub Sports Jersey II",
-    category: "polyester",
-    subcategory: "sublimation",
-    collar: "polo-collar",
-    sleeve: "half",
-    material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "Custom Sublimation Colors Available",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Sports Activities, Training, Smart Casual, Teamwear",
-    features: [
-      "Performance polyester engineered for high-intensity sport",
-      "Quick-dry and breathable for all-day comfort",
-      "Polo collar with button placket — smart athletic presentation",
-      "Slim athletic fit for a sharp, professional team look",
-      "Half sleeves for unrestricted arm movement",
-      "Sublimation-compatible for full-colour custom prints",
-      "Reinforced seams for durability under regular sport use",
-      "Suitable for custom logo, name, and number printing"
-    ],
-    description: "The second variant in our polo sublimation sports series. Engineered for teams that want the practicality of a polo with the visual impact of sublimation printing. Ideal for cricket, football, golf, and corporate sports events. This jersey is a top-selling product for wholesale buyers supplying sports clubs and gymwear retailers across Africa and the Middle East.",
-    customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options (full sublimation range)",
-      "Custom tags and labels"
-    ],
-    industryUse: {
-      clubs: "Excellent for cricket, football and golf club uniforms",
-      teams: "Smart team presentation for matches and events",
-      resellers: "Popular SKU for bulk sportswear wholesale orders"
-    }
-  },
-  {
-    id: "vneck-poly-sub-jersey-half",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p3.png",
-    name: "V-Neck Poly Sublimation Jersey Half Sleeve",
-    shortName: "V-Neck Poly Sub Jersey",
-    category: "polyester",
-    subcategory: "sublimation",
-    collar: "v-neck",
-    sleeve: "half",
-    material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "Custom Sublimation Colors Available",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Sports, Gym, Athletic Wear, Teamwear",
-    features: [
-      "Lightweight performance polyester for active sport use",
-      "V-neck design adds a modern, fashion-forward athletic look",
-      "Breathable and quick-dry for sweat management",
-      "Slim fit tailored for athletic body types",
-      "Full sublimation-ready — vibrant all-over print capability",
-      "Half sleeves for flexibility during training",
-      "Durable double-needle stitching at all stress points",
-      "Smooth print surface for sharp logo and design output"
-    ],
-    description: "The V-neck silhouette brings a contemporary edge to the classic sports jersey. Sublimation-ready polyester enables full-colour, edge-to-edge design — perfect for teams wanting to stand out. The slim athletic fit and moisture-wicking construction make it as functional as it looks. A preferred style for basketball, volleyball, and athletics clubs ordering bulk export quantities.",
-    customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options (full sublimation range)",
-      "Custom tags and labels"
-    ],
-    industryUse: {
-      clubs: "Popular for basketball, volleyball, and athletics clubs",
-      teams: "Modern team jersey for matches and events",
-      resellers: "Premium SKU with high retail appeal"
+      clubs: "Ideal for gym and training collections",
+      teams: "High-demand motivational activewear",
+      resellers: "Suitable for Africa & global export markets"
     }
   },
 
-  // ─── POLYESTER PLAIN ──────────────────────────────────────────────────
+  // ─── POLYESTER JERSEY ────────────────────────────────────────────────────
   {
-    id: "round-neck-poly-plain-half",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-gym-p1.png",
-    name: "Round Neck Polyester Half Sleeve Plain",
-    shortName: "Poly Plain Tee – Round Neck",
+    id: "poly-jersey-multicolour",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p1.png",
+    name: "Men's Premium Football Jersey – Multi-Colour Round Neck",
+    shortName: "Football Jersey – Multi-Colour",
     category: "polyester",
-    subcategory: "plain",
+    subcategory: "sublimation",
     collar: "round-neck",
     sleeve: "half",
-    material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "White / Multiple Colour Options",
+    material: "100% Polyester Performance Fabric (Sublimation)",
+    gsm: "170 GSM",
+    fit: "Slim Athletic Fit",
+    color: "White Base with Green & Yellow Multi-Pattern Design",
     moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Gym Wear, Training, Sports Activities, Fitness Use",
+    occasion: "Football, Training, Sports Activities, Team Uniform",
     features: [
-      "Lightweight polyester fabric designed for performance and active use",
+      "Lightweight polyester fabric designed for high-performance sports use",
+      "Advanced sublimation printing for long-lasting, fade-resistant design",
       "Breathable and quick-dry material for sweat management",
-      "Slim fit design enhances athletic body shape",
-      "Stretchable fabric allows ease of movement during workouts",
-      "Round neck design for a clean and functional look",
-      "Half sleeves suitable for intense training sessions",
-      "Durable stitching for regular gym and sports use",
-      "Smooth surface suitable for logo and branding customization"
+      "Slim athletic fit enhances mobility and comfort",
+      "Full-body sublimation design for bold visual impact",
+      "Durable stitching for long-term performance use",
+      "Smooth surface ideal for team branding and customization",
+      "Round neck design for comfort during extended play"
     ],
-    description: "This men's gym t-shirt is designed for performance, comfort, and a modern athletic look. Made from lightweight polyester fabric, it offers breathability, quick-dry functionality, and flexibility for intense workouts. The white colour provides a clean and professional appearance, while the slim fit and stretchable fabric ensure a structured and body-contouring fit. Ideal for gyms, sports teams, and bulk buyers.",
+    description: "This men's premium football jersey is engineered for performance, durability, and strong visual identity. Made from high-quality polyester fabric with advanced sublimation printing, it ensures breathability, quick-dry performance, and long-lasting colour vibrancy. The white base combined with dynamic green and yellow patterns creates a powerful and energetic look, making it highly suitable for teamwear and competitive sports environments. Ideal for teams, clubs, and bulk buyers.",
     customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options available",
-      "Custom tags and labels"
+      "Back name customization",
+      "Back number customization",
+      "Sleeve branding options",
+      "Full design and colour customization available"
     ],
     industryUse: {
-      clubs: "Suitable for training kits and fitness programs",
-      teams: "Ideal for practice wear and sports activities",
-      resellers: "Strong product for gymwear and activewear categories"
+      clubs: "Ideal for football teams and training kits",
+      teams: "Suitable for match uniforms and tournaments",
+      resellers: "High-demand sportswear category"
     }
   },
   {
-    id: "round-neck-poly-gym-plain-half",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-gym-p2.png",
-    name: "Round Neck Half Sleeve Gym Poly Plain",
-    shortName: "Gym Poly Plain – Half Sleeve",
-    category: "polyester",
-    subcategory: "plain",
-    collar: "round-neck",
-    sleeve: "half",
-    material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "Multiple Colour Options",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Gym Wear, Fitness, Training, Sports",
-    features: [
-      "High-grade polyester blend engineered for gym performance",
-      "Moisture-wicking technology to keep athletes dry",
-      "Slim athletic fit for a professional gym appearance",
-      "Four-way stretch for unrestricted movement",
-      "Round neck crew design — classic gym aesthetic",
-      "Half sleeves for maximum arm mobility",
-      "Anti-odour treated fabric for extended use",
-      "Print-ready surface for custom branding"
-    ],
-    description: "A gym-specific polyester plain tee built for fitness professionals, gym chains, and activewear brands. The plain design serves as an ideal blank canvas for custom logos, team branding, or retailer private labels. With moisture-wicking performance and a flattering slim fit, this is a consistently high-selling SKU across African and Middle Eastern wholesale markets.",
-    customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options available",
-      "Custom tags and labels"
-    ],
-    industryUse: {
-      clubs: "Fitness clubs and gym chain uniform supply",
-      teams: "Training wear for sports and athletics teams",
-      resellers: "Blank canvas for private label gymwear brands"
-    }
-  },
-  {
-    id: "round-neck-poly-gym-full",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-gym-p3.png",
-    name: "Round Neck Poly Full Sleeve Plain Gym",
-    shortName: "Gym Poly Plain – Full Sleeve",
-    category: "polyester",
-    subcategory: "plain",
-    collar: "round-neck",
-    sleeve: "full",
-    material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "Multiple Colour Options",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Gym Wear, Outdoor Training, Sports, Fitness",
-    features: [
-      "Durable polyester construction for demanding gym environments",
-      "Full sleeves for added muscle support and outdoor versatility",
-      "Quick-dry and breathable for extended training sessions",
-      "Slim athletic fit with body-contouring design",
-      "Round neck for a clean, minimal athletic look",
-      "Four-way stretch allows complete freedom of movement",
-      "Reinforced stitching at shoulders and sides",
-      "Compatible with screen print and embroidery customization"
-    ],
-    description: "The full-sleeve variant of our gym polyester plain range. Designed for outdoor training, cooler climates, and athletes who prefer additional arm coverage. The plain construction makes it ideal for large-format logo printing and private label manufacturing. A strong seller for wholesale buyers supplying gym equipment stores and sports retailers in South Africa and beyond.",
-    customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options available",
-      "Custom tags and labels"
-    ],
-    industryUse: {
-      clubs: "Suitable for outdoor sports clubs and training academies",
-      teams: "Full-sleeve team training kit for cooler conditions",
-      resellers: "Popular for gym retail, PE uniform suppliers"
-    }
-  },
-  {
-    id: "vneck-poly-jersey-half",
+    id: "poly-jersey-geometric",
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p2.png",
-    name: "V-Neck Poly Jersey Half Sleeve",
-    shortName: "V-Neck Poly Plain Jersey",
+    name: "Men's Premium Football Jersey – Black Geometric Design",
+    shortName: "Football Jersey – Black Geometric",
     category: "polyester",
-    subcategory: "plain",
-    collar: "v-neck",
+    subcategory: "sublimation",
+    collar: "round-neck",
     sleeve: "half",
-    material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "Multiple Colour Options",
+    material: "100% Polyester Performance Fabric (Sublimation)",
+    gsm: "170 GSM",
+    fit: "Slim Athletic Fit",
+    color: "Black Base with Gold & Dark Geometric Pattern",
     moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Sports, Gym, Athletic Wear, Smart Casual",
+    occasion: "Football, Training, Sports Activities, Team Uniform",
     features: [
-      "Modern V-neck design with contemporary athletic appeal",
-      "Lightweight polyester jersey construction",
-      "Breathable and moisture-wicking performance fabric",
-      "Slim fit for a sharp, professional athletic profile",
-      "Half sleeves for freedom of movement",
-      "Smooth fabric ideal for embroidery and screen printing",
-      "Durable construction for regular sporting use",
-      "Versatile style — sport to smart-casual crossover"
+      "Lightweight polyester fabric designed for high-performance use",
+      "Advanced sublimation printing for fade-resistant, long-lasting design",
+      "Breathable and quick-dry fabric for sweat control",
+      "Slim athletic fit for enhanced movement and comfort",
+      "Premium geometric pattern for a modern, elite look",
+      "Durable stitching for long-term sports use",
+      "Smooth surface ideal for team branding and customization",
+      "Round neck design for comfort during extended play"
     ],
-    description: "The V-neck plain jersey offers a more fashion-forward option within our polyester range. Its contemporary neckline crossover between athletic and smart-casual makes it popular for gym-to-street wear collections and corporate sports days. Clean lines and a flattering slim cut make this jersey a consistent favourite among wholesale buyers building lifestyle sportswear ranges.",
+    description: "This men's premium football jersey is built for performance and premium visual impact, making it ideal for competitive sports and teamwear. The black base with subtle geometric patterns and gold detailing creates a bold and elite appearance, making it highly attractive for professional teams and premium market segments. The slim athletic fit ensures comfort and flexibility during high-intensity activities. Ideal for clubs, teams, and bulk buyers.",
     customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options available",
-      "Custom tags and labels"
+      "Back name customization",
+      "Back number customization",
+      "Sleeve branding options",
+      "Full design and colour customization available"
     ],
     industryUse: {
-      clubs: "Great for golf clubs and leisure sports organisations",
-      teams: "Smart match-day and training wear",
-      resellers: "Popular in lifestyle and athleisure retail segments"
+      clubs: "Ideal for football teams and match kits",
+      teams: "Suitable for tournaments and training wear",
+      resellers: "High-value premium sportswear category"
     }
   },
   {
-    id: "round-neck-poly-deep-green",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-gym-p3.png",
-    name: "Polyester Half Sleeve Round Neck Jersey – Deep Green",
-    shortName: "Deep Green Poly Jersey",
+    id: "poly-jersey-dark-tech",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p3.png",
+    name: "Men's Premium Football Jersey – Dark Tech Design",
+    shortName: "Football Jersey – Dark Tech Navy",
     category: "polyester",
-    subcategory: "plain",
+    subcategory: "sublimation",
     collar: "round-neck",
     sleeve: "half",
-    material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "Deep Green",
+    material: "100% Polyester Performance Fabric (Sublimation)",
+    gsm: "170 GSM",
+    fit: "Slim Athletic Fit",
+    color: "Dark Navy Blue with Electric Blue Tech Pattern",
     moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Sports, Training, Teamwear, Activewear",
+    occasion: "Football, Training, Sports Activities, Team Uniform",
     features: [
-      "Signature deep green colourway — a premium, distinctive tone",
-      "100% polyester construction for performance use",
-      "Breathable and quick-dry fabric for active training",
-      "Slim athletic fit enhances body shape",
-      "Round neck design — clean, classic, versatile",
-      "Half sleeves for training and sport activities",
+      "Lightweight polyester fabric designed for high-performance use",
+      "Advanced sublimation printing for fade-resistant, long-lasting design",
+      "Breathable and quick-dry fabric for effective sweat control",
+      "Slim athletic fit for maximum mobility and comfort",
+      "Futuristic tech-inspired pattern for modern sports appeal",
+      "Durable stitching for long-term usage",
+      "Smooth surface ideal for branding and customization",
+      "Round neck construction for comfortable wear during matches"
+    ],
+    description: "This men's premium football jersey is designed for high-performance sportswear and modern team identity, combining durability, comfort, and a bold visual design. The dark navy base with electric blue tech-inspired patterns delivers a powerful, futuristic look that stands out on the field. The design is ideal for teams seeking a professional and aggressive visual identity. Perfect for clubs, teams, academies, and bulk buyers.",
+    customizations: [
+      "Back name customization",
+      "Back number customization",
+      "Sleeve branding options",
+      "Full design and colour customization available"
+    ],
+    industryUse: {
+      clubs: "Ideal for professional and semi-professional teams",
+      teams: "Suitable for match kits and tournaments",
+      resellers: "High-demand modern sportswear category"
+    }
+  },
+
+  // ─── COTTON SHIRTS ───────────────────────────────────────────────────────
+  {
+    id: "cotton-shirt-formal-aqua",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-shirt-p1.png",
+    name: "Men's Premium Cotton Formal Shirt – Aqua Blue",
+    shortName: "Cotton Formal Shirt – Aqua Blue",
+    category: "shirts",
+    subcategory: "formal",
+    collar: "spread-collar",
+    sleeve: "full",
+    material: "100% Cotton / Cotton Blend",
+    gsm: "160 GSM",
+    fit: "Slim Fit / Regular Fit",
+    color: "Aqua Blue",
+    moq: 500,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Office, Business Meetings, Corporate Wear, Daily Formal Use",
+    features: [
+      "Premium cotton fabric for soft and breathable comfort",
+      "Lightweight GSM ideal for all-day formal wear",
+      "Clean solid design for professional appearance",
+      "Structured classic spread collar for sharp formal look",
       "Durable stitching for long-term use",
-      "Logo print and embroidery-ready surface"
+      "Skin-friendly fabric suitable for extended wear",
+      "Wrinkle-resistant finish (optional)",
+      "Versatile styling for office and business environments"
     ],
-    description: "The Deep Green signature jersey is one of Paanthera's standout colourways — a rich, forest-deep green that photographes beautifully and commands attention on the field. Made from high-quality polyester with the same performance specs as our core range, this jersey is a frequent choice for sports clubs seeking a distinctive team colour. Available in bulk with full customisation options.",
+    description: "This men's premium formal shirt is designed for modern professionals, combining elegance, comfort, and durability. Made from high-quality cotton fabric, it offers excellent breathability and a refined finish suitable for long working hours. The aqua blue colour delivers a fresh and premium look, making it suitable for both daily office wear and business occasions. Ideal for resellers, distributors, and apparel brands.",
     customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options available",
-      "Custom tags and labels"
+      "Fabric customization (100% cotton / blends)",
+      "Colour customization (bulk orders)",
+      "Collar and cuff design variations",
+      "Packaging customization"
     ],
     industryUse: {
-      clubs: "A natural team colour for football, hockey and rugby clubs",
-      teams: "Distinctive match-day kit for competitive teams",
-      resellers: "Sought-after colourway in South African sports retail"
+      clubs: "High-demand formalwear product",
+      teams: "Office uniform and bulk requirements",
+      resellers: "Ideal for Africa & global export markets"
     }
   },
   {
-    id: "collar-sports-half-v1",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p2.png",
-    name: "Collar Sports Wear Half Sleeve",
-    shortName: "Sports Polo Jersey I",
-    category: "polyester",
-    subcategory: "plain",
-    collar: "polo-collar",
-    sleeve: "half",
-    material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "Dark Green with Contrast Tipping Detail",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Sports Activities, Training, Casual Wear, Teamwear",
-    features: [
-      "Lightweight polyester fabric designed for performance and active use",
-      "Breathable and quick-dry material for effective sweat management",
-      "Slim fit design for a modern athletic look",
-      "Polo collar with button placket for a smart sporty appearance",
-      "Contrast tipping on collar and sleeve cuffs for a premium finish",
-      "Half sleeves suitable for training and active environments",
-      "Durable stitching suitable for regular sports use",
-      "Smooth fabric surface suitable for logo and branding customization"
-    ],
-    description: "This men's sports polo t-shirt is designed for performance, comfort, and a refined athletic look. Made from lightweight polyester fabric, it offers breathability, quick-dry performance, and flexibility for sports and training activities. The dark green combined with contrast tipping gives a premium professional appearance, suitable for both activewear and smart casual. Ideal for teams, clubs, and bulk buyers seeking high-quality customisable sportswear.",
-    customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options available",
-      "Custom tags and labels"
-    ],
-    industryUse: {
-      clubs: "Suitable for team uniforms and sports events",
-      teams: "Ideal for training and coordinated apparel",
-      resellers: "Strong product for sportswear and activewear categories"
-    }
-  },
-  {
-    id: "collar-sports-half-v2",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p3.png",
-    name: "Collar Sports Wear Half Sleeve II",
-    shortName: "Sports Polo Jersey II",
-    category: "polyester",
-    subcategory: "plain",
-    collar: "polo-collar",
-    sleeve: "half",
-    material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "Multiple Colour Options",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Sports, Training, Teamwear, Corporate Events",
-    features: [
-      "Premium polyester polo construction for team sport use",
-      "Smart polo collar with button placket",
-      "Quick-dry performance fabric keeps athletes comfortable",
-      "Slim athletic fit for a modern team look",
-      "Half sleeves for ease of movement",
-      "Available in a wide range of team colours",
-      "Durable seams for season-long use",
-      "Compatible with embroidery and screen printing"
-    ],
-    description: "The second design in our sports polo range offers a slightly different cut and collar construction, providing wholesale buyers with variety within the same product category. Well-suited for corporate sports events, school sports teams, and club uniforms. A versatile, reliable performer in the export catalogue.",
-    customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options available",
-      "Custom tags and labels"
-    ],
-    industryUse: {
-      clubs: "Corporate and school sports club uniforms",
-      teams: "Season-long training and match kit",
-      resellers: "High-velocity product for sports uniform suppliers"
-    }
-  },
-  {
-    id: "collar-sports-half-v3",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/poly-jersey-p2.png",
-    name: "Collar Sports Wear Half Sleeve III",
-    shortName: "Sports Polo Jersey III",
-    category: "polyester",
-    subcategory: "plain",
-    collar: "polo-collar",
-    sleeve: "half",
-    material: "100% Polyester Performance Fabric",
-    fit: "Slim Fit",
-    color: "Multiple Colour Options",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Sports, Training, Team Events, Activewear",
-    features: [
-      "Third variant in Paanthera's sports polo series — unique cut and finish",
-      "High-grade polyester performance fabric",
-      "Polo collar for a smart, professional team appearance",
-      "Breathable and moisture-wicking for all-day comfort",
-      "Slim fit tailored for athletic frames",
-      "Reinforced construction at collar and placket",
-      "Wide colour range for custom team orders",
-      "Smooth surface for clean embroidery or print results"
-    ],
-    description: "Completing the three-piece sports polo lineup, this variant features refined tailoring details that set it apart from the series. For buyers wanting to build a range within a single product category, all three polo variants can be offered together as a coordinated collection. A proven export performer with consistent re-order rates from South African wholesale clients.",
-    customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options available",
-      "Custom tags and labels"
-    ],
-    industryUse: {
-      clubs: "Range-building option for sports club uniform suppliers",
-      teams: "Coordinated collection across three polo styles",
-      resellers: "Bundle-selling opportunity for wholesale buyers"
-    }
-  },
-
-  // ─── COTTON T-SHIRTS ──────────────────────────────────────────────────
-  {
-    id: "cotton-round-half",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-half-p1.png",
-    name: "Cotton Half Sleeve T-Shirt Round Neck",
-    shortName: "Cotton Round Neck Tee – Half Sleeve",
-    category: "cotton",
+    id: "cotton-shirt-casual-mustard",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-shirt-p2.png",
+    name: "Men's Premium Cotton Casual Shirt – Mustard Yellow",
+    shortName: "Cotton Casual Shirt – Mustard Yellow",
+    category: "shirts",
     subcategory: "casual",
-    collar: "round-neck",
-    sleeve: "half",
-    material: "100% Premium Cotton",
-    fit: "Regular Fit",
-    color: "Multiple Colour Options",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Everyday Use, Promotional Wear",
-    features: [
-      "100% premium cotton for all-day comfort",
-      "Soft hand-feel with a clean, finished appearance",
-      "Regular fit — comfortable for a wide range of body types",
-      "Classic round neck design, universally wearable",
-      "Half sleeves for casual everyday styling",
-      "Pre-shrunk fabric to maintain shape after washing",
-      "Double-needle stitching throughout for durability",
-      "Ideal base for screen printing and promotional use"
-    ],
-    description: "The cotton round-neck half-sleeve is a wardrobe staple — reliable, comfortable, and versatile. Made from 100% premium cotton, it delivers the softness and breathability that everyday wear demands. Available in a full range of colours for custom printing, promotional campaigns, corporate giveaways, or casual retail. A consistently high-volume product in our export portfolio.",
-    customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options available",
-      "Custom tags and labels"
-    ],
-    industryUse: {
-      clubs: "Promotional and event wear for organisations",
-      teams: "Casual team wear and off-field apparel",
-      resellers: "Essential product for general apparel retail and wholesale"
-    }
-  },
-  {
-    id: "cotton-round-full",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-full-p1.png",
-    name: "Cotton T-Shirt Round Neck Full Sleeve",
-    shortName: "Cotton Round Neck Tee – Full Sleeve",
-    category: "cotton",
-    subcategory: "casual",
-    collar: "round-neck",
+    collar: "classic-collar",
     sleeve: "full",
-    material: "100% Premium Cotton",
-    fit: "Regular Fit",
-    color: "Multiple Colour Options",
+    material: "100% Cotton / Cotton Blend",
+    gsm: "160 GSM",
+    fit: "Slim Fit / Regular Fit",
+    color: "Mustard Yellow",
     moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Everyday Use, All-Season Wear",
+    occasion: "Casual Outings, Daily Wear, Travel, Smart Casual",
     features: [
-      "100% premium cotton — soft and breathable for all-day use",
-      "Full sleeves for cooler weather and additional coverage",
-      "Regular fit for comfortable everyday wear",
-      "Classic round neck — timeless and universally popular",
-      "Pre-shrunk to maintain size and shape",
-      "Reinforced stitching for long-term durability",
-      "Versatile — suitable across seasons and markets",
-      "Excellent base for full-sleeve print and branding"
+      "Premium cotton fabric for breathable all-day comfort",
+      "Soft-touch fabric suitable for daily wear",
+      "Roll-up sleeve styling for versatile look",
+      "Strong stitching for long-lasting usage",
+      "Clean solid design for wide market acceptance",
+      "Skin-friendly fabric with smooth finish",
+      "Easy to pair with jeans, trousers, or chinos",
+      "Single chest pocket for practical styling"
     ],
-    description: "The full-sleeve cotton round-neck is a seasonal staple and one of our most versatile export products. Made from 100% premium cotton, it provides warmth and comfort for cooler climates without sacrificing breathability. Perfect for markets like South Africa where temperature variation requires year-round apparel versatility. Equally suited to promotional, casual retail, and branded corporate wear.",
+    description: "This men's premium casual shirt is designed for modern everyday wear, combining comfort, durability, and a stylish appearance. Made from high-quality cotton fabric, it offers excellent breathability and a soft feel suitable for long hours of wear. The mustard yellow colour provides a bold yet premium look, making it a standout choice in casual fashion while maintaining strong market demand. Ideal for resellers, distributors, and apparel brands.",
     customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options available",
-      "Custom tags and labels"
+      "Logo customization (embroidery / print)",
+      "Fabric customization (cotton / blends)",
+      "Colour customization (bulk orders)",
+      "Collar and cuff variations",
+      "Custom packaging"
     ],
     industryUse: {
-      clubs: "Off-season training wear and casual club apparel",
-      teams: "All-season team wear and travel kit",
-      resellers: "Year-round essential for apparel wholesale"
+      clubs: "High-demand casualwear category",
+      teams: "Easy-to-sell vibrant product",
+      resellers: "Ideal for Africa & global export markets"
     }
   },
   {
-    id: "cotton-round-casual-half",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-half-p3.png",
-    name: "Round Neck Cotton T-Shirt Casual Half Sleeve",
-    shortName: "Cotton Casual Tee – Round Neck",
-    category: "cotton",
-    subcategory: "casual",
-    collar: "round-neck",
-    sleeve: "half",
-    material: "100% Premium Cotton",
-    fit: "Regular Fit",
-    color: "Multiple Colour Options",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Street Style, Everyday Use",
-    features: [
-      "Premium cotton blend for superior softness",
-      "Casual round-neck cut with relaxed styling",
-      "Regular fit — universally flattering silhouette",
-      "Half-sleeve styling for everyday casual wear",
-      "Smooth, even surface for clean print results",
-      "Colourfast fabric — maintains vibrancy through washing",
-      "Lightweight and breathable for warm climates",
-      "Consistent sizing for bulk uniform and wholesale orders"
-    ],
-    description: "A refined casual cotton tee designed for everyday life. The relaxed round-neck cut, premium cotton construction, and extensive colour palette make this one of Paanthera's most commercially versatile products. Whether for retail shelves, promotional campaigns, or school uniforms — this tee delivers consistent quality at export-competitive pricing. A top-seller in South African retail accounts.",
-    customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options available",
-      "Custom tags and labels"
-    ],
-    industryUse: {
-      clubs: "Casual club merchandise and fan wear",
-      teams: "Off-field team wear and travel apparel",
-      resellers: "Volume seller for general apparel retail"
-    }
-  },
-  {
-    id: "cotton-collar-half",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-polo-half-p1.png",
-    name: "Cotton Collar Half Sleeve T-Shirt",
-    shortName: "Cotton Polo Tee – Half Sleeve",
-    category: "cotton",
-    subcategory: "casual",
-    collar: "polo-collar",
-    sleeve: "half",
-    material: "100% Premium Cotton",
-    fit: "Regular Fit",
-    color: "Multiple Colour Options",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Smart Casual, Work Wear, Casual Fridays, Corporate",
-    features: [
-      "100% premium cotton for comfort and natural breathability",
-      "Polo collar construction for a smart, elevated look",
-      "Button placket adds professional finishing detail",
-      "Regular fit suitable for diverse body types",
-      "Half sleeves for smart-casual everyday wear",
-      "Colourfast, pre-shrunk fabric",
-      "Ideal for corporate branding and uniform programmes",
-      "Clean stitch finish for a tailored appearance"
-    ],
-    description: "The cotton polo tee bridges casual comfort and professional presentation. Made from 100% premium cotton with a structured polo collar and button placket, it elevates the classic t-shirt for smart-casual and corporate environments. Widely used for corporate staff uniforms, hospitality wear, and premium retail collections. One of Paanthera's most reordered styles in the South African corporate market.",
-    customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options available",
-      "Custom tags and labels"
-    ],
-    industryUse: {
-      clubs: "Smart club presentation and hospitality events",
-      teams: "Corporate sports teams and work uniforms",
-      resellers: "High-value product for corporate uniform suppliers"
-    }
-  },
-  {
-    id: "cotton-casual-full",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-full-p2.png",
-    name: "Cotton Casual Full Sleeve (CCSF)",
-    shortName: "Cotton Casual Full Sleeve",
-    category: "cotton",
-    subcategory: "casual",
-    collar: "round-neck",
+    id: "cotton-shirt-formal-olive",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-shirt-p3.png",
+    name: "Men's Premium Cotton Formal Shirt – Olive Green",
+    shortName: "Cotton Formal Shirt – Olive Green",
+    category: "shirts",
+    subcategory: "formal",
+    collar: "spread-collar",
     sleeve: "full",
-    material: "100% Premium Cotton",
-    fit: "Regular Fit",
-    color: "Multiple Colour Options",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Everyday Use, All-Season Style",
-    features: [
-      "Smooth premium cotton for comfort across seasons",
-      "Full-sleeve construction for versatile year-round wear",
-      "Regular fit with a clean, finished silhouette",
-      "Round neck design — timeless and widely wearable",
-      "Excellent print surface for branding and customization",
-      "Pre-shrunk and colourfast for reliable sizing",
-      "Lightweight and breathable despite full coverage",
-      "Suitable for layering in cooler market conditions"
-    ],
-    description: "The CCSF (Cotton Casual Full Sleeve) is a foundational garment in Paanthera's cotton range. Built for markets that require year-round cotton options, its full-sleeve design offers comfort and coverage without compromising on style. Available across a broad colour palette, this is a consistently ordered product for South African casual wear retailers and promotional apparel buyers.",
-    customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Custom colour options available",
-      "Custom tags and labels"
-    ],
-    industryUse: {
-      clubs: "All-season casual club wear and merchandise",
-      teams: "Year-round team wear for diverse climate markets",
-      resellers: "Consistent seller across casual apparel categories"
-    }
-  },
-  {
-    id: "cotton-casual-full-olive",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-full-p3.png",
-    name: "Cotton Casual Full Sleeve – Olive Green",
-    shortName: "Cotton Casual Full Sleeve (Olive)",
-    category: "cotton",
-    subcategory: "casual",
-    collar: "round-neck",
-    sleeve: "full",
-    material: "100% Premium Cotton",
-    fit: "Regular Fit",
+    material: "100% Cotton / Cotton Blend",
+    gsm: "160 GSM",
+    fit: "Slim Fit / Regular Fit",
     color: "Olive Green",
     moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Street Style, Outdoor Lifestyle",
+    occasion: "Office, Corporate Wear, Meetings, Daily Formal Use",
     features: [
-      "Signature olive green — a trend-dominant earthy tone",
-      "100% premium cotton for comfort and natural feel",
-      "Full-sleeve design for versatile seasonal wear",
-      "Regular fit for a relaxed, comfortable silhouette",
-      "Rich colourfast dye — maintains depth through washing",
-      "Clean round-neck with double-needle finish",
-      "Pre-shrunk to preserve sizing accuracy",
-      "Compatible with tonal and contrast branding applications"
+      "Premium cotton fabric for breathable all-day comfort",
+      "Lightweight GSM suitable for office wear",
+      "Clean solid design for professional look",
+      "Structured collar for sharp appearance",
+      "Durable stitching for long-term use",
+      "Skin-friendly fabric for extended wear",
+      "Smooth finish for premium presentation",
+      "Versatile styling for multiple formal occasions"
     ],
-    description: "The Olive Green CCSF brings one of fashion's most enduring earthy tones to Paanthera's cotton casual range. A colour that resonates strongly across African and international streetwear markets, olive green has seen sustained demand in both retail and wholesale channels. The full-sleeve cut and premium cotton construction make this one of the most photographable and retailable products in our export lineup.",
+    description: "This men's premium formal shirt is crafted for modern professionals, offering a perfect blend of comfort, durability, and refined style. Made from high-quality cotton fabric, it ensures breathability and a smooth finish suitable for long working hours. The olive green colour delivers a sophisticated and premium look, making it stand out from traditional formal shades while maintaining strong market acceptance. Ideal for resellers, distributors, and corporate buyers.",
     customizations: [
-      "Chest logo printing or heat transfer",
-      "Back branding customization",
-      "Sleeve branding customization",
-      "Olive green signature with custom contrast options",
-      "Custom tags and labels"
+      "Logo customization (embroidery / print)",
+      "Fabric customization (cotton / blends)",
+      "Colour customization (bulk orders)",
+      "Collar and cuff variations",
+      "Custom packaging"
     ],
     industryUse: {
-      clubs: "Lifestyle merchandise for modern sports clubs",
-      teams: "Fashion-forward casual team wear",
-      resellers: "Top colourway for streetwear and lifestyle retail"
+      clubs: "Premium formalwear category",
+      teams: "Office uniform requirements",
+      resellers: "Ideal for Africa & global export markets"
     }
   },
 
-  // ─── SHORTS ───────────────────────────────────────────────────────────
+  // ─── COTTON POLO T-SHIRTS ────────────────────────────────────────────────
   {
-    id: "cotton-shorts-gym",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/shorts-p2.png",
-    name: "Cotton Shorts Gym",
-    shortName: "Cotton Gym Shorts",
-    category: "shorts",
-    subcategory: "gym",
-    collar: null,
-    sleeve: null,
-    material: "100% Premium Cotton",
+    id: "cotton-polo-dual-tone",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-polo-half-p1.png",
+    name: "Men's Premium Cotton Polo T-Shirt – Dual Tone Panel Design",
+    shortName: "Cotton Polo – Dual Tone (Black/Neon)",
+    category: "cotton",
+    subcategory: "polo",
+    collar: "polo-collar",
+    sleeve: "half",
+    material: "100% Combed Cotton",
+    gsm: "220 GSM",
     fit: "Regular Fit",
-    color: "Multiple Colour Options",
+    color: "Black Base with Neon Lime Green Contrast Panel",
     moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Gym Wear, Training, Fitness, Active Use",
+    occasion: "Casual Wear, Retail, Corporate, Bulk Supply",
     features: [
-      "100% cotton construction for breathable gym performance",
-      "Elastic waistband with drawstring for adjustable fit",
-      "Side seam pockets for practical use during training",
-      "Mid-thigh length for freedom of movement",
-      "Reinforced seams for durability under athletic use",
-      "Soft, non-irritating fabric suitable for skin contact",
-      "Pre-shrunk and colourfast",
-      "Logo print and embroidery-ready waistband and leg"
+      "Premium combed cotton fabric with smooth, breathable finish",
+      "High-GSM structure ensures durability and export-grade quality",
+      "Bold contrast panel design for strong visual appeal",
+      "Soft-touch fabric suitable for all-day wear",
+      "Reinforced stitching for long-term use",
+      "Colorfast fabric with minimal shrinkage",
+      "Structured polo collar with button placket for a refined look",
+      "Clean surface ideal for branding & customization"
     ],
-    description: "Gym-specific cotton shorts built for training comfort. The elastic drawstring waistband, practical pocketing, and mid-thigh length make these ideal for weight training, circuit sessions, and fitness use. 100% cotton construction keeps things breathable without the synthetic feel. A reliable, high-volume product for gym chains, fitness studios, and activewear wholesale buyers.",
+    description: "This men's premium cotton polo T-shirt is designed for modern export markets, combining durability with a bold visual identity. Made from high-quality 100% combed cotton, it offers a breathable, soft feel with a structured premium finish. The dual-tone panel design in neon lime and black creates a strong retail presence, making it highly suitable for wholesale markets. Ideal for bulk buyers, resellers, and brands.",
     customizations: [
-      "Custom logo on waistband or leg",
-      "Back branding customization",
-      "Custom colour options available",
-      "Custom tags and labels",
-      "Custom drawstring colours"
+      "Chest logo customization (embroidery / print)",
+      "Custom colour panel combinations",
+      "Packaging customization (on request)"
     ],
     industryUse: {
-      clubs: "Fitness clubs and gym chain uniform bottoms",
-      teams: "Training shorts for athletics and sports teams",
-      resellers: "Essential product for gym and activewear retail"
+      clubs: "High-demand casual premium product",
+      teams: "Strong margin & repeat purchase category",
+      resellers: "Ideal for bulk export markets"
     }
   },
   {
-    id: "cotton-shorts-plain",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/shorts-p3.png",
-    name: "Cotton Shorts Plain",
-    shortName: "Cotton Plain Shorts",
-    category: "shorts",
+    id: "cotton-polo-stripe",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-polo-half-p2.png",
+    name: "Men's Premium Cotton Polo T-Shirt – Horizontal Stripe Design",
+    shortName: "Cotton Polo – Horizontal Stripe",
+    category: "cotton",
+    subcategory: "polo",
+    collar: "polo-collar",
+    sleeve: "half",
+    material: "100% Combed Cotton",
+    gsm: "220 GSM",
+    fit: "Regular Fit",
+    color: "Black Base with White Horizontal Stripe Pattern",
+    moq: 500,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Casual Wear, Retail, Bulk Supply",
+    features: [
+      "High-quality combed cotton for soft and breathable comfort",
+      "Premium horizontal stripe pattern with strong retail appeal",
+      "High-GSM fabric ensures durability and long-lasting shape",
+      "Smooth fabric surface suitable for branding",
+      "Fade-resistant colour with minimal shrinkage",
+      "Reinforced stitching for export-grade performance",
+      "Structured collar for a clean, semi-formal look",
+      "Designed for high-demand wholesale markets"
+    ],
+    description: "This men's premium cotton polo T-shirt is crafted for bulk export markets, combining comfort, durability, and timeless design. The black and white horizontal stripe pattern delivers a classic yet high-demand retail look, making it highly suitable for wholesale markets. The high-GSM fabric ensures long-term durability, while the polo collar enhances its premium positioning. Ideal for resellers, distributors, and apparel brands.",
+    customizations: [
+      "Chest logo customization (embroidery / print)",
+      "Stripe colour modification (on bulk orders)",
+      "Packaging customization (on request)"
+    ],
+    industryUse: {
+      clubs: "Evergreen stripe design with consistent demand",
+      teams: "High-repeat purchase category",
+      resellers: "Ideal for Africa-focused export markets"
+    }
+  },
+  {
+    id: "cotton-polo-vertical-line",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-polo-half-p3.png",
+    name: "Men's Premium Cotton Polo T-Shirt – Vertical Line Design",
+    shortName: "Cotton Polo – Vertical Line (Mustard)",
+    category: "cotton",
+    subcategory: "polo",
+    collar: "polo-collar",
+    sleeve: "half",
+    material: "100% Combed Cotton",
+    gsm: "200–220 GSM",
+    fit: "Regular Fit",
+    color: "Mustard Yellow with Dark Brown Collar & Black Vertical Line",
+    moq: 500,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Casual Wear, Retail, Bulk Supply",
+    features: [
+      "Premium combed cotton fabric with soft, breathable comfort",
+      "High-GSM fabric ensures durability and long-term wear",
+      "Unique vertical double-line design enhances visual length",
+      "Contrast collar adds a premium and refined look",
+      "Smooth surface suitable for branding and customization",
+      "Colorfast fabric with minimal shrinkage",
+      "Reinforced stitching for export-grade durability",
+      "Clean minimal design with strong retail presence"
+    ],
+    description: "This men's premium cotton polo T-shirt is designed for high-performance retail and export markets, combining comfort, durability, and a distinctive modern look. The mustard yellow base paired with a dark contrast collar and vertical line detailing creates a premium, eye-catching design that stands out in wholesale markets. The vertical design element enhances body proportions visually, making it attractive across a wide customer base. Perfect for resellers, distributors, and apparel brands.",
+    customizations: [
+      "Chest logo customization (embroidery / print)",
+      "Packaging customization (on request)"
+    ],
+    industryUse: {
+      clubs: "Unique design with strong visual differentiation",
+      teams: "High-margin, fast-moving product",
+      resellers: "Ideal for Africa & global export markets"
+    }
+  },
+
+  // ─── COTTON ROUND NECK HALF SLEEVE ───────────────────────────────────────
+  {
+    id: "cotton-round-half-diagonal",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-half-p1.png",
+    name: "Men's Premium Cotton Round Neck T-Shirt – Diagonal Panel Design",
+    shortName: "Cotton Round Half – Diagonal (Royal Blue)",
+    category: "cotton",
     subcategory: "casual",
-    collar: null,
-    sleeve: null,
-    material: "100% Premium Cotton",
+    collar: "round-neck",
+    sleeve: "half",
+    material: "100% Combed Cotton",
+    gsm: "180–200 GSM",
     fit: "Regular Fit",
-    color: "Multiple Colour Options",
+    color: "Royal Blue with White & Light Blue Diagonal Panel",
     moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Leisure, Everyday Use, Beach",
+    occasion: "Casual Wear, Retail, Bulk Supply",
     features: [
-      "Lightweight 100% cotton construction for everyday comfort",
-      "Clean plain design — versatile and minimalist",
-      "Elastic waistband with drawstring",
-      "Available in a comprehensive colour range",
-      "Smooth surface for printing and embroidery",
-      "Pre-shrunk fabric for consistent sizing",
-      "Suitable for casual, beach, and leisure wear contexts",
-      "Durable stitching for regular everyday use"
+      "Premium combed cotton fabric with soft and breathable comfort",
+      "Lightweight yet durable fabric suitable for daily wear",
+      "Bold diagonal panel design for modern and sporty appeal",
+      "Smooth surface ideal for branding and printing",
+      "Colorfast fabric with minimal shrinkage",
+      "Reinforced stitching for long-lasting durability",
+      "Clean round neck finish for everyday versatility",
+      "Designed for high-demand wholesale markets"
     ],
-    description: "Simple, clean, and endlessly versatile — the Cotton Plain Shorts are a staple in any wholesale catalogue. The minimalist design makes them the perfect blank canvas for brand printing, school uniforms, event merchandise, or leisure retail. Available in a full spectrum of colours with consistent sizing and reliable fabric quality. One of our highest-volume casual shorts in the export range.",
+    description: "This men's premium cotton round neck T-shirt is designed for modern export markets, offering a perfect balance of comfort, durability, and visual appeal. The royal blue base combined with white and light blue diagonal panel design creates a sporty and eye-catching look, making it highly attractive for retail and wholesale buyers. Its clean construction and premium finish ensure strong shelf presence and consistent demand. Ideal for resellers, distributors, and apparel brands.",
     customizations: [
-      "Custom logo on waistband or leg",
-      "Back branding customization",
-      "Custom colour options available",
-      "Custom tags and labels",
-      "Custom drawstring colours"
+      "Chest logo customization (print / embroidery)",
+      "Panel colour customization (bulk orders)",
+      "Packaging customization (on request)"
     ],
     industryUse: {
-      clubs: "Casual club merchandise and event giveaways",
-      teams: "Casual team wear and leisure shorts",
-      resellers: "Volume seller for general apparel and leisure retail"
+      clubs: "Sporty casual design with strong demand",
+      teams: "Fast-moving, youth-focused product",
+      resellers: "Ideal for Africa & global export markets"
     }
   },
   {
-    id: "poly-sub-sports-shorts",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/shorts-p2.png",
-    name: "Poly Sublimation Sports Shorts",
-    shortName: "Poly Sub Sports Shorts",
+    id: "cotton-round-half-lightning",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-half-p2.png",
+    name: "Men's Premium Cotton Round Neck T-Shirt – Lightning Graphic Design",
+    shortName: "Cotton Round Half – Lightning (Neon Lime)",
+    category: "cotton",
+    subcategory: "casual",
+    collar: "round-neck",
+    sleeve: "half",
+    material: "100% Combed Cotton",
+    gsm: "180–200 GSM",
+    fit: "Regular Fit",
+    color: "Neon Lime Green with Black & White Lightning Graphic",
+    moq: 500,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Casual Wear, Streetwear, Bulk Supply",
+    features: [
+      "Premium combed cotton fabric with breathable comfort",
+      "High-visibility neon colour for strong retail impact",
+      "Bold lightning graphic design for modern streetwear appeal",
+      "Smooth surface suitable for DTF and screen printing",
+      "Colorfast fabric with minimal shrinkage",
+      "Reinforced stitching for long-lasting durability",
+      "Lightweight and comfortable for daily wear",
+      "Designed for high-demand youth and streetwear markets"
+    ],
+    description: "This men's premium cotton round neck T-shirt is built for high-demand retail and export markets, combining comfort, durability, and bold design appeal. The neon lime green base paired with a striking lightning graphic in black and white creates a powerful visual identity, making it highly attractive for youth-focused and fast-moving markets. The high-visibility colour ensures strong shelf presence. Ideal for resellers, distributors, and apparel brands.",
+    customizations: [
+      "Graphic size and colour customization",
+      "Chest logo addition (print / embroidery)",
+      "Packaging customization (on request)"
+    ],
+    industryUse: {
+      clubs: "High-visibility product for youth segment",
+      teams: "Fast-moving trendy design",
+      resellers: "Ideal for Africa & global export markets"
+    }
+  },
+  {
+    id: "cotton-round-half-wave",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-half-p3.png",
+    name: "Men's Premium Cotton Round Neck T-Shirt – Flow Wave Design",
+    shortName: "Cotton Round Half – Wave (Sky Blue)",
+    category: "cotton",
+    subcategory: "casual",
+    collar: "round-neck",
+    sleeve: "half",
+    material: "100% Combed Cotton",
+    gsm: "180–200 GSM",
+    fit: "Regular Fit",
+    color: "Sky Blue with White & Navy Flow Wave Pattern",
+    moq: 500,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Casual Wear, Retail, Bulk Supply",
+    features: [
+      "Premium combed cotton fabric with soft, breathable comfort",
+      "Lightweight yet durable fabric suitable for daily wear",
+      "Elegant wave pattern design for a clean and modern look",
+      "Smooth surface ideal for printing and customization",
+      "Colorfast fabric with minimal shrinkage",
+      "Reinforced stitching for long-lasting durability",
+      "Clean neckline finish for everyday versatility",
+      "Designed for high-demand wholesale markets"
+    ],
+    description: "This men's premium cotton round neck T-shirt is designed for modern export markets, combining comfort, durability, and refined aesthetics. The sky blue base enhanced with subtle white and navy wave patterns creates a smooth, premium visual appeal that stands out while remaining versatile. This design is ideal for buyers looking for a clean yet distinctive product with broad market acceptance. Perfect for resellers, distributors, and apparel brands.",
+    customizations: [
+      "Chest logo customization (print / embroidery)",
+      "Pattern colour adjustment (bulk orders)",
+      "Packaging customization (on request)"
+    ],
+    industryUse: {
+      clubs: "Clean premium design with wide appeal",
+      teams: "High-repeat purchase category",
+      resellers: "Ideal for Africa & global export markets"
+    }
+  },
+
+  // ─── COTTON ROUND NECK FULL SLEEVE ───────────────────────────────────────
+  {
+    id: "cotton-round-full-colorblock",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-full-p1.png",
+    name: "Men's Premium Cotton Round Neck T-Shirt – Colour Block Full Sleeve",
+    shortName: "Cotton Round Full – Colour Block",
+    category: "cotton",
+    subcategory: "casual",
+    collar: "round-neck",
+    sleeve: "full",
+    material: "100% Combed Cotton",
+    gsm: "220 GSM",
+    fit: "Regular Fit",
+    color: "Black & Off-White Dual Tone Colour Block",
+    moq: 500,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Casual Wear, Retail, Bulk Supply",
+    features: [
+      "Premium combed cotton fabric with soft and breathable feel",
+      "Heavy GSM fabric ensures durability and premium structure",
+      "Clean horizontal colour block design with strong visual appeal",
+      "Smooth fabric surface ideal for branding and customization",
+      "Colorfast fabric with minimal shrinkage",
+      "Reinforced stitching for long-lasting performance",
+      "Full sleeve design suitable for all-season wear",
+      "Minimal yet premium styling for wide market acceptance"
+    ],
+    description: "This men's premium cotton full sleeve T-shirt is designed for modern export markets, combining durability, comfort, and timeless design. The black and off-white horizontal colour block design delivers a clean and sophisticated look, making it suitable for a wide range of customers. Its minimal aesthetic ensures versatility across retail segments while maintaining strong shelf appeal. Ideal for resellers, distributors, and apparel brands.",
+    customizations: [
+      "Chest logo customization (print / embroidery)",
+      "Colour block customization (bulk orders)",
+      "Packaging customization (on request)"
+    ],
+    industryUse: {
+      clubs: "Clean premium design with wide appeal",
+      teams: "High-repeat purchase category",
+      resellers: "Ideal for Africa & global export markets"
+    }
+  },
+  {
+    id: "cotton-round-full-texture",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-full-p2.png",
+    name: "Men's Premium Cotton Round Neck T-Shirt – Textured Solid Full Sleeve",
+    shortName: "Cotton Round Full – Textured (Olive)",
+    category: "cotton",
+    subcategory: "casual",
+    collar: "round-neck",
+    sleeve: "full",
+    material: "100% Combed Cotton",
+    gsm: "220 GSM",
+    fit: "Regular Fit",
+    color: "Olive Green with Subtle Micro Texture Pattern",
+    moq: 500,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Casual Wear, Retail, Bulk Supply",
+    features: [
+      "Premium combed cotton fabric with soft and breathable comfort",
+      "Heavy GSM fabric ensures durability and structured premium feel",
+      "Subtle all-over micro texture adds depth without heavy design",
+      "Clean solid look suitable for wide market acceptance",
+      "Smooth surface suitable for branding and customization",
+      "Colorfast fabric with minimal shrinkage",
+      "Reinforced stitching for long-lasting performance",
+      "Full sleeve design suitable for all-season wear"
+    ],
+    description: "This men's premium cotton full sleeve T-shirt is designed for modern export markets, offering a perfect combination of comfort, durability, and refined styling. The olive green base enhanced with a subtle micro texture pattern creates a sophisticated and mature look, making it highly suitable for a wide range of customers. The minimal design ensures versatility while maintaining a premium identity in retail and wholesale markets. Ideal for resellers, distributors, and apparel brands.",
+    customizations: [
+      "Chest logo customization (print / embroidery)",
+      "Texture variation (based on bulk requirements)",
+      "Packaging customization (on request)"
+    ],
+    industryUse: {
+      clubs: "Premium minimal product with broad appeal",
+      teams: "High-repeat purchase category",
+      resellers: "Ideal for Africa & global export markets"
+    }
+  },
+  {
+    id: "cotton-round-full-abstract",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-full-p3.png",
+    name: "Men's Premium Cotton Round Neck T-Shirt – Abstract Flow Full Sleeve",
+    shortName: "Cotton Round Full – Abstract (Teal)",
+    category: "cotton",
+    subcategory: "casual",
+    collar: "round-neck",
+    sleeve: "full",
+    material: "100% Combed Cotton",
+    gsm: "220 GSM",
+    fit: "Regular Fit",
+    color: "Deep Teal Green with Subtle Flow Pattern",
+    moq: 500,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Casual Wear, Retail, Bulk Supply",
+    features: [
+      "Premium combed cotton fabric with soft and breathable comfort",
+      "Heavy GSM fabric ensures durability and structured premium feel",
+      "Subtle abstract flow design adds depth without heavy printing",
+      "Clean minimal aesthetic with modern premium appeal",
+      "Smooth surface suitable for branding and customization",
+      "Colorfast fabric with minimal shrinkage",
+      "Reinforced stitching for long-lasting performance",
+      "Full sleeve design suitable for all-season wear"
+    ],
+    description: "This men's premium cotton full sleeve T-shirt is crafted for modern export markets, combining durability, comfort, and refined styling. The deep teal base enhanced with a subtle abstract flow pattern creates a sophisticated and stylish look, making it suitable for both casual and semi-premium segments. The design remains minimal while offering visual depth, ensuring strong shelf appeal. Ideal for resellers, distributors, and apparel brands.",
+    customizations: [
+      "Chest logo customization (print / embroidery)",
+      "Pattern intensity and placement adjustment",
+      "Packaging customization (on request)"
+    ],
+    industryUse: {
+      clubs: "Premium minimal design with wide appeal",
+      teams: "High-repeat purchase category",
+      resellers: "Ideal for Africa & global export markets"
+    }
+  },
+
+  // ─── SHORTS ───────────────────────────────────────────────────────────────
+  {
+    id: "shorts-gradient",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/shorts-p1.png",
+    name: "Men's Premium Sports Shorts – Gradient Design",
+    shortName: "Sports Shorts – Blue Gradient",
     category: "shorts",
     subcategory: "sublimation",
     collar: null,
     sleeve: null,
     material: "100% Polyester Performance Fabric",
-    fit: "Athletic Fit",
-    color: "Custom Sublimation Colors Available",
+    gsm: "170 GSM",
+    fit: "Regular Athletic Fit",
+    color: "Blue Gradient (Aqua Blue to Deep Navy)",
     moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Sports, Football, Athletics, Training, Teamwear",
+    occasion: "Football, Gym, Training, Casual Sportswear",
     features: [
-      "Lightweight polyester for performance sport use",
-      "Full sublimation-ready for custom all-over print",
-      "Elastic waistband with drawstring for secure fit",
-      "Side slits for additional leg mobility during play",
-      "Moisture-wicking lining for comfort during activity",
-      "Athletic fit — tailored for sport performance",
-      "Durable seams for high-activity use",
-      "Pairs perfectly with Paanthera sublimation jerseys"
+      "Lightweight polyester fabric for high-performance use",
+      "Breathable and quick-dry material for sweat management",
+      "Smooth gradient design with premium visual appeal",
+      "Elastic waistband with adjustable drawstring for comfort fit",
+      "Side pockets for convenience and functionality",
+      "Durable stitching for long-term usage",
+      "Soft inner feel for all-day comfort",
+      "Ideal for both sports and casual wear"
     ],
-    description: "Complete the kit. These polyester sublimation sports shorts are designed to pair with our sublimation jersey range for full matching teamwear sets. Full sublimation capability means unlimited colour and design freedom — ideal for football clubs, athletics teams, and sport organisations wanting a unified, professional look. High re-order rate among South African football wholesale buyers.",
+    description: "These men's premium sports shorts are designed for performance, comfort, and modern styling, making them ideal for activewear and export markets. The aqua-to-navy gradient design delivers a fresh and dynamic look, making the product highly attractive for both sports and casual wear segments. The elastic waistband with drawstring ensures a secure and adjustable fit. Perfect for resellers, distributors, fitness brands, and sports teams.",
     customizations: [
-      "Full sublimation print capability",
-      "Custom logo and number printing",
-      "Side panel design options",
-      "Custom colour options (full sublimation range)",
-      "Custom tags and labels"
+      "Logo customization (print / embroidery)",
+      "Colour and gradient customization",
+      "Pocket style customization",
+      "Packaging customization (on request)"
     ],
     industryUse: {
-      clubs: "Football, athletics and team sport club shorts",
-      teams: "Match-day shorts for competitive sport teams",
-      resellers: "Kit-completion product for sports uniform suppliers"
+      clubs: "Ideal for football and training kits",
+      teams: "Suitable for gym and activewear collections",
+      resellers: "Ideal for Africa & global export markets"
+    }
+  },
+  {
+    id: "shorts-solid",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/shorts-p2.png",
+    name: "Men's Premium Sports Shorts – Solid Design",
+    shortName: "Sports Shorts – Solid (Camel Brown)",
+    category: "shorts",
+    subcategory: "plain",
+    collar: null,
+    sleeve: null,
+    material: "100% Polyester Performance Fabric",
+    gsm: "170 GSM",
+    fit: "Regular Athletic Fit",
+    color: "Camel Brown Solid",
+    moq: 500,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Gym, Training, Sports Activities, Casual Wear",
+    features: [
+      "Lightweight polyester fabric for high-performance activities",
+      "Breathable and quick-dry material for effective sweat control",
+      "Clean solid design for a premium and versatile look",
+      "Elastic waistband with adjustable drawstring for secure fit",
+      "Side pockets for convenience and functionality",
+      "Durable stitching for long-term usage",
+      "Soft inner feel for all-day comfort",
+      "Minimal styling suitable for bulk markets"
+    ],
+    description: "These men's premium sports shorts are designed for performance, comfort, and everyday versatility. The camel brown solid design offers a unique yet premium look, making it stand out from common sportswear colours while maintaining wide market acceptance. The elastic waistband with drawstring provides a comfortable and adjustable fit, suitable for various activities. Perfect for resellers, distributors, fitness brands, and sportswear retailers.",
+    customizations: [
+      "Logo customization (print / embroidery)",
+      "Custom colour options (bulk orders)",
+      "Pocket and trim customization",
+      "Packaging customization (on request)"
+    ],
+    industryUse: {
+      clubs: "Ideal for training and casual kits",
+      teams: "Suitable for gym and activewear lines",
+      resellers: "Ideal for Africa & global export markets"
+    }
+  },
+  {
+    id: "shorts-panel",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/shorts-p3.png",
+    name: "Men's Premium Sports Shorts – Dynamic Panel Design",
+    shortName: "Sports Shorts – Panel (Dark Green)",
+    category: "shorts",
+    subcategory: "sublimation",
+    collar: null,
+    sleeve: null,
+    material: "100% Polyester Performance Fabric",
+    gsm: "170 GSM",
+    fit: "Regular Athletic Fit",
+    color: "Dark Green with Neon Green & Black Panel Design",
+    moq: 500,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Football, Training, Gym, Sports Activities",
+    features: [
+      "Lightweight polyester fabric for high-performance activities",
+      "Breathable and quick-dry material for efficient sweat control",
+      "Dynamic panel design for a bold and sporty appearance",
+      "Elastic waistband with adjustable drawstring for secure fit",
+      "Functional side pockets for convenience",
+      "Durable stitching for long-term use",
+      "Fade-resistant sublimation detailing",
+      "Designed for both performance and casual sportswear"
+    ],
+    description: "These men's premium sports shorts are engineered for performance, durability, and modern sports styling. The dark green base enhanced with neon green and black dynamic panels creates a powerful, sporty look that stands out in teamwear and training environments. The structured design enhances visual appeal while maintaining flexibility and comfort. Perfect for sports teams, fitness brands, resellers, and distributors.",
+    customizations: [
+      "Logo customization (print / embroidery)",
+      "Panel colour and design customization",
+      "Custom branding and labelling",
+      "Packaging customization (on request)"
+    ],
+    industryUse: {
+      clubs: "Ideal for football and training kits",
+      teams: "Suitable for activewear collections",
+      resellers: "Ideal for Africa & global export markets"
     }
   },
 
-  // ─── TROUSERS ─────────────────────────────────────────────────────────
+  // ─── TROUSERS (hidden from catalog) ──────────────────────────────────────
   {
-    id: "cotton-casual-trouser",
+    id: "trouser-cargo-olive",
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/trousers-p1.png",
-    name: "Cotton Casual Trouser (CCT)",
-    shortName: "Cotton Casual Trouser",
+    name: "Men's Premium Cargo Jogger Pants – Olive Green",
+    shortName: "Cargo Jogger – Olive Green",
     category: "trousers",
     subcategory: "casual",
     collar: null,
     sleeve: null,
-    material: "100% Premium Cotton",
-    fit: "Regular Fit",
-    color: "Multiple Colour Options",
+    material: "Cotton Blend",
+    gsm: "280 GSM",
+    fit: "Slim Tapered Fit",
+    color: "Olive Green",
     moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Everyday Use, Corporate Casual",
+    occasion: "Casual Wear, Travel, Streetwear, Daily Use",
     features: [
-      "100% premium cotton for breathable all-day comfort",
-      "Clean casual trouser design with classic proportions",
-      "Elastic waistband with drawstring for flexible fit",
-      "Deep side pockets for practical everyday use",
-      "Pre-shrunk and colourfast for consistent sizing",
-      "Regular fit — comfortable for a wide range of builds",
-      "Available across a broad colour range",
-      "Compatible with embroidery and print customization"
+      "Premium cotton blend fabric for comfort and durability",
+      "Heavy GSM construction ensures long-lasting wear",
+      "Multiple utility cargo pockets for functionality",
+      "Elastic waistband with adjustable drawstring for secure fit",
+      "Elastic cuffed hem for modern jogger style",
+      "Reinforced stitching for rugged usage",
+      "Soft inner feel suitable for all-day comfort",
+      "Structured design for premium streetwear appeal"
     ],
-    description: "The CCT (Cotton Casual Trouser) is Paanthera's everyday bottom for casual wear, leisure, and smart-casual markets. Built from 100% premium cotton with a comfortable regular fit and practical pocketing. A strong performer in South African retail markets where cotton casual trousers maintain year-round demand. Available in wide colour range for school uniform, promotional, and retail applications.",
+    description: "These men's premium cargo jogger pants are designed for modern streetwear and utility-focused fashion, combining durability, comfort, and functionality. The olive green colour paired with multiple cargo pockets delivers a rugged yet premium aesthetic, making it highly suitable for both casual and travel wear. Ideal for resellers, distributors, and apparel brands.",
     customizations: [
-      "Custom logo on waistband or pocket",
-      "Back branding customization",
-      "Custom colour options available",
-      "Custom tags and labels",
-      "Custom drawstring colours"
+      "Logo customization (print / embroidery)",
+      "Fabric and colour customization (bulk orders)",
+      "Pocket style modifications",
+      "Packaging customization (on request)"
     ],
     industryUse: {
-      clubs: "Casual trouser for club leisure and travel wear",
-      teams: "Off-field team wear bottoms",
-      resellers: "Consistent seller for casual and school uniform retail"
+      clubs: "High-demand streetwear product",
+      teams: "Strong margin casualwear category",
+      resellers: "Ideal for Africa & global export markets"
     }
   },
   {
-    id: "cotton-poly-sports-trouser",
+    id: "trouser-cargo-grey",
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/trousers-p2.png",
-    name: "Cotton Polyester Sports Trouser (CPST)",
-    shortName: "Cotton-Poly Sports Trouser",
+    name: "Men's Premium Cargo Jogger Pants – Light Grey",
+    shortName: "Cargo Jogger – Light Grey",
     category: "trousers",
-    subcategory: "sports",
+    subcategory: "casual",
     collar: null,
     sleeve: null,
-    material: "Cotton-Polyester Performance Blend",
-    fit: "Athletic Fit",
-    color: "Multiple Colour Options",
+    material: "Cotton Blend",
+    gsm: "280 GSM",
+    fit: "Slim Tapered Fit",
+    color: "Light Grey",
     moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Sports Training, Athletics, Gym, Active Use",
+    occasion: "Casual Wear, Travel, Streetwear, Daily Use",
     features: [
-      "Cotton-polyester blend combines comfort with performance",
-      "Athletic fit tailored for sport and training activities",
-      "Moisture-wicking capability for active use",
-      "Elastic waistband with adjustable drawstring",
-      "Side pockets and optional back pocket",
-      "Reinforced stitching for high-movement sport environments",
-      "Four-way stretch at key flex points",
-      "Compatible with side panel printing and logo application"
+      "Premium cotton blend fabric for superior comfort and durability",
+      "Heavy GSM ensures long-lasting shape retention",
+      "Multiple cargo pockets with flap & zipper detailing",
+      "Elastic waistband with adjustable drawstring for better fit",
+      "Elastic cuffed hem for modern jogger silhouette",
+      "Clean stitching with reinforced seams",
+      "Soft inner feel suitable for extended wear",
+      "Minimal premium design for wide market acceptance"
     ],
-    description: "The CPST (Cotton Polyester Sports Trouser) is engineered for athletes and active wear. The cotton-polyester blend delivers the breathability of cotton with the performance properties of polyester — moisture management, stretch, and durability. Used extensively by athletics clubs, gym chains, and football academies as part of full training kits. A natural pairing with our polyester jersey range for complete coordinated kit supply.",
+    description: "These men's premium cargo jogger pants are designed for modern urban fashion and functional everyday wear. The light grey colour enhances versatility, making it easy to pair with multiple outfit styles, while the cargo pockets add both functionality and a structured streetwear appeal. Ideal for resellers, distributors, and fashion brands.",
     customizations: [
-      "Side panel sublimation or print",
-      "Custom logo on waistband or leg",
-      "Custom colour options available",
-      "Custom tags and labels",
-      "Custom drawstring and trim colours"
+      "Logo customization (print / embroidery)",
+      "Fabric and colour customization",
+      "Pocket design modification",
+      "Custom packaging options"
     ],
     industryUse: {
-      clubs: "Training trousers for sports and athletics clubs",
-      teams: "Full training kit bottom for professional teams",
-      resellers: "Performance bottom for sports uniform and kit suppliers"
+      clubs: "High-demand neutral colour product",
+      teams: "Easy-to-sell versatile jogger",
+      resellers: "Suitable for Africa & global markets"
+    }
+  },
+  {
+    id: "trouser-cargo-navy",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/trousers-p3.png",
+    name: "Men's Premium Cargo Jogger Pants – Navy Blue",
+    shortName: "Cargo Jogger – Navy Blue",
+    category: "trousers",
+    subcategory: "casual",
+    collar: null,
+    sleeve: null,
+    material: "Cotton Blend",
+    gsm: "280 GSM",
+    fit: "Slim Tapered Fit",
+    color: "Navy Blue",
+    moq: 500,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Casual Wear, Travel, Smart Casual, Daily Wear",
+    features: [
+      "Premium cotton blend fabric for comfort and durability",
+      "Structured look with clean front waist design",
+      "Multiple cargo pockets for utility and style",
+      "Back flap pocket for added functionality",
+      "Elasticated back waistband for flexible fit",
+      "Strong stitching for long-term use",
+      "Smooth finish suitable for both casual & semi-formal wear",
+      "Minimal premium design for broad market acceptance"
+    ],
+    description: "These men's premium cargo jogger pants are designed for modern urban wear, combining functionality with a clean and refined look. The navy blue colour enhances versatility and premium appeal, making it suitable for both casual and smart-casual styling. The clean front waist combined with an elastic back ensures a polished appearance with added comfort. Ideal for resellers, distributors, and apparel brands.",
+    customizations: [
+      "Logo customization (print / embroidery)",
+      "Fabric and colour customization",
+      "Pocket style modification",
+      "Custom packaging options"
+    ],
+    industryUse: {
+      clubs: "High-demand versatile bottomwear",
+      teams: "Easy-to-sell premium jogger",
+      resellers: "Ideal for Africa & global markets"
     }
   }
 ];
@@ -996,17 +954,17 @@ function getProductsByCategory(category) {
   return PRODUCTS.filter(p => p.category === category);
 }
 
-// Helper: build WhatsApp message
-function buildWhatsAppMessage(product) {
-  const msg = `Hi Paanthera! I'm interested in the *${product.name}*.\n\nProduct: ${product.name}\nMaterial: ${product.material}\n${product.collar ? 'Collar: ' + product.collar.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase()) + '\n' : ''}${product.sleeve ? 'Sleeve: ' + product.sleeve.replace(/\b\w/g,c=>c.toUpperCase()) + ' Sleeve\n' : ''}\nCould you please share pricing, availability, and customization details? Thank you!`;
-  return `https://wa.me/917387427007?text=${encodeURIComponent(msg)}`;
+// Helper: build enquiry message for product
+function buildEnquiryMessage(product) {
+  return `Hi Paanthera! I'm interested in the *${product.name}*.\n\nProduct: ${product.name}\nMaterial: ${product.material}\n${product.collar ? 'Collar: ' + product.collar.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase()) + '\n' : ''}${product.sleeve ? 'Sleeve: ' + product.sleeve.replace(/\b\w/g,c=>c.toUpperCase()) + ' Sleeve\n' : ''}\nCould you please share pricing, availability, and customization details? Thank you!`;
 }
 
 // Category meta
 const CATEGORIES = {
-  all:       { label: "All Products", count: PRODUCTS.length },
-  polyester: { label: "Polyester Jerseys", count: PRODUCTS.filter(p => p.category === 'polyester').length },
-  cotton:    { label: "Cotton T-Shirts", count: PRODUCTS.filter(p => p.category === 'cotton').length },
-  shorts:    { label: "Shorts", count: PRODUCTS.filter(p => p.category === 'shorts').length },
-  trousers:  { label: "Trousers", count: PRODUCTS.filter(p => p.category === 'trousers').length }
+  all:       { label: "All Products" },
+  polyester: { label: "Polyester Jerseys" },
+  cotton:    { label: "Cotton T-Shirts" },
+  shirts:    { label: "Cotton Shirts" },
+  shorts:    { label: "Shorts" },
+  trousers:  { label: "Trousers" }
 };

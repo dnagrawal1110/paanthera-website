@@ -132,6 +132,7 @@
         <a href="catalog.html" class="sub-filter-btn active">All Products</a>
         <a href="catalog.html?cat=polyester" class="sub-filter-btn">Polyester Jerseys</a>
         <a href="catalog.html?cat=cotton" class="sub-filter-btn">Cotton T-Shirts</a>
+        <a href="catalog.html?cat=shirts" class="sub-filter-btn">Cotton Shirts</a>
         <a href="catalog.html?cat=shorts" class="sub-filter-btn">Shorts</a>
       </div>
 
@@ -274,6 +275,7 @@
           <ul role="list">
             <li><a href="catalog.html?cat=polyester">Polyester Jerseys</a></li>
             <li><a href="catalog.html?cat=cotton">Cotton T-Shirts</a></li>
+            <li><a href="catalog.html?cat=shirts">Cotton Shirts</a></li>
             <li><a href="catalog.html?cat=shorts">Shorts</a></li>
           </ul>
           <h4 style="margin-top:20px">Legal</h4>
@@ -437,6 +439,14 @@
       m.classList.remove('open');
       document.body.style.overflow = '';
     }
+    // Auto-open after 4 seconds (once per session)
+    if (!sessionStorage.getItem('enq-shown')) {
+      setTimeout(() => {
+        openEnquiryModal();
+        sessionStorage.setItem('enq-shown', '1');
+      }, 4000);
+    }
+
     // Close on Escape
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeEnquiryModal(); });
 
