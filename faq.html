@@ -239,8 +239,12 @@
   </div>
 
   <!-- ══════════════════ HERO ══════════════════ -->
-  <header class="faq-hero" aria-labelledby="faq-heading">
-    <div class="container">
+  <header class="faq-hero" aria-labelledby="faq-heading" style="position:relative;overflow:hidden">
+    <!-- Decorative panther watermark -->
+    <div aria-hidden="true" style="position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:55%;max-width:700px;opacity:0.04;pointer-events:none;display:flex;align-items:center;justify-content:center">
+      <img src="https://pub-c157d1d153874174bc99b77d00766615.r2.dev/logos/PaantheraLogo.png" alt="" style="width:100%;filter:grayscale(1)">
+    </div>
+    <div class="container" style="position:relative;z-index:1">
       <div class="subheading fade-up" style="margin-bottom:14px">Support &amp; Legal</div>
       <h1 id="faq-heading" class="fade-up delay-1" style="font-family:var(--font-serif);font-size:clamp(2.4rem,5vw,4rem);font-weight:600;color:var(--white);line-height:1.1;max-width:14ch">
         Frequently Asked<br><em>Questions</em>
@@ -252,230 +256,171 @@
     </div>
   </header>
 
-  <!-- ══════════════════ MAIN CONTENT ══════════════════ -->
-  <section class="section" aria-label="FAQ and Legal">
+  <!-- ══════════════════ FAQ ══════════════════ -->
+  <section class="section" aria-label="Frequently Asked Questions">
     <div class="container">
 
-      <!-- Tab Navigation -->
-      <div class="faq-tabs" role="tablist" aria-label="FAQ sections">
-        <button class="faq-tab active" data-panel="general" role="tab" aria-selected="true">General</button>
-        <button class="faq-tab" data-panel="bulk" role="tab" aria-selected="false">Bulk &amp; Wholesale</button>
-        <button class="faq-tab" data-panel="terms" role="tab" aria-selected="false">Terms &amp; Conditions</button>
-        <button class="faq-tab" data-panel="privacy" role="tab" aria-selected="false">Privacy Policy</button>
-        <button class="faq-tab" data-panel="tos" role="tab" aria-selected="false">Terms of Service</button>
-      </div>
+      <div class="faq-list">
 
-      <!-- ─── PANEL: General FAQ ─── -->
-      <div id="panel-general" class="faq-panel active" role="tabpanel">
-        <div class="faq-category-label">General Questions</div>
-        <div class="faq-list">
-
-          <details class="faq-item fade-up">
-            <summary class="faq-question">
-              <h4>Are your clothes good quality?</h4>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </summary>
-            <div class="faq-answer">
-              Yes. We use premium fabrics and conduct thorough quality checks on every product before shipping. Our manufacturing process is held to international export standards, ensuring that every piece you receive — from stitching to finishing — reflects the quality that Paanthera stands for.
-            </div>
-          </details>
-
-          <details class="faq-item fade-up delay-1">
-            <summary class="faq-question">
-              <h4>What sizes do you offer?</h4>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </summary>
-            <div class="faq-answer">
-              We offer a full size range: <strong style="color:var(--white2)">S, M, L, XL, and XXL</strong> across all standard products. Custom sizes are also available on request for bulk orders. Please contact us with your specific size requirements and we'll advise accordingly.
-            </div>
-          </details>
-
-        </div>
-
-        <!-- Still have questions CTA -->
-        <div class="faq-cta-box fade-up delay-3" style="margin-top:52px">
-          <h3>Still Have Questions?</h3>
-          <p>Our team is ready to help. Send us an enquiry and our team will respond within 24 hours.</p>
-          <div class="faq-cta-btns">
-            <a href="enquiry.html" class="btn btn-gold">Enquire Now</a>
-            <a href="catalog.html" class="btn btn-outline">Browse Catalog</a>
+        <details class="faq-item fade-up">
+          <summary class="faq-question">
+            <h4>Are your clothes good quality?</h4>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            Yes. We use premium fabrics and conduct thorough quality checks on every product before shipping. Our manufacturing process is held to international export standards, ensuring that every piece you receive — from stitching to finishing — reflects the quality that Paanthera stands for.
           </div>
-        </div>
-      </div>
+        </details>
 
-      <!-- ─── PANEL: Bulk & Wholesale ─── -->
-      <div id="panel-bulk" class="faq-panel" role="tabpanel">
-        <div class="faq-category-label">Bulk &amp; Wholesale</div>
-        <div class="faq-list">
-
-          <details class="faq-item fade-up">
-            <summary class="faq-question">
-              <h4>Do you accept bulk or wholesale orders?</h4>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </summary>
-            <div class="faq-answer">
-              Yes — bulk and wholesale orders are our speciality. We work with wholesalers, sports clubs, retailers, and distributors across global markets. Whether you need 500 pieces or 20,000, we have the production capacity and export infrastructure to deliver consistently.
-            </div>
-          </details>
-
-          <details class="faq-item fade-up delay-1">
-            <summary class="faq-question">
-              <h4>What is your Minimum Order Quantity (MOQ)?</h4>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </summary>
-            <div class="faq-answer">
-              Our MOQ varies by product type — typically starting from <strong style="color:var(--white2)">500 pieces per style</strong>. For custom orders with specific branding, colours, or labels, the MOQ may differ. Please contact us directly with your product requirements and we'll provide a tailored quote.
-            </div>
-          </details>
-
-          <details class="faq-item fade-up delay-2">
-            <summary class="faq-question">
-              <h4>What are your production timelines for bulk orders?</h4>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </summary>
-            <div class="faq-answer">
-              Production timelines vary depending on the quantity, customisation complexity, and current production schedule. We ensure timely delivery with consistent quality at every stage. Once your order is confirmed, we'll provide a precise timeline and keep you updated throughout production.
-            </div>
-          </details>
-
-          <details class="faq-item fade-up delay-2">
-            <summary class="faq-question">
-              <h4>Do you offer custom designs?</h4>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </summary>
-            <div class="faq-answer">
-              Yes. We offer comprehensive customisation options for businesses: custom colours, chest logo printing, back branding, sleeve prints, custom tags, private labelling, and more. Share your artwork and requirements and our team will guide you through the process.
-            </div>
-          </details>
-
-          <details class="faq-item fade-up delay-3">
-            <summary class="faq-question">
-              <h4>What payment terms do you offer for bulk orders?</h4>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </summary>
-            <div class="faq-answer">
-              Payment terms are flexible and tailored to the order size and our working relationship. Our team will walk you through the available options — including advance payment structures and milestone-based payments for larger orders. Reach out to discuss terms that work for both parties.
-            </div>
-          </details>
-
-          <details class="faq-item fade-up delay-3">
-            <summary class="faq-question">
-              <h4>Do you handle international shipping for bulk orders?</h4>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </summary>
-            <div class="faq-answer">
-              Yes. We manage end-to-end international shipping with proper packaging, export documentation, and logistics coordination. We have an established export track record, particularly to South Africa, and are equipped to handle customs requirements for multiple international markets.
-            </div>
-          </details>
-
-          <details class="faq-item fade-up delay-4">
-            <summary class="faq-question">
-              <h4>What about quality assurance for bulk production?</h4>
-              <span class="faq-icon" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </summary>
-            <div class="faq-answer">
-              Quality is built into every stage of our process. We follow strict quality checks from fabric procurement through cutting, stitching, finishing, and final inspection — ensuring consistency in sizing, colour, and construction across every piece in your order. Our goal is zero surprises when your shipment arrives.
-            </div>
-          </details>
-
-        </div>
-
-        <!-- Still have questions CTA -->
-        <div class="faq-cta-box fade-up" style="margin-top:52px">
-          <h3>Ready to Place a Bulk Order?</h3>
-          <p>Get in touch directly — our team will respond with pricing, availability, and a tailored proposal for your requirements.</p>
-          <div class="faq-cta-btns">
-            <a href="enquiry.html" class="btn btn-gold">Enquire Now</a>
-            <a href="catalog.html" class="btn btn-outline">View Full Catalog</a>
+        <details class="faq-item fade-up delay-1">
+          <summary class="faq-question">
+            <h4>What sizes do you offer?</h4>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            We offer a full size range: <strong style="color:var(--white2)">S, M, L, XL, and XXL</strong> across all standard products. Custom sizes are also available on request for bulk orders. Please contact us with your specific size requirements and we'll advise accordingly.
           </div>
-        </div>
-      </div>
+        </details>
 
-      <!-- ─── PANEL: Terms & Conditions ─── -->
-      <div id="panel-terms" class="faq-panel" role="tabpanel">
-        <div class="faq-category-label gold">Legal</div>
-
-        <div class="legal-section fade-up">
-          <h3>Terms &amp; Conditions</h3>
-          <p>Welcome to <strong style="color:var(--white2)">PAANTHERA</strong>. By accessing or using our website, you agree to comply with our terms and policies. All products displayed are subject to availability, and we reserve the right to update pricing, specifications, or content without prior notice.</p>
-          <p>We strive to ensure accurate product representation; however, slight variations in colour, texture, or finish may occur due to screen settings or manufacturing processes. Unauthorised use of our content, designs, or brand identity is strictly prohibited.</p>
-          <p>By placing an order, you confirm that all provided information is accurate and that you agree to our policies regarding payments, shipping, and returns.</p>
-        </div>
-
-        <hr class="legal-divider">
-
-        <!-- Still have questions CTA -->
-        <div class="faq-cta-box fade-up">
-          <h3>Still Have Questions?</h3>
-          <p>For any queries about our terms or policies, reach out to us directly — we're happy to clarify anything.</p>
-          <div class="faq-cta-btns">
-            <a href="enquiry.html" class="btn btn-gold">Enquire Now</a>
+        <details class="faq-item fade-up delay-2">
+          <summary class="faq-question">
+            <h4>Do you accept bulk or wholesale orders?</h4>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            Yes — bulk and wholesale orders are our speciality. We work with wholesalers, sports clubs, retailers, and distributors across global markets. Whether you need 500 pieces or 20,000, we have the production capacity and export infrastructure to deliver consistently.
           </div>
-        </div>
-      </div>
+        </details>
 
-      <!-- ─── PANEL: Privacy Policy ─── -->
-      <div id="panel-privacy" class="faq-panel" role="tabpanel">
-        <div class="faq-category-label gold">Legal</div>
-
-        <div class="legal-section fade-up">
-          <h3>Privacy Policy</h3>
-          <p>At <strong style="color:var(--white2)">PAANTHERA</strong>, we value your privacy and are committed to protecting your personal information with the highest level of confidentiality. Any data collected — including contact details and transaction information — is used solely to process orders, improve customer experience, and communicate relevant updates.</p>
-          <p>We do not sell, trade, or share your personal information with third parties, except where required for order fulfilment or legal compliance. All transactions are handled through secure systems to ensure data protection.</p>
-          <p>By using our website, you consent to our privacy practices designed to safeguard your information.</p>
-        </div>
-
-        <hr class="legal-divider">
-
-        <div class="faq-cta-box fade-up">
-          <h3>Questions About Your Data?</h3>
-          <p>If you have any concerns about how your information is handled, please contact us directly.</p>
-          <div class="faq-cta-btns">
-            <a href="enquiry.html" class="btn btn-gold">Enquire Now</a>
+        <details class="faq-item fade-up delay-3">
+          <summary class="faq-question">
+            <h4>What is your Minimum Order Quantity (MOQ)?</h4>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            Our MOQ varies by product type — typically starting from <strong style="color:var(--white2)">500 pieces per style</strong>. For custom orders with specific branding, colours, or labels, the MOQ may differ. Please contact us directly with your product requirements and we'll provide a tailored quote.
           </div>
-        </div>
-      </div>
+        </details>
 
-      <!-- ─── PANEL: Terms of Service ─── -->
-      <div id="panel-tos" class="faq-panel" role="tabpanel">
-        <div class="faq-category-label gold">Legal</div>
-
-        <div class="legal-section fade-up">
-          <h3>Terms of Service</h3>
-          <p>By using our services, you agree to engage with <strong style="color:var(--white2)">PAANTHERA</strong> in a lawful and respectful manner. Our services are intended for legitimate purchasing and business purposes only. Any misuse of the platform — including fraudulent activity or unauthorised access — will result in immediate action.</p>
-          <p>We reserve the right to modify, suspend, or discontinue any part of our services at our discretion to maintain quality and operational standards. While we aim for uninterrupted access, we do not guarantee that the website will always be error-free or continuously available.</p>
-          <p>Your continued use of our services signifies your acceptance of these terms and our commitment to delivering a reliable and premium experience.</p>
-        </div>
-
-        <hr class="legal-divider">
-
-        <div class="faq-cta-box fade-up">
-          <h3>Need Clarification?</h3>
-          <p>Our team is always available to clarify any aspect of our terms before you commit to a partnership.</p>
-          <div class="faq-cta-btns">
-            <a href="enquiry.html" class="btn btn-gold">Enquire Now</a>
+        <details class="faq-item fade-up">
+          <summary class="faq-question">
+            <h4>What are your production timelines for bulk orders?</h4>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            Production timelines vary depending on the quantity, customisation complexity, and current production schedule. We ensure timely delivery with consistent quality at every stage. Once your order is confirmed, we'll provide a precise timeline and keep you updated throughout production.
           </div>
+        </details>
+
+        <details class="faq-item fade-up delay-1">
+          <summary class="faq-question">
+            <h4>Do you offer custom designs?</h4>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            Yes. We offer comprehensive customisation options for businesses: custom colours, chest logo printing, back branding, sleeve prints, custom tags, private labelling, and more. Share your artwork and requirements and our team will guide you through the process.
+          </div>
+        </details>
+
+        <details class="faq-item fade-up delay-2">
+          <summary class="faq-question">
+            <h4>What payment terms do you offer for bulk orders?</h4>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            Payment terms are flexible and tailored to the order size and our working relationship. Our team will walk you through the available options — including advance payment structures and milestone-based payments for larger orders. Reach out to discuss terms that work for both parties.
+          </div>
+        </details>
+
+        <details class="faq-item fade-up delay-3">
+          <summary class="faq-question">
+            <h4>Do you handle international shipping?</h4>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            Yes. We manage end-to-end international shipping with proper packaging, export documentation, and logistics coordination. We have an established export track record across global markets and are equipped to handle customs requirements for multiple international destinations.
+          </div>
+        </details>
+
+        <details class="faq-item fade-up">
+          <summary class="faq-question">
+            <h4>What about quality assurance for bulk production?</h4>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            Quality is built into every stage of our process. We follow strict quality checks from fabric procurement through cutting, stitching, finishing, and final inspection — ensuring consistency in sizing, colour, and construction across every piece in your order. Our goal is zero surprises when your shipment arrives.
+          </div>
+        </details>
+
+      </div>
+
+      <!-- CTA box -->
+      <div class="faq-cta-box fade-up" style="margin-top:52px">
+        <h3>Still Have Questions?</h3>
+        <p>Get in touch directly — our team will respond with pricing, availability, and a tailored proposal for your requirements.</p>
+        <div class="faq-cta-btns">
+          <a href="enquiry.html" class="btn btn-gold">Send Enquiry</a>
+          <a href="catalog.html" class="btn btn-outline">Browse Catalog</a>
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ══════════════════ LEGAL ══════════════════ -->
+  <section style="background:var(--dark2);border-top:1px solid var(--border);padding:80px 0" aria-label="Legal">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:56px" class="fade-up">
+        <div class="subheading" style="margin-bottom:10px">Legal</div>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);color:var(--white)">Policies &amp; Terms</h2>
+        <div class="gold-line center" style="margin:20px auto 0"></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:0 auto">
+
+        <!-- Terms & Conditions -->
+        <div id="terms" class="fade-up delay-1" style="background:var(--mid);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:16px;padding:36px 32px">
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">Terms &amp; Conditions</div>
+          <p style="color:var(--grey);font-size:0.88rem;line-height:1.8;margin-bottom:12px">Welcome to <strong style="color:var(--white2)">PAANTHERA</strong>. By accessing or using our website, you agree to comply with our terms and policies. All products displayed are subject to availability, and we reserve the right to update pricing, specifications, or content without prior notice.</p>
+          <p style="color:var(--grey);font-size:0.88rem;line-height:1.8;margin-bottom:12px">We strive to ensure accurate product representation; however, slight variations in colour, texture, or finish may occur due to screen settings or manufacturing processes. Unauthorised use of our content, designs, or brand identity is strictly prohibited.</p>
+          <p style="color:var(--grey);font-size:0.88rem;line-height:1.8">By placing an order, you confirm that all provided information is accurate and that you agree to our policies regarding payments, shipping, and returns.</p>
+        </div>
+
+        <!-- Privacy Policy -->
+        <div id="privacy" class="fade-up delay-2" style="background:var(--mid);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:16px;padding:36px 32px">
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">Privacy Policy</div>
+          <p style="color:var(--grey);font-size:0.88rem;line-height:1.8;margin-bottom:12px">At <strong style="color:var(--white2)">PAANTHERA</strong>, we value your privacy and are committed to protecting your personal information. Any data collected — including contact details and transaction information — is used solely to process orders, improve customer experience, and communicate relevant updates.</p>
+          <p style="color:var(--grey);font-size:0.88rem;line-height:1.8;margin-bottom:12px">We do not sell, trade, or share your personal information with third parties, except where required for order fulfilment or legal compliance. All transactions are handled through secure systems to ensure data protection.</p>
+          <p style="color:var(--grey);font-size:0.88rem;line-height:1.8">By using our website, you consent to our privacy practices designed to safeguard your information.</p>
+        </div>
+
+        <!-- Terms of Service -->
+        <div id="tos" class="fade-up delay-3" style="background:var(--mid);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:16px;padding:36px 32px">
+          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px">Terms of Service</div>
+          <p style="color:var(--grey);font-size:0.88rem;line-height:1.8;margin-bottom:12px">By using our services, you agree to engage with <strong style="color:var(--white2)">PAANTHERA</strong> in a lawful and respectful manner. Our services are intended for legitimate purchasing and business purposes only. Any misuse of the platform — including fraudulent activity or unauthorised access — will result in immediate action.</p>
+          <p style="color:var(--grey);font-size:0.88rem;line-height:1.8;margin-bottom:12px">We reserve the right to modify, suspend, or discontinue any part of our services at our discretion to maintain quality and operational standards. While we aim for uninterrupted access, we do not guarantee that the website will always be error-free or continuously available.</p>
+          <p style="color:var(--grey);font-size:0.88rem;line-height:1.8">Your continued use of our services signifies your acceptance of these terms and our commitment to delivering a reliable and premium experience.</p>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -506,9 +451,9 @@
           </ul>
           <h4 style="margin-top:20px">Legal</h4>
           <ul role="list">
-            <li><a href="faq.html?tab=terms">Terms &amp; Conditions</a></li>
-            <li><a href="faq.html?tab=privacy">Privacy Policy</a></li>
-            <li><a href="faq.html?tab=tos">Terms of Service</a></li>
+            <li><a href="faq.html#terms">Terms &amp; Conditions</a></li>
+            <li><a href="faq.html#privacy">Privacy Policy</a></li>
+            <li><a href="faq.html#tos">Terms of Service</a></li>
           </ul>
         </div>
         <div class="footer-col footer-contact">
@@ -541,28 +486,12 @@
   <script src="js/products.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // Tab switching
-    const tabs  = document.querySelectorAll('.faq-tab');
-    const panels = document.querySelectorAll('.faq-panel');
-
-    function activateTab(panelId) {
-      tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
-      panels.forEach(p => p.classList.remove('active'));
-      const btn = document.querySelector(`[data-panel="${panelId}"]`);
-      const panel = document.getElementById(`panel-${panelId}`);
-      if (btn)   { btn.classList.add('active'); btn.setAttribute('aria-selected','true'); }
-      if (panel) { panel.classList.add('active'); reObserveFadeUps(); }
-    }
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => activateTab(tab.dataset.panel));
-    });
-
-    // Support ?tab= URL param for direct linking from footer
+    // Smooth scroll to legal section if anchor provided
     document.addEventListener('DOMContentLoaded', () => {
-      const params = new URLSearchParams(window.location.search);
-      const tab = params.get('tab');
-      if (tab) activateTab(tab);
+      if (window.location.hash) {
+        const el = document.querySelector(window.location.hash);
+        if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 200);
+      }
     });
   </script>
 </body>

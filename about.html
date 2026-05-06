@@ -40,8 +40,12 @@
   </div>
 
   <!-- ══════════════════ ABOUT HERO ══════════════════ -->
-  <header class="about-hero" aria-labelledby="about-heading">
-    <div class="container">
+  <header class="about-hero" aria-labelledby="about-heading" style="position:relative;overflow:hidden">
+    <!-- Decorative panther watermark -->
+    <div aria-hidden="true" style="position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:55%;max-width:700px;opacity:0.04;pointer-events:none;display:flex;align-items:center;justify-content:center">
+      <img src="https://pub-c157d1d153874174bc99b77d00766615.r2.dev/logos/PaantheraLogo.png" alt="" style="width:100%;filter:grayscale(1)">
+    </div>
+    <div class="container" style="position:relative;z-index:1">
       <div class="subheading fade-up" style="margin-bottom:14px">Our Story</div>
       <h1 id="about-heading" class="fade-up delay-1">
         Dressed for<br>
@@ -463,9 +467,9 @@
           </ul>
           <h4 style="margin-top:20px">Legal</h4>
           <ul role="list">
-            <li><a href="faq.html?tab=terms">Terms &amp; Conditions</a></li>
-            <li><a href="faq.html?tab=privacy">Privacy Policy</a></li>
-            <li><a href="faq.html?tab=tos">Terms of Service</a></li>
+            <li><a href="faq.html#terms">Terms &amp; Conditions</a></li>
+            <li><a href="faq.html#privacy">Privacy Policy</a></li>
+            <li><a href="faq.html#tos">Terms of Service</a></li>
           </ul>
         </div>
         <div class="footer-col footer-contact">
