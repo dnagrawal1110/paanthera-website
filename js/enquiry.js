@@ -160,7 +160,7 @@ function renderEnquiryForm(containerId, options = {}) {
           <label class="enq-label" for="enq-quantity">Quantity Required</label>
           <select class="enq-input enq-select" id="enq-quantity" name="quantity">
             <option value="">Select quantity range</option>
-            <option value="200–500 pcs">200 – 500 pieces</option>
+            <option value="500–1000 pcs">500 – 1,000 pieces</option>
             <option value="500–1000 pcs">500 – 1,000 pieces</option>
             <option value="1000–5000 pcs">1,000 – 5,000 pieces</option>
             <option value="5000+ pcs">5,000+ pieces</option>

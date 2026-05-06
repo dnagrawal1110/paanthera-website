@@ -12,7 +12,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "Custom Sublimation Colors Available",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Gym Wear, Training, Sports Activities, Fitness Use",
     features: [
@@ -51,7 +51,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "Custom Sublimation Colors Available",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Gym Wear, Training, Sports Activities, Fitness Use",
     features: [
@@ -90,7 +90,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "Custom Sublimation Colors Available",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Sports, Teamwear, Training, Athletic Events",
     features: [
@@ -129,7 +129,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "Dark Green with Contrast Tipping Detail",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Sports Activities, Training, Casual Wear, Teamwear",
     features: [
@@ -168,7 +168,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "Custom Sublimation Colors Available",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Sports Activities, Training, Smart Casual, Teamwear",
     features: [
@@ -207,7 +207,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "Custom Sublimation Colors Available",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Sports, Gym, Athletic Wear, Teamwear",
     features: [
@@ -248,7 +248,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "White / Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Gym Wear, Training, Sports Activities, Fitness Use",
     features: [
@@ -287,7 +287,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Gym Wear, Fitness, Training, Sports",
     features: [
@@ -326,7 +326,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Gym Wear, Outdoor Training, Sports, Fitness",
     features: [
@@ -365,7 +365,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Sports, Gym, Athletic Wear, Smart Casual",
     features: [
@@ -404,7 +404,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "Deep Green",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Sports, Training, Teamwear, Activewear",
     features: [
@@ -443,7 +443,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "Dark Green with Contrast Tipping Detail",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Sports Activities, Training, Casual Wear, Teamwear",
     features: [
@@ -482,7 +482,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Sports, Training, Teamwear, Corporate Events",
     features: [
@@ -521,7 +521,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Slim Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Sports, Training, Team Events, Activewear",
     features: [
@@ -562,7 +562,7 @@ const PRODUCTS = [
     material: "100% Premium Cotton",
     fit: "Regular Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Casual Wear, Everyday Use, Promotional Wear",
     features: [
@@ -601,7 +601,7 @@ const PRODUCTS = [
     material: "100% Premium Cotton",
     fit: "Regular Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Casual Wear, Everyday Use, All-Season Wear",
     features: [
@@ -640,7 +640,7 @@ const PRODUCTS = [
     material: "100% Premium Cotton",
     fit: "Regular Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Casual Wear, Street Style, Everyday Use",
     features: [
@@ -679,7 +679,7 @@ const PRODUCTS = [
     material: "100% Premium Cotton",
     fit: "Regular Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Smart Casual, Work Wear, Casual Fridays, Corporate",
     features: [
@@ -718,7 +718,7 @@ const PRODUCTS = [
     material: "100% Premium Cotton",
     fit: "Regular Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Casual Wear, Everyday Use, All-Season Style",
     features: [
@@ -757,7 +757,7 @@ const PRODUCTS = [
     material: "100% Premium Cotton",
     fit: "Regular Fit",
     color: "Olive Green",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Casual Wear, Street Style, Outdoor Lifestyle",
     features: [
@@ -798,7 +798,7 @@ const PRODUCTS = [
     material: "100% Premium Cotton",
     fit: "Regular Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Gym Wear, Training, Fitness, Active Use",
     features: [
@@ -837,7 +837,7 @@ const PRODUCTS = [
     material: "100% Premium Cotton",
     fit: "Regular Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Casual Wear, Leisure, Everyday Use, Beach",
     features: [
@@ -876,7 +876,7 @@ const PRODUCTS = [
     material: "100% Polyester Performance Fabric",
     fit: "Athletic Fit",
     color: "Custom Sublimation Colors Available",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Sports, Football, Athletics, Training, Teamwear",
     features: [
@@ -917,7 +917,7 @@ const PRODUCTS = [
     material: "100% Premium Cotton",
     fit: "Regular Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Casual Wear, Everyday Use, Corporate Casual",
     features: [
@@ -956,7 +956,7 @@ const PRODUCTS = [
     material: "Cotton-Polyester Performance Blend",
     fit: "Athletic Fit",
     color: "Multiple Colour Options",
-    moq: 200,
+    moq: 500,
     sizes: ["S", "M", "L", "XL", "XXL"],
     occasion: "Sports Training, Athletics, Gym, Active Use",
     features: [

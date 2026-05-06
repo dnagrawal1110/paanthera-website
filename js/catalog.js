@@ -138,12 +138,7 @@ function updateSubFilters() {
 }
 
 function updateTabCounts() {
-  document.querySelectorAll('[data-cat-tab]').forEach(tab => {
-    const cat = tab.dataset.catTab;
-    const count = cat === 'all' ? VISIBLE_PRODUCTS.length : VISIBLE_PRODUCTS.filter(p => p.category === cat).length;
-    const badge = tab.querySelector('.filter-count');
-    if (badge) badge.textContent = count;
-  });
+  // Count badges removed — no-op
 }
 
 function initCatalog() {
