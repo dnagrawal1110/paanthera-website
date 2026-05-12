@@ -203,7 +203,6 @@ function buildProductCard(product, linkPrefix = '') {
           ${specs.map(s => `<span class="spec-pill">${s}</span>`).join('')}
         </div>
         <div class="card-footer">
-          <div class="card-moq">MOQ <strong>${product.moq} pcs</strong></div>
           <a href="${linkPrefix}product.html?id=${product.id}" class="btn-ghost" style="font-size:0.72rem">Details</a>
         </div>
       </div>

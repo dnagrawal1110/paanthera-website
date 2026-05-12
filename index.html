@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paanthera — Export-Grade Activewear, Crafted in India</title>
-  <meta name="description" content="Premium polyester jerseys and sportswear for wholesalers, clubs, and retailers across Africa and beyond. MOQ 500 pcs. Full customisation available.">
+  <meta name="description" content="Premium polyester jerseys and sportswear for wholesalers, clubs, and retailers across Africa and beyond. Export-ready, fully customisable.">
   <link rel="stylesheet" href="css/style.css">
   <!-- Favicon placeholder -->
   <link rel="icon" type="image/png" href="https://pub-c157d1d153874174bc99b77d00766615.r2.dev/logos/PaantheraLogo.png">
@@ -14,15 +14,15 @@
   <!-- ══════════════════ NAVBAR ══════════════════ -->
   <nav class="navbar transparent" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo-wrap" aria-label="Paanthera Home">
+      <a href="index.html" class="nav-logo-wrap" aria-label="Paanthera Home" style="display:flex;align-items:center;gap:10px;text-decoration:none">
         <img src="https://pub-c157d1d153874174bc99b77d00766615.r2.dev/logos/PaantheraLogo.png" alt="Paanthera" class="nav-logo" id="nav-logo">
+        <span style="font-family:var(--font-serif);font-size:1.35rem;font-weight:600;color:var(--white);letter-spacing:0.04em;line-height:1">Paanthera</span>
       </a>
 
       <ul class="nav-links" role="list">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="catalog.html">Catalog</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="faq.html">FAQ</a></li>
       </ul>
 
       <div class="nav-cta">
@@ -39,7 +39,6 @@
     <a href="index.html">Home</a>
     <a href="catalog.html">Catalog</a>
     <a href="about.html">About Us</a>
-    <a href="#contact">Contact</a>
     <a href="enquiry.html" class="btn btn-gold" style="text-align:center;margin-top:8px">Enquire Now</a>
   </div>
 
@@ -74,10 +73,10 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 6h16M4 10h16M4 14h10"/></svg>
             View Full Catalog
           </a>
-          <button class="btn btn-gold" id="hero-enquire-btn" onclick="openEnquiryModal()">
+          <a href="enquiry.html" class="btn btn-gold">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            Send Enquiry
-          </button>
+            Enquire Now
+          </a>
         </div>
         <div class="hero-scroll" aria-hidden="true">
           <div class="scroll-line"></div>
@@ -86,6 +85,45 @@
       </div>
     </div>
   </section>
+
+  <!-- ══════════════════ MANUFACTURING VIDEO ══════════════════ -->
+  <section style="background:var(--black);padding:72px 0;border-bottom:1px solid var(--border)" aria-label="Manufacturing video">
+    <div class="container">
+      <div class="section-header fade-up" style="margin-bottom:40px">
+        <div class="subheading">Craftsmanship</div>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.8rem,3vw,2.6rem);color:var(--white)">Made in India. Built for the World.</h2>
+        <div class="gold-line"></div>
+      </div>
+      <!-- Click-to-play lite embed -->
+      <div id="mfg-video-wrap" class="fade-up" style="position:relative;max-width:900px;margin:0 auto;border-radius:16px;overflow:hidden;cursor:pointer;border:1px solid var(--border);box-shadow:0 24px 80px rgba(0,0,0,0.5)" onclick="loadMfgVideo(this)">
+        <!-- Thumbnail -->
+        <img id="mfg-thumb"
+          src="https://drive.google.com/thumbnail?id=1_kl_cTWEnyZP_zDzgNgITY6Qyf8lIp21&sz=w1280"
+          alt="Paanthera manufacturing facility"
+          style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover"
+          onerror="this.style.background='var(--mid)';this.style.minHeight='360px'">
+        <!-- Play button overlay -->
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.35);transition:background 0.2s"
+          onmouseover="this.style.background='rgba(0,0,0,0.2)'" onmouseout="this.style.background='rgba(0,0,0,0.35)'">
+          <div style="width:72px;height:72px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 12px rgba(201,169,110,0.2);transition:transform 0.2s"
+            onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#0D0D0D"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function loadMfgVideo(wrap) {
+      wrap.innerHTML = `<iframe
+        src="https://drive.google.com/file/d/1_kl_cTWEnyZP_zDzgNgITY6Qyf8lIp21/preview"
+        style="width:100%;aspect-ratio:16/9;display:block;border:0"
+        allow="autoplay"
+        allowfullscreen
+        title="Paanthera Manufacturing">
+      </iframe>`;
+    }
+  </script>
 
   <!-- ══════════════════ STATS BAR ══════════════════ -->
   <section class="stats-bar" aria-label="Key statistics">
@@ -96,12 +134,6 @@
             <span data-counter="25" data-suffix="+">25+</span>
           </div>
           <div class="stat-label">Products in Range</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">
-            <span data-counter="500" data-suffix=" pc">500 pc</span>
-          </div>
-          <div class="stat-label">Minimum Order Qty</div>
         </div>
         <div class="stat-item">
           <div class="stat-num">
@@ -317,64 +349,79 @@
 
   <!-- ══════════════════ QUICK ENQUIRY MODAL ══════════════════ -->
   <div id="enquiry-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display:none;position:fixed;inset:0;z-index:9000;align-items:center;justify-content:center;padding:16px">
-    <!-- Backdrop -->
-    <div id="modal-backdrop" onclick="closeEnquiryModal()" style="position:absolute;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px)"></div>
-    <!-- Card -->
+    <div onclick="closeEnquiryModal()" style="position:absolute;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px)"></div>
     <div style="position:relative;z-index:1;background:var(--dark);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:20px;padding:40px 36px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto">
-      <!-- Close -->
       <button onclick="closeEnquiryModal()" aria-label="Close" style="position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;color:var(--grey);padding:4px;line-height:1">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
       </button>
-      <!-- Header -->
       <div style="margin-bottom:28px">
         <div class="subheading" style="margin-bottom:8px">Get in Touch</div>
         <h2 id="modal-title" style="font-family:var(--font-serif);font-size:1.7rem;color:var(--white);line-height:1.2;margin:0">Send Us an Enquiry</h2>
       </div>
-      <!-- Form -->
       <form id="modal-enq-form" novalidate>
-        <!-- Full Name -->
         <div style="margin-bottom:18px">
           <label for="mq-name" style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white2);margin-bottom:7px">Full Name <span style="color:var(--red)">*</span></label>
           <input id="mq-name" name="name" type="text" placeholder="John Smith" required
             style="width:100%;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.92rem;padding:12px 16px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;box-sizing:border-box">
           <div id="mq-name-err" style="font-size:0.72rem;color:var(--red);min-height:16px;margin-top:4px"></div>
         </div>
-        <!-- Contact Number -->
-        <div style="margin-bottom:18px">
-          <label for="mq-phone" style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white2);margin-bottom:7px">Contact Number <span style="color:var(--red)">*</span></label>
-          <div style="display:flex;gap:10px">
-            <input id="mq-code" name="countryCode" type="text" placeholder="+27" value=""
-              style="width:90px;flex-shrink:0;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.92rem;padding:12px 14px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;box-sizing:border-box">
-            <input id="mq-phone" name="phone" type="tel" placeholder="71 234 5678" required
-              style="flex:1;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.92rem;padding:12px 16px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;box-sizing:border-box">
-          </div>
-          <div id="mq-phone-err" style="font-size:0.72rem;color:var(--red);min-height:16px;margin-top:4px"></div>
-        </div>
-        <!-- Email -->
         <div style="margin-bottom:18px">
           <label for="mq-email" style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white2);margin-bottom:7px">Email Address <span style="color:var(--red)">*</span></label>
           <input id="mq-email" name="email" type="email" placeholder="john@example.com" required
             style="width:100%;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.92rem;padding:12px 16px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;box-sizing:border-box">
           <div id="mq-email-err" style="font-size:0.72rem;color:var(--red);min-height:16px;margin-top:4px"></div>
         </div>
-        <!-- Location -->
         <div style="margin-bottom:18px">
-          <label for="mq-location" style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white2);margin-bottom:7px">Location / Country <span style="color:var(--red)">*</span></label>
-          <input id="mq-location" name="location" type="text" placeholder="Johannesburg, South Africa" required
-            style="width:100%;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.92rem;padding:12px 16px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;box-sizing:border-box">
-          <div id="mq-location-err" style="font-size:0.72rem;color:var(--red);min-height:16px;margin-top:4px"></div>
+          <label for="mq-phone" style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white2);margin-bottom:7px">Contact Number <span style="color:var(--red)">*</span></label>
+          <div style="display:flex;gap:10px">
+            <select id="mq-code" name="countryCode"
+              style="width:140px;flex-shrink:0;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.85rem;padding:12px 10px;outline:none;box-sizing:border-box">
+              <option value="+27">🇿🇦 +27</option>
+              <option value="+91">🇮🇳 +91</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+971">🇦🇪 +971</option>
+              <option value="+974">🇶🇦 +974</option>
+              <option value="+966">🇸🇦 +966</option>
+              <option value="+254">🇰🇪 +254</option>
+              <option value="+234">🇳🇬 +234</option>
+              <option value="+263">🇿🇼 +263</option>
+              <option value="+267">🇧🇼 +267</option>
+              <option value="+260">🇿🇲 +260</option>
+              <option value="+255">🇹🇿 +255</option>
+              <option value="+233">🇬🇭 +233</option>
+              <option value="+20">🇪🇬 +20</option>
+              <option value="+212">🇲🇦 +212</option>
+              <option value="+61">🇦🇺 +61</option>
+              <option value="+65">🇸🇬 +65</option>
+              <option value="+49">🇩🇪 +49</option>
+              <option value="+33">🇫🇷 +33</option>
+              <option value="+other">🌍 Other</option>
+            </select>
+            <input id="mq-phone" name="phone" type="tel" placeholder="71 234 5678" required
+              style="flex:1;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.92rem;padding:12px 16px;outline:none;transition:border-color 0.2s,box-shadow 0.2s;box-sizing:border-box">
+          </div>
+          <div id="mq-phone-err" style="font-size:0.72rem;color:var(--red);min-height:16px;margin-top:4px"></div>
         </div>
-        <!-- Message -->
-        <div style="margin-bottom:24px">
-          <label for="mq-message" style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white2);margin-bottom:7px">Message</label>
-          <textarea id="mq-message" name="message" rows="4" placeholder="Tell us about your requirements — product, quantity, customisation…"
+        <div style="margin-bottom:20px">
+          <label for="mq-message" style="display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--white2);margin-bottom:7px">Message / Requirement <span style="color:var(--red)">*</span></label>
+          <textarea id="mq-message" name="message" rows="4" placeholder="Tell us about your requirements — product, quantity, customisation…" required
             style="width:100%;background:var(--mid);border:1px solid var(--border);border-radius:10px;color:var(--white2);font-family:var(--font-sans);font-size:0.92rem;padding:12px 16px;outline:none;resize:vertical;transition:border-color 0.2s,box-shadow 0.2s;box-sizing:border-box"></textarea>
+          <div id="mq-msg-err" style="font-size:0.72rem;color:var(--red);min-height:16px;margin-top:4px"></div>
         </div>
-        <!-- Status -->
+        <!-- Consent -->
+        <div style="margin-bottom:20px">
+          <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;user-select:none">
+            <input type="checkbox" id="mq-consent"
+              style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:var(--gold);cursor:pointer">
+            <span style="font-size:0.82rem;color:var(--grey);line-height:1.55">
+              I am okay with Paanthera contacting me regarding this enquiry
+            </span>
+          </label>
+        </div>
         <div id="mq-status" style="display:none;border-radius:10px;padding:14px 18px;margin-bottom:18px;font-size:0.88rem;line-height:1.6"></div>
-        <!-- Submit -->
-        <button type="submit" id="mq-submit" class="btn btn-gold" style="width:100%;justify-content:center;font-size:0.92rem">
-          <span id="mq-btn-text">Send Enquiry</span>
+        <button type="submit" id="mq-submit" class="btn btn-gold" disabled style="width:100%;justify-content:center;font-size:0.92rem;opacity:0.45;cursor:not-allowed;transition:opacity 0.2s">
+          <span id="mq-btn-text">Enquire Now</span>
         </button>
       </form>
     </div>
@@ -382,7 +429,7 @@
 
   <style>
     #enquiry-modal.open { display:flex !important; }
-    #enquiry-modal input:focus, #enquiry-modal textarea:focus {
+    #enquiry-modal input:focus, #enquiry-modal textarea:focus, #enquiry-modal select:focus {
       border-color: var(--gold) !important;
       box-shadow: 0 0 0 3px rgba(201,169,110,0.12) !important;
     }
@@ -394,6 +441,7 @@
   <!-- ══════════════════ SCRIPTS ══════════════════ -->
   <script src="js/products.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/enquiry.js"></script>
   <script>
     // Render 6 featured products (one from each category + mix)
     document.addEventListener('DOMContentLoaded', () => {
@@ -435,10 +483,21 @@
       document.getElementById('mq-name').focus();
     }
     function closeEnquiryModal() {
-      const m = document.getElementById('enquiry-modal');
-      m.classList.remove('open');
+      document.getElementById('enquiry-modal').classList.remove('open');
       document.body.style.overflow = '';
     }
+
+    // Consent checkbox enables/disables submit
+    document.addEventListener('DOMContentLoaded', () => {
+      const consent = document.getElementById('mq-consent');
+      const btn     = document.getElementById('mq-submit');
+      consent.addEventListener('change', () => {
+        btn.disabled       = !consent.checked;
+        btn.style.opacity  = consent.checked ? '1'       : '0.45';
+        btn.style.cursor   = consent.checked ? 'pointer' : 'not-allowed';
+      });
+    });
+
     // Auto-open after 4 seconds (once per session)
     if (!sessionStorage.getItem('enq-shown')) {
       setTimeout(() => {
@@ -447,65 +506,64 @@
       }, 4000);
     }
 
-    // Close on Escape
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeEnquiryModal(); });
 
-    // Form submission
     document.getElementById('modal-enq-form').addEventListener('submit', async function(e) {
       e.preventDefault();
+      const btn = document.getElementById('mq-submit');
+      if (btn.disabled) return;
+
       // Clear errors
-      ['name','phone','email','location'].forEach(f => {
-        document.getElementById('mq-'+f+'-err').textContent = '';
-        document.getElementById('mq-'+f).classList.remove('invalid');
+      ['name','email','phone','msg'].forEach(f => {
+        const el = document.getElementById('mq-'+f+'-err');
+        if (el) el.textContent = '';
       });
-      const status = document.getElementById('mq-status');
-      status.style.display = 'none';
+      ['mq-name','mq-email','mq-phone','mq-message'].forEach(id => {
+        document.getElementById(id)?.classList.remove('invalid');
+      });
 
-      // Values
-      const name     = document.getElementById('mq-name').value.trim();
-      const code     = document.getElementById('mq-code').value.trim();
-      const phone    = document.getElementById('mq-phone').value.trim();
-      const email    = document.getElementById('mq-email').value.trim();
-      const location = document.getElementById('mq-location').value.trim();
-      const message  = document.getElementById('mq-message').value.trim();
+      const name    = document.getElementById('mq-name').value.trim();
+      const email   = document.getElementById('mq-email').value.trim();
+      const code    = document.getElementById('mq-code').value;
+      const phone   = document.getElementById('mq-phone').value.trim();
+      const message = document.getElementById('mq-message').value.trim();
 
-      // Validation
       let valid = true;
-      if (!name) { document.getElementById('mq-name-err').textContent = 'Name is required.'; document.getElementById('mq-name').classList.add('invalid'); valid = false; }
-      if (!phone) { document.getElementById('mq-phone-err').textContent = 'Phone number is required.'; document.getElementById('mq-phone').classList.add('invalid'); valid = false; }
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById('mq-email-err').textContent = 'A valid email is required.'; document.getElementById('mq-email').classList.add('invalid'); valid = false; }
-      if (!location) { document.getElementById('mq-location-err').textContent = 'Location is required.'; document.getElementById('mq-location').classList.add('invalid'); valid = false; }
+      if (!name)    { document.getElementById('mq-name-err').textContent  = 'Name is required.';           document.getElementById('mq-name').classList.add('invalid');    valid = false; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById('mq-email-err').textContent = 'A valid email is required.'; document.getElementById('mq-email').classList.add('invalid');   valid = false; }
+      if (!phone)   { document.getElementById('mq-phone-err').textContent = 'Phone number is required.';   document.getElementById('mq-phone').classList.add('invalid');   valid = false; }
+      if (!message) { document.getElementById('mq-msg-err').textContent   = 'Please describe your requirements.'; document.getElementById('mq-message').classList.add('invalid'); valid = false; }
       if (!valid) return;
 
-      const btn = document.getElementById('mq-submit');
       const btnText = document.getElementById('mq-btn-text');
-      btn.disabled = true;
+      btn.disabled        = true;
       btnText.textContent = 'Sending…';
 
       try {
-        const fullPhone = code ? code + ' ' + phone : phone;
-        const payload = new FormData();
-        payload.append('fullName', name);
-        payload.append('phone', fullPhone);
-        payload.append('email', email);
-        payload.append('location', location);
-        payload.append('message', message || '(no message)');
-        payload.append('product', 'General Enquiry');
-        payload.append('orderQty', '');
-        payload.append('source', 'Homepage Popup');
-        payload.append('timestamp', new Date().toISOString());
-
-        await fetch(MODAL_SHEET_URL, { method: 'POST', body: payload });
-
-        status.style.cssText = 'display:block;background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.25);color:#4ade80;border-radius:10px;padding:14px 18px;margin-bottom:18px;font-size:0.88rem;line-height:1.6';
-        status.innerHTML = '<strong>Enquiry sent!</strong> Our team will get back to you within 24 hours.';
+        await fetch(MODAL_SHEET_URL, {
+          method: 'POST',
+          body: JSON.stringify({
+            fullName: name, email, phone: `${code} ${phone}`.trim(),
+            message, product: 'General Enquiry', sourcePage: 'Homepage Popup',
+            timestamp: new Date().toISOString()
+          })
+        });
         this.reset();
+        document.getElementById('mq-consent').checked = false;
+        closeEnquiryModal();
+        if (typeof showEnquirySuccessPopup === 'function') showEnquirySuccessPopup();
       } catch (err) {
+        const status = document.getElementById('mq-status');
         status.style.cssText = 'display:block;background:rgba(200,16,46,0.07);border:1px solid rgba(200,16,46,0.25);color:var(--red);border-radius:10px;padding:14px 18px;margin-bottom:18px;font-size:0.88rem;line-height:1.6';
-        status.innerHTML = '<strong>Something went wrong.</strong> Please try again or call us directly.';
+        status.innerHTML = '<strong>Something went wrong.</strong> Please try again.';
       } finally {
-        btn.disabled = false;
-        btnText.textContent = 'Send Enquiry';
+        btn.disabled        = false;
+        btnText.textContent = 'Enquire Now';
+        // Re-enforce consent state
+        const consent = document.getElementById('mq-consent');
+        btn.disabled      = !consent.checked;
+        btn.style.opacity = consent.checked ? '1' : '0.45';
+        btn.style.cursor  = consent.checked ? 'pointer' : 'not-allowed';
       }
     });
   </script>

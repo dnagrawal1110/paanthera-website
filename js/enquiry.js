@@ -1,66 +1,61 @@
 /**
  * Paanthera — Enquiry Form Handler
- * Submits form data to Google Sheets via Apps Script Web App
- *
- * SETUP: Paste your Apps Script Web App URL below
  */
 
-// ─────────────────────────────────────────────────────────────────────────────
-// CONFIGURATION — Replace with your Google Apps Script Web App URL
-// See setup/google-sheet-script.js for instructions
-// ─────────────────────────────────────────────────────────────────────────────
 const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbz2bTRvtxoMdMHbWIPjbbUOkNmJqavXESRbeRqyJX0OyDD-eecLD7ItkBAnZZMLiBLa/exec';
 
 // ─────────────────────────────────────────────────────────────────────────────
-// PRODUCT LIST for dropdown
+// Country codes
 // ─────────────────────────────────────────────────────────────────────────────
-const ENQUIRY_PRODUCTS = [
-  { value: '', label: 'Select a product (optional)' },
-  { value: 'General Inquiry', label: 'General Inquiry — All Products' },
-  { value: '— Polyester Jerseys —', label: '── Polyester Jerseys ──', disabled: true },
-  { value: 'Round Neck Poly Sublimation Gym Full Sleeve', label: 'Round Neck Poly Sublimation Gym Full Sleeve' },
-  { value: 'Round Neck Poly Sublimation Gym Half Sleeve', label: 'Round Neck Poly Sublimation Gym Half Sleeve' },
-  { value: 'Round Neck Poly Sublimation Jersey Half Sleeve', label: 'Round Neck Poly Sublimation Jersey Half Sleeve' },
-  { value: 'Collar Poly Sublimation Sports Half Sleeve', label: 'Collar Poly Sublimation Sports Half Sleeve' },
-  { value: 'Collar Poly Sublimation Sports Half Sleeve II', label: 'Collar Poly Sublimation Sports Half Sleeve II' },
-  { value: 'V-Neck Poly Sublimation Jersey Half Sleeve', label: 'V-Neck Poly Sublimation Jersey Half Sleeve' },
-  { value: 'Round Neck Polyester Half Sleeve Plain', label: 'Round Neck Polyester Half Sleeve Plain' },
-  { value: 'Round Neck Half Sleeve Gym Poly Plain', label: 'Round Neck Half Sleeve Gym Poly Plain' },
-  { value: 'Round Neck Poly Full Sleeve Plain Gym', label: 'Round Neck Poly Full Sleeve Plain Gym' },
-  { value: 'V-Neck Poly Jersey Half Sleeve', label: 'V-Neck Poly Jersey Half Sleeve' },
-  { value: 'Polyester Half Sleeve Round Neck Jersey (Deep Green)', label: 'Polyester Half Sleeve Round Neck Jersey (Deep Green)' },
-  { value: 'Collar Sports Wear Half Sleeve', label: 'Collar Sports Wear Half Sleeve' },
-  { value: 'Collar Sports Wear Half Sleeve II', label: 'Collar Sports Wear Half Sleeve II' },
-  { value: 'Collar Sports Wear Half Sleeve III', label: 'Collar Sports Wear Half Sleeve III' },
-  { value: '— Cotton T-Shirts —', label: '── Cotton T-Shirts ──', disabled: true },
-  { value: 'Cotton Half Sleeve T-Shirt Round Neck', label: 'Cotton Half Sleeve T-Shirt Round Neck' },
-  { value: 'Cotton T-Shirt Round Neck Full Sleeve', label: 'Cotton T-Shirt Round Neck Full Sleeve' },
-  { value: 'Round Neck Cotton T-Shirt Casual Half Sleeve', label: 'Round Neck Cotton T-Shirt Casual Half Sleeve' },
-  { value: 'Cotton Collar Half Sleeve T-Shirt', label: 'Cotton Collar Half Sleeve T-Shirt' },
-  { value: 'Cotton Casual Full Sleeve (CCSF)', label: 'Cotton Casual Full Sleeve (CCSF)' },
-  { value: 'Cotton Casual Full Sleeve – Olive Green', label: 'Cotton Casual Full Sleeve – Olive Green' },
-  { value: '— Shorts —', label: '── Shorts ──', disabled: true },
-  { value: 'Cotton Shorts Gym', label: 'Cotton Shorts Gym' },
-  { value: 'Cotton Shorts Plain', label: 'Cotton Shorts Plain' },
-  { value: 'Poly Sublimation Sports Shorts', label: 'Poly Sublimation Sports Shorts' },
-  { value: '— Trousers —', label: '── Trousers ──', disabled: true },
-  { value: 'Cotton Casual Trouser (CCT)', label: 'Cotton Casual Trouser (CCT)' },
-  { value: 'Cotton Polyester Sports Trouser (CPST)', label: 'Cotton Polyester Sports Trouser (CPST)' },
+const COUNTRY_CODES = [
+  { code: '+91',  flag: '🇮🇳', name: 'India' },
+  { code: '+27',  flag: '🇿🇦', name: 'South Africa' },
+  { code: '+1',   flag: '🇺🇸', name: 'USA' },
+  { code: '+44',  flag: '🇬🇧', name: 'UK' },
+  { code: '+971', flag: '🇦🇪', name: 'UAE' },
+  { code: '+974', flag: '🇶🇦', name: 'Qatar' },
+  { code: '+966', flag: '🇸🇦', name: 'Saudi Arabia' },
+  { code: '+968', flag: '🇴🇲', name: 'Oman' },
+  { code: '+965', flag: '🇰🇼', name: 'Kuwait' },
+  { code: '+973', flag: '🇧🇭', name: 'Bahrain' },
+  { code: '+254', flag: '🇰🇪', name: 'Kenya' },
+  { code: '+234', flag: '🇳🇬', name: 'Nigeria' },
+  { code: '+263', flag: '🇿🇼', name: 'Zimbabwe' },
+  { code: '+267', flag: '🇧🇼', name: 'Botswana' },
+  { code: '+260', flag: '🇿🇲', name: 'Zambia' },
+  { code: '+255', flag: '🇹🇿', name: 'Tanzania' },
+  { code: '+256', flag: '🇺🇬', name: 'Uganda' },
+  { code: '+233', flag: '🇬🇭', name: 'Ghana' },
+  { code: '+237', flag: '🇨🇲', name: 'Cameroon' },
+  { code: '+251', flag: '🇪🇹', name: 'Ethiopia' },
+  { code: '+212', flag: '🇲🇦', name: 'Morocco' },
+  { code: '+213', flag: '🇩🇿', name: 'Algeria' },
+  { code: '+20',  flag: '🇪🇬', name: 'Egypt' },
+  { code: '+61',  flag: '🇦🇺', name: 'Australia' },
+  { code: '+64',  flag: '🇳🇿', name: 'New Zealand' },
+  { code: '+49',  flag: '🇩🇪', name: 'Germany' },
+  { code: '+33',  flag: '🇫🇷', name: 'France' },
+  { code: '+31',  flag: '🇳🇱', name: 'Netherlands' },
+  { code: '+32',  flag: '🇧🇪', name: 'Belgium' },
+  { code: '+34',  flag: '🇪🇸', name: 'Spain' },
+  { code: '+39',  flag: '🇮🇹', name: 'Italy' },
+  { code: '+46',  flag: '🇸🇪', name: 'Sweden' },
+  { code: '+47',  flag: '🇳🇴', name: 'Norway' },
+  { code: '+45',  flag: '🇩🇰', name: 'Denmark' },
+  { code: '+86',  flag: '🇨🇳', name: 'China' },
+  { code: '+81',  flag: '🇯🇵', name: 'Japan' },
+  { code: '+82',  flag: '🇰🇷', name: 'South Korea' },
+  { code: '+65',  flag: '🇸🇬', name: 'Singapore' },
+  { code: '+60',  flag: '🇲🇾', name: 'Malaysia' },
+  { code: '+55',  flag: '🇧🇷', name: 'Brazil' },
+  { code: '+52',  flag: '🇲🇽', name: 'Mexico' },
+  { code: '+54',  flag: '🇦🇷', name: 'Argentina' },
+  { code: '+56',  flag: '🇨🇱', name: 'Chile' },
+  { code: '+other', flag: '🌍', name: 'Other' },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Build the product dropdown HTML
-// ─────────────────────────────────────────────────────────────────────────────
-function buildProductDropdown(selectedValue) {
-  return ENQUIRY_PRODUCTS.map(p => {
-    if (p.disabled) return `<option disabled>${p.label}</option>`;
-    const sel = selectedValue && p.value === selectedValue ? ' selected' : '';
-    return `<option value="${p.value}"${sel}>${p.label}</option>`;
-  }).join('');
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Render enquiry form HTML into a container element
+// Render the enquiry form
 // ─────────────────────────────────────────────────────────────────────────────
 function renderEnquiryForm(containerId, options = {}) {
   const container = document.getElementById(containerId);
@@ -68,150 +63,71 @@ function renderEnquiryForm(containerId, options = {}) {
 
   const { productName = '', sourcePage = window.location.pathname } = options;
 
+  const codeOptions = COUNTRY_CODES.map(c =>
+    `<option value="${c.code}"${c.code === '+27' ? ' selected' : ''}>${c.flag} ${c.code} ${c.name}</option>`
+  ).join('');
+
   container.innerHTML = `
     <form id="paanthera-enquiry-form" class="enq-form" novalidate>
       <input type="hidden" name="sourcePage" value="${sourcePage}">
       <input type="hidden" name="preselectedProduct" value="${productName}">
 
-      <div class="enq-row enq-row-2">
-        <!-- Full Name -->
-        <div class="enq-field">
-          <label class="enq-label" for="enq-fullname">Full Name <span class="enq-req">*</span></label>
-          <input class="enq-input" type="text" id="enq-fullname" name="fullName"
-            placeholder="e.g. Rajesh Sharma" autocomplete="name" required>
-          <span class="enq-error" id="err-fullname"></span>
-        </div>
-
-        <!-- Company -->
-        <div class="enq-field">
-          <label class="enq-label" for="enq-company">Company / Organisation <span class="enq-req">*</span></label>
-          <input class="enq-input" type="text" id="enq-company" name="company"
-            placeholder="e.g. SportZone Wholesale" autocomplete="organization" required>
-          <span class="enq-error" id="err-company"></span>
-        </div>
-      </div>
-
-      <div class="enq-row enq-row-2">
-        <!-- Phone -->
-        <div class="enq-field">
-          <label class="enq-label" for="enq-phone">Contact Number <span class="enq-req">*</span></label>
-          <div class="enq-phone-wrap">
-            <select class="enq-select enq-code" id="enq-code" name="countryCode" aria-label="Country code">
-              <option value="+91">🇮🇳 +91</option>
-              <option value="+27">🇿🇦 +27</option>
-              <option value="+1">🇺🇸 +1</option>
-              <option value="+44">🇬🇧 +44</option>
-              <option value="+971">🇦🇪 +971</option>
-              <option value="+254">🇰🇪 +254</option>
-              <option value="+234">🇳🇬 +234</option>
-              <option value="+263">🇿🇼 +263</option>
-              <option value="+267">🇧🇼 +267</option>
-              <option value="+260">🇿🇲 +260</option>
-              <option value="+255">🇹🇿 +255</option>
-              <option value="+61">🇦🇺 +61</option>
-              <option value="+64">🇳🇿 +64</option>
-              <option value="+49">🇩🇪 +49</option>
-              <option value="+33">🇫🇷 +33</option>
-              <option value="+other">Other</option>
-            </select>
-            <input class="enq-input enq-phone-num" type="tel" id="enq-phone" name="phoneNum"
-              placeholder="73874 27007" autocomplete="tel-national" required>
-          </div>
-          <span class="enq-error" id="err-phone"></span>
-        </div>
-
-        <!-- Email -->
-        <div class="enq-field">
-          <label class="enq-label" for="enq-email">Email Address <span class="enq-req">*</span></label>
-          <input class="enq-input" type="email" id="enq-email" name="email"
-            placeholder="you@company.com" autocomplete="email" required>
-          <span class="enq-error" id="err-email"></span>
-        </div>
-      </div>
-
-      <div class="enq-row enq-row-2">
-        <!-- Country -->
-        <div class="enq-field">
-          <label class="enq-label" for="enq-country">Country <span class="enq-req">*</span></label>
-          <input class="enq-input" type="text" id="enq-country" name="country"
-            placeholder="e.g. South Africa" autocomplete="country-name" required>
-          <span class="enq-error" id="err-country"></span>
-        </div>
-
-        <!-- City -->
-        <div class="enq-field">
-          <label class="enq-label" for="enq-city">City / Location</label>
-          <input class="enq-input" type="text" id="enq-city" name="city"
-            placeholder="e.g. Johannesburg" autocomplete="address-level2">
-        </div>
-      </div>
-
-      <div class="enq-row enq-row-2">
-        <!-- Product -->
-        <div class="enq-field">
-          <label class="enq-label" for="enq-product">Product of Interest</label>
-          <select class="enq-input enq-select" id="enq-product" name="product">
-            ${buildProductDropdown(productName)}
-          </select>
-        </div>
-
-        <!-- Quantity -->
-        <div class="enq-field">
-          <label class="enq-label" for="enq-quantity">Quantity Required</label>
-          <select class="enq-input enq-select" id="enq-quantity" name="quantity">
-            <option value="">Select quantity range</option>
-            <option value="500–1000 pcs">500 – 1,000 pieces</option>
-            <option value="500–1000 pcs">500 – 1,000 pieces</option>
-            <option value="1000–5000 pcs">1,000 – 5,000 pieces</option>
-            <option value="5000+ pcs">5,000+ pieces</option>
-            <option value="Not decided yet">Not decided yet</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="enq-row enq-row-2">
-        <!-- Customisation -->
-        <div class="enq-field">
-          <label class="enq-label" for="enq-custom">Customisation Required?</label>
-          <select class="enq-input enq-select" id="enq-custom" name="customisation">
-            <option value="">Select an option</option>
-            <option value="Yes — logo, colours &amp; labels">Yes — logo, colours &amp; labels</option>
-            <option value="Yes — logo only">Yes — logo only</option>
-            <option value="No — standard product">No — standard product</option>
-            <option value="Not sure yet">Not sure yet</option>
-          </select>
-        </div>
-
-        <!-- How heard -->
-        <div class="enq-field">
-          <label class="enq-label" for="enq-heard">How Did You Hear About Us?</label>
-          <select class="enq-input enq-select" id="enq-heard" name="howHeard">
-            <option value="">Select source</option>
-            <option value="WhatsApp">WhatsApp</option>
-            <option value="Google Search">Google Search</option>
-            <option value="Trade Fair / Exhibition">Trade Fair / Exhibition</option>
-            <option value="Referral">Referral</option>
-            <option value="Social Media">Social Media</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Message -->
+      <!-- Full Name -->
       <div class="enq-field">
-        <label class="enq-label" for="enq-message">Message / Requirements <span class="enq-req">*</span></label>
+        <label class="enq-label" for="enq-fullname">Full Name <span class="enq-req">*</span></label>
+        <input class="enq-input" type="text" id="enq-fullname" name="fullName"
+          placeholder="e.g. John Smith" autocomplete="name" required>
+        <span class="enq-error" id="err-fullname"></span>
+      </div>
+
+      <!-- Email -->
+      <div class="enq-field">
+        <label class="enq-label" for="enq-email">Email Address <span class="enq-req">*</span></label>
+        <input class="enq-input" type="email" id="enq-email" name="email"
+          placeholder="you@company.com" autocomplete="email" required>
+        <span class="enq-error" id="err-email"></span>
+      </div>
+
+      <!-- Contact Number -->
+      <div class="enq-field">
+        <label class="enq-label" for="enq-phone">Contact Number <span class="enq-req">*</span></label>
+        <div class="enq-phone-wrap">
+          <select class="enq-input enq-select enq-code" id="enq-code" name="countryCode" aria-label="Country code">
+            ${codeOptions}
+          </select>
+          <input class="enq-input enq-phone-num" type="tel" id="enq-phone" name="phoneNum"
+            placeholder="71 234 5678" autocomplete="tel-national" required>
+        </div>
+        <span class="enq-error" id="err-phone"></span>
+      </div>
+
+      <!-- Message / Requirement -->
+      <div class="enq-field">
+        <label class="enq-label" for="enq-message">Message / Requirement <span class="enq-req">*</span></label>
         <textarea class="enq-input enq-textarea" id="enq-message" name="message"
-          placeholder="Tell us about your requirements — product types, quantities, delivery location, customisation details, or any questions..."
+          placeholder="Tell us about your requirements — product, quantity, customisation, delivery location…"
           rows="5" required></textarea>
         <span class="enq-error" id="err-message"></span>
       </div>
 
+      <!-- Consent checkbox -->
+      <div style="margin-top:8px">
+        <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;user-select:none">
+          <input type="checkbox" id="enq-consent" name="consent"
+            style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:var(--gold);cursor:pointer">
+          <span style="font-size:0.82rem;color:var(--grey);line-height:1.55">
+            I am okay with Paanthera contacting me regarding this enquiry
+          </span>
+        </label>
+      </div>
+
       <!-- Submit -->
-      <div class="enq-submit-row">
-        <button type="submit" class="enq-btn" id="enq-submit-btn">
+      <div class="enq-submit-row" style="margin-top:20px">
+        <button type="submit" class="enq-btn" id="enq-submit-btn" disabled
+          style="opacity:0.45;cursor:not-allowed;transition:opacity 0.2s">
           <span class="enq-btn-text">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            Send Enquiry
+            Enquire Now
           </span>
           <span class="enq-btn-loading" style="display:none">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spin"><circle cx="12" cy="12" r="10" stroke-opacity="0.3"/><path d="M12 2a10 10 0 0 1 10 10"/></svg>
@@ -224,15 +140,8 @@ function renderEnquiryForm(containerId, options = {}) {
         </p>
       </div>
 
-      <!-- Status messages -->
-      <div id="enq-success" class="enq-status enq-success" style="display:none">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-        <div>
-          <strong>Enquiry Received!</strong>
-          <p>Thank you — our team will respond within 24 hours. For urgent queries, <a href="#" data-wa-general>message us on WhatsApp</a>.</p>
-        </div>
-      </div>
-      <div id="enq-error" class="enq-status enq-error-box" style="display:none">
+      <!-- Inline error/status (hidden by default) -->
+      <div id="enq-error" class="enq-status enq-error-box" style="display:none;margin-top:16px">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
         <div>
           <strong>Submission Failed</strong>
@@ -246,77 +155,107 @@ function renderEnquiryForm(containerId, options = {}) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Initialise form validation and submission
+// Success popup
+// ─────────────────────────────────────────────────────────────────────────────
+function showEnquirySuccessPopup() {
+  // Remove existing if any
+  const existing = document.getElementById('enq-success-popup');
+  if (existing) existing.remove();
+
+  const popup = document.createElement('div');
+  popup.id = 'enq-success-popup';
+  popup.setAttribute('role', 'dialog');
+  popup.setAttribute('aria-modal', 'true');
+  popup.innerHTML = `
+    <div id="enq-success-backdrop" style="position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);z-index:9999"></div>
+    <div style="position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:24px">
+      <div style="background:var(--dark);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:20px;padding:48px 40px;max-width:480px;width:100%;text-align:center;position:relative">
+        <!-- Gold checkmark -->
+        <div style="width:64px;height:64px;border-radius:50%;background:rgba(201,169,110,0.1);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto 24px">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2.5"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+        </div>
+        <h2 style="font-family:var(--font-serif);font-size:1.7rem;color:var(--white);line-height:1.2;margin-bottom:16px">
+          Thank you for choosing<br><em style="color:var(--gold)">PAANTHERA</em>
+        </h2>
+        <p style="font-size:0.95rem;color:var(--grey);line-height:1.75;margin-bottom:32px">
+          Your enquiry has been received successfully.<br>
+          Our team will connect with you shortly to assist you further.
+        </p>
+        <button onclick="document.getElementById('enq-success-popup').remove()" class="btn btn-gold" style="min-width:160px;justify-content:center">
+          Close
+        </button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(popup);
+
+  // Close on backdrop click
+  document.getElementById('enq-success-backdrop').addEventListener('click', () => popup.remove());
+  // Close on Escape
+  const escHandler = (e) => { if (e.key === 'Escape') { popup.remove(); document.removeEventListener('keydown', escHandler); } };
+  document.addEventListener('keydown', escHandler);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Init: validation, consent toggle, submission
 // ─────────────────────────────────────────────────────────────────────────────
 function initEnquiryForm(containerId) {
   const form = document.getElementById('paanthera-enquiry-form');
   if (!form) return;
 
-  // Re-bind WhatsApp links inside form
   if (typeof bindWhatsApp === 'function') bindWhatsApp();
+
+  // Consent checkbox enables/disables submit button
+  const consentBox = document.getElementById('enq-consent');
+  const submitBtn  = document.getElementById('enq-submit-btn');
+
+  consentBox.addEventListener('change', () => {
+    submitBtn.disabled = !consentBox.checked;
+    submitBtn.style.opacity  = consentBox.checked ? '1'           : '0.45';
+    submitBtn.style.cursor   = consentBox.checked ? 'pointer'     : 'not-allowed';
+  });
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (submitBtn.disabled) return;
     if (!validateEnquiryForm(form)) return;
 
-    const btn       = document.getElementById('enq-submit-btn');
-    const btnText   = btn.querySelector('.enq-btn-text');
-    const btnLoad   = btn.querySelector('.enq-btn-loading');
-    const successEl = document.getElementById('enq-success');
-    const errorEl   = document.getElementById('enq-error');
+    const btnText = submitBtn.querySelector('.enq-btn-text');
+    const btnLoad = submitBtn.querySelector('.enq-btn-loading');
+    const errorEl = document.getElementById('enq-error');
 
-    // Loading state
-    btn.disabled = true;
+    submitBtn.disabled   = true;
     btnText.style.display = 'none';
     btnLoad.style.display = 'flex';
-    successEl.style.display = 'none';
-    errorEl.style.display   = 'none';
+    errorEl.style.display = 'none';
 
     const code = form.querySelector('[name="countryCode"]')?.value || '';
     const num  = form.querySelector('[name="phoneNum"]')?.value || '';
 
     const payload = {
-      fullName:      form.querySelector('[name="fullName"]')?.value.trim(),
-      company:       form.querySelector('[name="company"]')?.value.trim(),
-      phone:         `${code} ${num}`.trim(),
-      email:         form.querySelector('[name="email"]')?.value.trim(),
-      country:       form.querySelector('[name="country"]')?.value.trim(),
-      city:          form.querySelector('[name="city"]')?.value.trim(),
-      product:       form.querySelector('[name="product"]')?.value,
-      quantity:      form.querySelector('[name="quantity"]')?.value,
-      customisation: form.querySelector('[name="customisation"]')?.value,
-      howHeard:      form.querySelector('[name="howHeard"]')?.value,
-      message:       form.querySelector('[name="message"]')?.value.trim(),
-      sourcePage:    form.querySelector('[name="sourcePage"]')?.value,
+      fullName:   form.querySelector('[name="fullName"]')?.value.trim(),
+      phone:      `${code} ${num}`.trim(),
+      email:      form.querySelector('[name="email"]')?.value.trim(),
+      message:    form.querySelector('[name="message"]')?.value.trim(),
+      product:    form.querySelector('[name="preselectedProduct"]')?.value || 'General Enquiry',
+      sourcePage: form.querySelector('[name="sourcePage"]')?.value,
+      timestamp:  new Date().toISOString(),
     };
 
     try {
       let submitted = false;
 
-      // Try Google Sheets if URL is configured
       if (GOOGLE_SHEET_URL && GOOGLE_SHEET_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE') {
-        const res = await fetch(GOOGLE_SHEET_URL, {
+        await fetch(GOOGLE_SHEET_URL, {
           method: 'POST',
           body: JSON.stringify(payload),
         });
-        const json = await res.json().catch(() => ({}));
-        if (json.status === 'success') submitted = true;
+        submitted = true;
       }
 
-      // Fallback: mailto link (opens email client)
       if (!submitted) {
         const body = encodeURIComponent(
-          `Full Name: ${payload.fullName}\n` +
-          `Company: ${payload.company}\n` +
-          `Phone: ${payload.phone}\n` +
-          `Email: ${payload.email}\n` +
-          `Country: ${payload.country}\n` +
-          `City: ${payload.city}\n` +
-          `Product: ${payload.product}\n` +
-          `Quantity: ${payload.quantity}\n` +
-          `Customisation: ${payload.customisation}\n` +
-          `How Heard: ${payload.howHeard}\n\n` +
-          `Message:\n${payload.message}`
+          `Full Name: ${payload.fullName}\nPhone: ${payload.phone}\nEmail: ${payload.email}\n\nMessage:\n${payload.message}`
         );
         window.location.href = `mailto:deepak.mixmedia@gmail.com?subject=Paanthera Enquiry — ${payload.fullName}&body=${body}`;
         submitted = true;
@@ -324,36 +263,41 @@ function initEnquiryForm(containerId) {
 
       if (submitted) {
         form.reset();
-        successEl.style.display = 'flex';
-        successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        // Re-bind WA links
+        // Reset consent button state
+        consentBox.checked    = false;
+        submitBtn.disabled    = true;
+        submitBtn.style.opacity = '0.45';
+        submitBtn.style.cursor  = 'not-allowed';
         if (typeof bindWhatsApp === 'function') bindWhatsApp();
+        showEnquirySuccessPopup();
       }
 
     } catch (err) {
       errorEl.style.display = 'flex';
       console.error('Enquiry submission error:', err);
     } finally {
-      btn.disabled = false;
+      submitBtn.disabled    = false;
       btnText.style.display = 'flex';
       btnLoad.style.display = 'none';
+      // Re-enforce consent state after finally re-enables button
+      submitBtn.disabled    = !consentBox.checked;
+      submitBtn.style.opacity = consentBox.checked ? '1' : '0.45';
+      submitBtn.style.cursor  = consentBox.checked ? 'pointer' : 'not-allowed';
     }
   });
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Client-side validation
+// Validation
 // ─────────────────────────────────────────────────────────────────────────────
 function validateEnquiryForm(form) {
   let valid = true;
 
   const rules = [
     { id: 'enq-fullname', errId: 'err-fullname', msg: 'Please enter your full name' },
-    { id: 'enq-company',  errId: 'err-company',  msg: 'Please enter your company name' },
-    { id: 'enq-phone',    errId: 'err-phone',    msg: 'Please enter your contact number' },
     { id: 'enq-email',    errId: 'err-email',    msg: 'Please enter a valid email address', type: 'email' },
-    { id: 'enq-country',  errId: 'err-country',  msg: 'Please enter your country' },
-    { id: 'enq-message',  errId: 'err-message',  msg: 'Please add a message or your requirements' },
+    { id: 'enq-phone',    errId: 'err-phone',    msg: 'Please enter your contact number' },
+    { id: 'enq-message',  errId: 'err-message',  msg: 'Please describe your requirements' },
   ];
 
   rules.forEach(rule => {
@@ -362,9 +306,7 @@ function validateEnquiryForm(form) {
     if (!field || !errEl) return;
 
     let fieldValid = field.value.trim().length > 0;
-    if (rule.type === 'email') {
-      fieldValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim());
-    }
+    if (rule.type === 'email') fieldValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim());
 
     if (!fieldValid) {
       errEl.textContent = rule.msg;

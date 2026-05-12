@@ -75,6 +75,14 @@ function renderProductPage() {
         <div class="subheading" style="margin-bottom:12px">${categoryLabel(product.category)}</div>
         <h1 class="product-title">${product.name}</h1>
 
+        <!-- Enquire Now CTA (below title) -->
+        <div style="margin-bottom:28px">
+          <a href="enquiry.html?product=${encodeURIComponent(product.id)}" class="btn btn-gold" style="display:inline-flex;gap:10px;align-items:center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Enquire Now
+          </a>
+        </div>
+
         <!-- Spec Grid -->
         <div class="spec-grid">
           ${specItems.map(s => `
@@ -100,14 +108,7 @@ function renderProductPage() {
 
         <!-- Commercial Details -->
         <div class="detail-section">
-          <h3>Commercial Details</h3>
-          <div class="moq-badge-lg">
-            <div>
-              <div class="moq-label">Minimum Order Quantity</div>
-              <div class="moq-num">${product.moq}<span style="font-size:1rem;color:var(--grey)"> pcs</span></div>
-            </div>
-          </div>
-          <h4 style="font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--grey);margin-bottom:12px">Customization Options</h4>
+          <h3>Customization Options</h3>
           <ul class="customization-list">
             ${product.customizations.map(c => `<li>${c}</li>`).join('')}
           </ul>
