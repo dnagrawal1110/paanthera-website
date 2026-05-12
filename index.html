@@ -73,10 +73,6 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 6h16M4 10h16M4 14h10"/></svg>
             View Full Catalog
           </a>
-          <a href="enquiry.html" class="btn btn-gold">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            Enquire Now
-          </a>
         </div>
         <div class="hero-scroll" aria-hidden="true">
           <div class="scroll-line"></div>
@@ -87,7 +83,7 @@
   </section>
 
   <!-- ══════════════════ MANUFACTURING VIDEO ══════════════════ -->
-  <section style="background:var(--black);padding:72px 0;border-bottom:1px solid var(--border)" aria-label="Manufacturing video">
+  <section style="background:var(--black);padding:48px 0;border-bottom:1px solid var(--border)" aria-label="Manufacturing video">
     <div class="container">
       <div class="section-header fade-up" style="margin-bottom:40px">
         <div class="subheading">Craftsmanship</div>
@@ -225,7 +221,7 @@
   </section>
 
   <!-- ══════════════════ ABOUT TEASER ══════════════════ -->
-  <section class="section" style="background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)" aria-labelledby="about-teaser-heading">
+  <section style="background:var(--dark2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px 0" aria-labelledby="about-teaser-heading">
     <div class="container">
       <div style="display:grid;grid-template-columns:1fr;gap:60px;align-items:center" class="about-teaser-grid">
         <div class="fade-up">
@@ -446,12 +442,12 @@
     // Render 6 featured products (one from each category + mix)
     document.addEventListener('DOMContentLoaded', () => {
       const featured = [
-        PRODUCTS.find(p => p.id === 'collar-poly-sub-sports-half-v1'),
-        PRODUCTS.find(p => p.id === 'round-neck-poly-sub-gym-half'),
-        PRODUCTS.find(p => p.id === 'vneck-poly-sub-jersey-half'),
-        PRODUCTS.find(p => p.id === 'cotton-collar-half'),
-        PRODUCTS.find(p => p.id === 'poly-sub-sports-shorts'),
-        PRODUCTS.find(p => p.id === 'cotton-shorts-gym'),
+        PRODUCTS.find(p => p.id === 'poly-gym-solid'),
+        PRODUCTS.find(p => p.id === 'poly-jersey-multicolour'),
+        PRODUCTS.find(p => p.id === 'cotton-shirt-formal-aqua'),
+        PRODUCTS.find(p => p.id === 'cotton-polo-dual-tone'),
+        PRODUCTS.find(p => p.id === 'cotton-round-half-diagonal'),
+        PRODUCTS.find(p => p.id === 'shorts-gradient'),
       ].filter(Boolean);
 
       document.getElementById('featured-grid').innerHTML =

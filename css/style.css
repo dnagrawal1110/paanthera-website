@@ -167,8 +167,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 @media (min-width: 768px) { .container { padding: 0 40px; } }
 @media (min-width: 1280px) { .container { padding: 0 60px; } }
 
-.section { padding: 100px 0; }
-.section-sm { padding: 60px 0; }
+.section { padding: 64px 0; }
+.section-sm { padding: 40px 0; }
 
 .flex { display: flex; }
 .flex-center { display: flex; align-items: center; justify-content: center; }
@@ -409,7 +409,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: calc(var(--nav-h) + 60px) 0 80px;
+  padding: calc(var(--nav-h) + 40px) 0 56px;
 }
 .hero-eyebrow {
   display: flex;
@@ -528,7 +528,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ─── Section Headers ────────────────────────────────────────── */
-.section-header { margin-bottom: 64px; }
+.section-header { margin-bottom: 40px; }
 .section-header.center { text-align: center; }
 .section-header .subheading { margin-bottom: 12px; }
 .section-header h2 {
@@ -760,7 +760,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 40%, #9C0D22 100%);
   position: relative;
   overflow: hidden;
-  padding: 80px 0;
+  padding: 56px 0;
 }
 .cta-banner::before {
   content: '';
@@ -810,7 +810,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .footer {
   background: var(--dark);
   border-top: 1px solid var(--border);
-  padding: 64px 0 32px;
+  padding: 48px 0 24px;
 }
 .footer-grid {
   display: grid;
@@ -902,7 +902,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ─── Catalog Page ───────────────────────────────────────────── */
 .catalog-hero {
   background: var(--dark);
-  padding: calc(var(--nav-h) + 48px) 0 48px;
+  padding: calc(var(--nav-h) + 28px) 0 28px;
   border-bottom: 1px solid var(--border);
 }
 .catalog-hero h1 {
@@ -1001,7 +1001,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--gold);
 }
 
-.catalog-body { padding: 48px 0 80px; }
+.catalog-body { padding: 32px 0 56px; }
 .catalog-header-row {
   display: flex;
   align-items: center;
@@ -1121,10 +1121,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .product-info-col {
-  padding: 48px 40px 80px;
+  padding: 32px 32px 60px;
   overflow-y: auto;
 }
-@media (max-width: 767px) { .product-info-col { padding: 32px 20px 80px; } }
+@media (max-width: 767px) { .product-info-col { padding: 24px 16px 60px; } }
 
 .breadcrumb {
   display: flex;
@@ -1329,7 +1329,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ─── About Page ─────────────────────────────────────────────── */
 .about-hero {
   position: relative;
-  padding: calc(var(--nav-h) + 80px) 0 80px;
+  padding: calc(var(--nav-h) + 48px) 0 52px;
   overflow: hidden;
   background: var(--dark);
 }
