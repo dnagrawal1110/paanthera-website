@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block trousers (hidden category pages)
+Disallow: /product.html?id=trouser-cargo-olive
+Disallow: /product.html?id=trouser-cargo-grey
+Disallow: /product.html?id=trouser-cargo-navy
+
+Sitemap: https://paanthera.com/sitemap.xml

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://paanthera.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://paanthera.com/catalog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Polyester Jerseys -->
+  <url><loc>https://paanthera.com/product.html?id=poly-gym-solid</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=poly-gym-camo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=poly-gym-motivational</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=poly-jersey-multicolour</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=poly-jersey-geometric</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=poly-jersey-dark-tech</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Cotton Shirts -->
+  <url><loc>https://paanthera.com/product.html?id=cotton-shirt-formal-aqua</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=cotton-shirt-casual-mustard</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=cotton-shirt-formal-olive</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Cotton Polo -->
+  <url><loc>https://paanthera.com/product.html?id=cotton-polo-dual-tone</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=cotton-polo-stripe</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=cotton-polo-vertical-line</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Cotton Round Half Sleeve -->
+  <url><loc>https://paanthera.com/product.html?id=cotton-round-half-diagonal</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=cotton-round-half-lightning</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=cotton-round-half-wave</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Cotton Round Full Sleeve -->
+  <url><loc>https://paanthera.com/product.html?id=cotton-round-full-colorblock</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=cotton-round-full-texture</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=cotton-round-full-abstract</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Shorts -->
+  <url><loc>https://paanthera.com/product.html?id=shorts-gradient</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=shorts-solid</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://paanthera.com/product.html?id=shorts-panel</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url>
+    <loc>https://paanthera.com/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://paanthera.com/enquiry.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://paanthera.com/faq.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

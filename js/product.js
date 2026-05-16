@@ -28,8 +28,56 @@ function renderProductPage() {
   const waMsg  = `Hi Paanthera! I'm interested in the *${product.name}*.\n\nProduct: ${product.name}\nMaterial: ${product.material}\n${collar ? 'Collar: ' + collar + '\n' : ''}${sleeve ? 'Sleeve: ' + sleeve + '\n' : ''}\nCould you please share pricing, availability, and customization details? Thank you!`;
   const waLink = buildWALink(waMsg);
 
-  // Page title
-  document.title = `${product.name} | Paanthera`;
+  // ── Dynamic SEO ─────────────────────────────────────────────
+  const pageUrl  = `https://paanthera.com/product.html?id=${product.id}`;
+  const pageTitle = `${product.name} | Paanthera`;
+  const pageDesc  = `${product.description.slice(0,155).replace(/"/g,"'")}…`;
+  const pageImg   = product.image || 'https://pub-c157d1d153874174bc99b77d00766615.r2.dev/logos/PaantheraLogo.png';
+
+  document.title = pageTitle;
+  const setMeta = (id, val) => { const el = document.getElementById(id); if (el) el.setAttribute(el.tagName === 'LINK' ? 'href' : 'content', val); };
+  setMeta('seo-canonical',  pageUrl);
+  setMeta('seo-og-url',     pageUrl);
+  setMeta('seo-og-title',   pageTitle);
+  setMeta('seo-og-desc',    pageDesc);
+  setMeta('seo-og-img',     pageImg);
+  setMeta('seo-og-img-alt', product.name);
+  setMeta('seo-tw-title',   pageTitle);
+  setMeta('seo-tw-desc',    pageDesc);
+  setMeta('seo-tw-img',     pageImg);
+
+  // Product JSON-LD
+  const ld = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": product.name,
+        "description": product.description,
+        "image": pageImg,
+        "brand": { "@type": "Brand", "name": "Paanthera" },
+        "material": product.material,
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "seller": { "@type": "Organization", "name": "Paanthera" }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://paanthera.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Catalog", "item": "https://paanthera.com/catalog.html" },
+          { "@type": "ListItem", "position": 3, "name": product.name, "item": pageUrl }
+        ]
+      }
+    ]
+  };
+  const ldScript = document.createElement('script');
+  ldScript.type = 'application/ld+json';
+  ldScript.textContent = JSON.stringify(ld);
+  document.head.appendChild(ldScript);
 
   // Specs
   const specItems = [
