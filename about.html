@@ -84,40 +84,33 @@
   </header>
 
   <!-- ══════════════════ BRAND VIDEO ══════════════════ -->
-  <section style="background:var(--black);padding:72px 0 80px;border-bottom:1px solid var(--border)" aria-label="Brand video">
+  <section style="background:var(--black);padding:48px 0;border-bottom:1px solid var(--border)" aria-label="Manufacturing video">
     <div class="container">
-      <div style="text-align:center;margin-bottom:36px" class="fade-up">
-        <div class="subheading" style="margin-bottom:10px">Our Story</div>
-        <h2 style="font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.4rem);color:var(--white)">The Paanthera Journey</h2>
+      <div style="text-align:center;margin-bottom:32px" class="fade-up">
+        <div class="subheading" style="margin-bottom:10px">Craftsmanship</div>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(1.6rem,3vw,2.4rem);color:var(--white)">Made in India. Built for the World.</h2>
         <div class="gold-line center" style="margin:16px auto 0"></div>
       </div>
-      <div class="fade-up" style="
-        position:relative;
-        width:100%;
-        max-width:960px;
-        margin:0 auto;
-        aspect-ratio:16/9;
-        border-radius:20px;
-        overflow:hidden;
-        background:var(--dark);
-        border:1px solid var(--border);
-        box-shadow:0 32px 80px rgba(0,0,0,0.5);
-      ">
-        <!-- Founder brand story video hosted on Cloudflare R2 -->
-        <video
-          id="brand-video"
-          controls
-          preload="metadata"
-          poster="https://pub-c157d1d153874174bc99b77d00766615.r2.dev/videos/video-thumbnail.jpg"
-          style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;object-fit:cover"
-        >
-          <source src="https://pub-c157d1d153874174bc99b77d00766615.r2.dev/videos/paanthera-founder-video.mp4" type="video/mp4">
-        </video>
-        <!-- Gold gradient line at bottom -->
-        <div style="position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);pointer-events:none"></div>
+      <div id="about-video-wrap" class="fade-up" style="position:relative;max-width:900px;margin:0 auto;border-radius:16px;overflow:hidden;cursor:pointer;border:1px solid var(--border);box-shadow:0 24px 80px rgba(0,0,0,0.5)" onclick="loadAboutVideo(this)">
+        <img src="https://drive.google.com/thumbnail?id=1_kl_cTWEnyZP_zDzgNgITY6Qyf8lIp21&sz=w1280"
+          alt="Paanthera manufacturing"
+          style="width:100%;display:block;aspect-ratio:16/9;object-fit:cover"
+          onerror="this.style.background='var(--mid)';this.style.minHeight='360px'">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.35);transition:background 0.2s"
+          onmouseover="this.style.background='rgba(0,0,0,0.2)'" onmouseout="this.style.background='rgba(0,0,0,0.35)'">
+          <div style="width:72px;height:72px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 12px rgba(201,169,110,0.2);transition:transform 0.2s"
+            onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#0D0D0D"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+  <script>
+    function loadAboutVideo(wrap) {
+      wrap.innerHTML = `<iframe src="https://drive.google.com/file/d/1_kl_cTWEnyZP_zDzgNgITY6Qyf8lIp21/preview" style="width:100%;aspect-ratio:16/9;display:block;border:0" allow="autoplay" allowfullscreen title="Paanthera Manufacturing"></iframe>`;
+    }
+  </script>
 
   <!-- ══════════════════ OUR STORY ══════════════════ -->
   <section style="background:var(--dark2);border-top:1px solid var(--border);padding:100px 0;position:relative;overflow:hidden" aria-labelledby="story-heading">
@@ -545,10 +538,10 @@
         statsEl.style.gridColumn = '1/-1';
         statsEl.parentElement.style.gridTemplateColumns = 'repeat(auto-fit,minmax(180px,1fr))';
         const stats = [
-          { num: '25+', label: 'Products in Range' },
-          { num: '500', label: 'Min. Order Quantity (pcs)' },
-          { num: '5+',  label: 'Export Markets Served' },
+          { num: '25+',  label: 'Products in Range' },
+          { num: '5+',   label: 'Export Markets Served' },
           { num: '100%', label: 'Customisable' },
+          { num: '24h',  label: 'Enquiry Response Time' },
         ];
         statsEl.outerHTML = stats.map(s => `
           <div style="text-align:center;padding:32px 16px;background:var(--dark2);border:1px solid var(--border);border-radius:12px" class="fade-up">

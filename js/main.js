@@ -130,6 +130,7 @@ function categoryLabel(cat) {
   const map = {
     polyester: 'Polyester Jersey',
     cotton:    'Cotton T-Shirt',
+    shirts:    'Cotton Shirt',
     shorts:    'Shorts',
     trousers:  'Trousers'
   };
