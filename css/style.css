@@ -1560,3 +1560,34 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ─── Selection ──────────────────────────────────────────────── */
 ::selection { background: rgba(200,16,46,0.3); color: var(--white); }
+
+/* ─── About: Story Section ───────────────────────────────────── */
+.story-section { padding: 80px 0; }
+.story-cols {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 64px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.story-divider {
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--border), var(--gold-lt), var(--border), transparent);
+  align-self: stretch;
+  min-height: 240px;
+}
+@media (max-width: 767px) {
+  .story-section { padding: 56px 0; }
+  .story-cols {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .story-divider {
+    width: 100%;
+    height: 1px;
+    min-height: unset;
+    background: linear-gradient(to right, transparent, var(--border), var(--gold-lt), var(--border), transparent);
+    align-self: auto;
+  }
+}
