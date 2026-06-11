@@ -3,7 +3,7 @@
    ═══════════════════════════════════════════════════════════════ */
 
 function categoryLabel(cat) {
-  const map = { polyester: 'Polyester Jerseys', cotton: 'Cotton T-Shirts', shirts: 'Cotton Shirts', shorts: 'Shorts', trousers: 'Trousers' };
+  const map = { polyester: 'Polyester Jerseys', cotton: 'Cotton T-Shirts', oversized: 'Oversized T-Shirts', tanktop: 'Tank Tops', shirts: 'Cotton Shirts', shorts: 'Shorts', trousers: 'Trousers' };
   return map[cat] || cat;
 }
 

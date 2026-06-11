@@ -130,6 +130,8 @@ function categoryLabel(cat) {
   const map = {
     polyester: 'Polyester Jersey',
     cotton:    'Cotton T-Shirt',
+    oversized: 'Oversized T-Shirt',
+    tanktop:   'Tank Top',
     shirts:    'Cotton Shirt',
     shorts:    'Shorts',
     trousers:  'Trousers'

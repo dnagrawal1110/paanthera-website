@@ -9,7 +9,7 @@ let activeSleeve     = 'all';
 
 function getFilteredProducts() {
   return PRODUCTS.filter(p => {
-    if (p.category === 'trousers') return false;   // hidden category
+    if (p.hidden) return false;                    // hidden products
     if (activeCategory !== 'all' && p.category !== activeCategory) return false;
     if (activeSubcat   !== 'all' && p.subcategory !== activeSubcat) return false;
     if (activeCollar   !== 'all' && p.collar !== activeCollar) return false;
@@ -18,7 +18,7 @@ function getFilteredProducts() {
   });
 }
 
-const VISIBLE_PRODUCTS = PRODUCTS.filter(p => p.category !== 'trousers');
+const VISIBLE_PRODUCTS = PRODUCTS.filter(p => !p.hidden);
 
 function renderCatalog() {
   const grid  = document.getElementById('catalog-grid');
@@ -93,6 +93,13 @@ function updateSubFilters() {
       { val: 'half', label: 'Half Sleeve' },
       { val: 'full', label: 'Full Sleeve' }
     ];
+  } else if (activeCategory === 'oversized') {
+    collarOpts = [
+      { val: 'all', label: 'All Collars' },
+      { val: 'round-neck', label: 'Round Neck' }
+    ];
+  } else if (activeCategory === 'tanktop') {
+    // No sub-filters needed for tank tops
   } else if (activeCategory === 'shorts') {
     subCatOpts = [
       { val: 'all', label: 'All Types' },

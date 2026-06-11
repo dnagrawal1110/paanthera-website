@@ -239,6 +239,7 @@ const PRODUCTS = [
   // ─── COTTON SHIRTS ───────────────────────────────────────────────────────
   {
     id: "cotton-shirt-formal-aqua",
+    hidden: true,
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-shirt-p1.png",
     name: "Men's Premium Cotton Formal Shirt – Aqua Blue",
     shortName: "Cotton Formal Shirt – Aqua Blue",
@@ -278,6 +279,7 @@ const PRODUCTS = [
   },
   {
     id: "cotton-shirt-casual-mustard",
+    hidden: true,
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-shirt-p2.png",
     name: "Men's Premium Cotton Casual Shirt – Mustard Yellow",
     shortName: "Cotton Casual Shirt – Mustard Yellow",
@@ -318,6 +320,7 @@ const PRODUCTS = [
   },
   {
     id: "cotton-shirt-formal-olive",
+    hidden: true,
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-shirt-p3.png",
     name: "Men's Premium Cotton Formal Shirt – Olive Green",
     shortName: "Cotton Formal Shirt – Olive Green",
@@ -359,354 +362,392 @@ const PRODUCTS = [
 
   // ─── COTTON POLO T-SHIRTS ────────────────────────────────────────────────
   {
-    id: "cotton-polo-dual-tone",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-polo-half-p1.png",
-    name: "Men's Premium Cotton Polo T-Shirt – Dual Tone Panel Design",
-    shortName: "Cotton Polo – Dual Tone (Black/Neon)",
+    id: "cotton-polo-black",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/polo-black.png",
+    name: "Premium Men's Plain Polo T-Shirt – Black",
+    shortName: "Polo T-Shirt – Black",
     category: "cotton",
     subcategory: "polo",
     collar: "polo-collar",
     sleeve: "half",
-    material: "100% Combed Cotton",
+    material: "100% Cotton Piqué Fabric",
     gsm: "220 GSM",
     fit: "Regular Fit",
-    color: "Black Base with Neon Lime Green Contrast Panel",
-    moq: 500,
+    color: "Black",
+    moq: 200,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Retail, Corporate, Bulk Supply",
+    occasion: "Corporate, Casual Wear, Hospitality, Retail",
     features: [
-      "Premium combed cotton fabric with smooth, breathable finish",
-      "High-GSM structure ensures durability and export-grade quality",
-      "Bold contrast panel design for strong visual appeal",
-      "Soft-touch fabric suitable for all-day wear",
-      "Reinforced stitching for long-term use",
-      "Colorfast fabric with minimal shrinkage",
-      "Structured polo collar with button placket for a refined look",
-      "Clean surface ideal for branding & customization"
+      "Premium Piqué Knit Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Regular Fit",
+      "Ribbed Polo Collar",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "Suitable for Embroidery & Printing",
+      "Professional Appearance",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
     ],
-    description: "This men's premium cotton polo T-shirt is designed for modern export markets, combining durability with a bold visual identity. Made from high-quality 100% combed cotton, it offers a breathable, soft feel with a structured premium finish. The dual-tone panel design in neon lime and black creates a strong retail presence, making it highly suitable for wholesale markets. Ideal for bulk buyers, resellers, and brands.",
+    description: "Crafted from premium 100% Cotton Piqué fabric, this Men's Plain Polo T-Shirt combines comfort, durability, and timeless style. Featuring a classic polo collar, half sleeves, and a regular fit, it offers a professional yet versatile look suitable for everyday wear and business environments. The solid-color design makes it ideal for corporate uniforms, retail brands, hospitality staff, promotional events, and custom branding projects.",
     customizations: [
+      "Custom Colors (Black, White, Pink, Grey, Royal Blue, Maroon, Navy Blue, Olive Green)",
       "Chest logo customization (embroidery / print)",
-      "Custom colour panel combinations",
-      "Packaging customization (on request)"
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
     ],
     industryUse: {
-      clubs: "High-demand casual premium product",
-      teams: "Strong margin & repeat purchase category",
-      resellers: "Ideal for bulk export markets"
+      clubs: "Ideal for corporate uniforms and team branding",
+      teams: "Perfect for hospitality, education, and sports clubs",
+      resellers: "High-demand product for Africa & global wholesale markets"
     }
   },
   {
-    id: "cotton-polo-stripe",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-polo-half-p2.png",
-    name: "Men's Premium Cotton Polo T-Shirt – Horizontal Stripe Design",
-    shortName: "Cotton Polo – Horizontal Stripe",
+    id: "cotton-polo-grey",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/polo-grey.png",
+    name: "Premium Men's Plain Polo T-Shirt – Grey",
+    shortName: "Polo T-Shirt – Grey",
     category: "cotton",
     subcategory: "polo",
     collar: "polo-collar",
     sleeve: "half",
-    material: "100% Combed Cotton",
+    material: "100% Cotton Piqué Fabric",
     gsm: "220 GSM",
     fit: "Regular Fit",
-    color: "Black Base with White Horizontal Stripe Pattern",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Retail, Bulk Supply",
+    color: "Grey",
+    moq: 200,
+    sizes: ["S", "M", "L", "XL", "XXL", "XXXL"],
+    occasion: "Corporate, Casual Wear, Hospitality, Retail",
     features: [
-      "High-quality combed cotton for soft and breathable comfort",
-      "Premium horizontal stripe pattern with strong retail appeal",
-      "High-GSM fabric ensures durability and long-lasting shape",
-      "Smooth fabric surface suitable for branding",
-      "Fade-resistant colour with minimal shrinkage",
-      "Reinforced stitching for export-grade performance",
-      "Structured collar for a clean, semi-formal look",
-      "Designed for high-demand wholesale markets"
+      "Premium Cotton Piqué Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Regular Fit",
+      "Ribbed Polo Collar",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "Suitable for Embroidery & Printing",
+      "Professional Appearance",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
     ],
-    description: "This men's premium cotton polo T-shirt is crafted for bulk export markets, combining comfort, durability, and timeless design. The black and white horizontal stripe pattern delivers a classic yet high-demand retail look, making it highly suitable for wholesale markets. The high-GSM fabric ensures long-term durability, while the polo collar enhances its premium positioning. Ideal for resellers, distributors, and apparel brands.",
+    description: "Crafted from premium 100% Cotton Piqué fabric, this Grey Plain Polo T-Shirt delivers exceptional comfort, durability, and a refined appearance. Designed with a classic polo collar, half sleeves, and a regular fit, it offers a versatile style suitable for both professional and casual environments. Its clean and timeless design makes it ideal for corporate uniforms, hospitality staff, promotional events, retail brands, and custom apparel programs.",
     customizations: [
+      "Custom Colors (Black, White, Pink, Grey, Royal Blue, Maroon, Navy Blue, Olive Green)",
       "Chest logo customization (embroidery / print)",
-      "Stripe colour modification (on bulk orders)",
-      "Packaging customization (on request)"
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
     ],
     industryUse: {
-      clubs: "Evergreen stripe design with consistent demand",
-      teams: "High-repeat purchase category",
-      resellers: "Ideal for Africa-focused export markets"
+      clubs: "Ideal for corporate uniforms and team branding",
+      teams: "Perfect for hospitality, education, and sports clubs",
+      resellers: "High-demand product for Africa & global wholesale markets"
     }
   },
   {
-    id: "cotton-polo-vertical-line",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-polo-half-p3.png",
-    name: "Men's Premium Cotton Polo T-Shirt – Vertical Line Design",
-    shortName: "Cotton Polo – Vertical Line (Mustard)",
+    id: "cotton-polo-royal-blue",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/polo-royal-blue.png",
+    name: "Premium Men's Plain Polo T-Shirt – Royal Blue",
+    shortName: "Polo T-Shirt – Royal Blue",
     category: "cotton",
     subcategory: "polo",
     collar: "polo-collar",
     sleeve: "half",
-    material: "100% Combed Cotton",
-    gsm: "200–220 GSM",
+    material: "100% Cotton Piqué Fabric",
+    gsm: "220 GSM",
     fit: "Regular Fit",
-    color: "Mustard Yellow with Dark Brown Collar & Black Vertical Line",
-    moq: 500,
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Retail, Bulk Supply",
+    color: "Royal Blue",
+    moq: 200,
+    sizes: ["S", "M", "L", "XL", "XXL", "XXXL"],
+    occasion: "Corporate, Casual Wear, Hospitality, Retail",
     features: [
-      "Premium combed cotton fabric with soft, breathable comfort",
-      "High-GSM fabric ensures durability and long-term wear",
-      "Unique vertical double-line design enhances visual length",
-      "Contrast collar adds a premium and refined look",
-      "Smooth surface suitable for branding and customization",
-      "Colorfast fabric with minimal shrinkage",
-      "Reinforced stitching for export-grade durability",
-      "Clean minimal design with strong retail presence"
+      "Premium Cotton Piqué Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Regular Fit",
+      "Ribbed Polo Collar",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "Suitable for Embroidery & Printing",
+      "Professional Appearance",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
     ],
-    description: "This men's premium cotton polo T-shirt is designed for high-performance retail and export markets, combining comfort, durability, and a distinctive modern look. The mustard yellow base paired with a dark contrast collar and vertical line detailing creates a premium, eye-catching design that stands out in wholesale markets. The vertical design element enhances body proportions visually, making it attractive across a wide customer base. Perfect for resellers, distributors, and apparel brands.",
+    description: "Crafted from premium 100% Cotton Piqué fabric, this Royal Blue Plain Polo T-Shirt combines superior comfort, durability, and a polished appearance. Featuring a classic polo collar, half sleeves, and a regular fit, it delivers a timeless look suitable for both professional and casual settings. Its vibrant royal blue color and clean design make it an excellent choice for corporate uniforms, promotional campaigns, hospitality teams, retail brands, and custom apparel programs.",
     customizations: [
+      "Custom Colors (Black, White, Pink, Grey, Royal Blue, Maroon, Navy Blue, Olive Green)",
       "Chest logo customization (embroidery / print)",
-      "Packaging customization (on request)"
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
     ],
     industryUse: {
-      clubs: "Unique design with strong visual differentiation",
-      teams: "High-margin, fast-moving product",
-      resellers: "Ideal for Africa & global export markets"
+      clubs: "Ideal for corporate uniforms and team branding",
+      teams: "Perfect for hospitality, education, and sports clubs",
+      resellers: "High-demand product for Africa & global wholesale markets"
     }
   },
 
   // ─── COTTON ROUND NECK HALF SLEEVE ───────────────────────────────────────
   {
-    id: "cotton-round-half-diagonal",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-half-p1.png",
-    name: "Men's Premium Cotton Round Neck T-Shirt – Diagonal Panel Design",
-    shortName: "Cotton Round Half – Diagonal (Royal Blue)",
+    id: "cotton-rn-half-mustard",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/rn-half-mustard.png",
+    name: "Premium Men's Plain Round Neck T-Shirt – Mustard",
+    shortName: "Round Neck Half – Mustard",
     category: "cotton",
     subcategory: "casual",
     collar: "round-neck",
     sleeve: "half",
-    material: "100% Combed Cotton",
-    gsm: "180–200 GSM",
+    material: "100% Cotton Fabric",
+    gsm: "180 GSM",
     fit: "Regular Fit",
-    color: "Royal Blue with White & Light Blue Diagonal Panel",
-    moq: 500,
+    color: "Mustard",
+    moq: 200,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Retail, Bulk Supply",
+    occasion: "Casual Wear, Corporate, Retail, Sports Clubs",
     features: [
-      "Premium combed cotton fabric with soft and breathable comfort",
-      "Lightweight yet durable fabric suitable for daily wear",
-      "Bold diagonal panel design for modern and sporty appeal",
-      "Smooth surface ideal for branding and printing",
-      "Colorfast fabric with minimal shrinkage",
-      "Reinforced stitching for long-lasting durability",
-      "Clean round neck finish for everyday versatility",
-      "Designed for high-demand wholesale markets"
+      "Premium Cotton Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Regular Fit",
+      "Classic Round Neck Design",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "Suitable for Embroidery & Printing",
+      "Professional Appearance",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
     ],
-    description: "This men's premium cotton round neck T-shirt is designed for modern export markets, offering a perfect balance of comfort, durability, and visual appeal. The royal blue base combined with white and light blue diagonal panel design creates a sporty and eye-catching look, making it highly attractive for retail and wholesale buyers. Its clean construction and premium finish ensure strong shelf presence and consistent demand. Ideal for resellers, distributors, and apparel brands.",
+    description: "Crafted from premium 100% Cotton fabric, this Mustard Plain Round Neck T-Shirt delivers exceptional comfort, durability, and a clean modern appearance. Designed with a classic round neck, half sleeves, and a regular fit, it offers versatile styling suitable for everyday wear and professional environments. Its timeless design makes it an excellent choice for corporate uniforms, promotional campaigns, hospitality teams, retail brands, sports clubs, and custom apparel programs.",
     customizations: [
-      "Chest logo customization (print / embroidery)",
-      "Panel colour customization (bulk orders)",
-      "Packaging customization (on request)"
+      "Custom Colors (Black, Royal Blue, White, Olive Green, Grey, Red, Maroon, Mustard, Navy Blue, Lavender)",
+      "Chest logo customization (embroidery / print)",
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
     ],
     industryUse: {
-      clubs: "Sporty casual design with strong demand",
-      teams: "Fast-moving, youth-focused product",
-      resellers: "Ideal for Africa & global export markets"
+      clubs: "Ideal for sports clubs, team uniforms, and group wear",
+      teams: "Perfect for corporate, hospitality, and retail branding",
+      resellers: "High-demand plain tee for Africa & global wholesale markets"
     }
   },
   {
-    id: "cotton-round-half-lightning",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-half-p2.png",
-    name: "Men's Premium Cotton Round Neck T-Shirt – Lightning Graphic Design",
-    shortName: "Cotton Round Half – Lightning (Neon Lime)",
+    id: "cotton-rn-half-lavender",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/rn-half-lavender.png",
+    name: "Premium Men's Plain Round Neck T-Shirt – Lavender",
+    shortName: "Round Neck Half – Lavender",
     category: "cotton",
     subcategory: "casual",
     collar: "round-neck",
     sleeve: "half",
-    material: "100% Combed Cotton",
-    gsm: "180–200 GSM",
+    material: "100% Cotton Fabric",
+    gsm: "180 GSM",
     fit: "Regular Fit",
-    color: "Neon Lime Green with Black & White Lightning Graphic",
-    moq: 500,
+    color: "Lavender",
+    moq: 200,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Streetwear, Bulk Supply",
+    occasion: "Casual Wear, Corporate, Retail, Sports Clubs",
     features: [
-      "Premium combed cotton fabric with breathable comfort",
-      "High-visibility neon colour for strong retail impact",
-      "Bold lightning graphic design for modern streetwear appeal",
-      "Smooth surface suitable for DTF and screen printing",
-      "Colorfast fabric with minimal shrinkage",
-      "Reinforced stitching for long-lasting durability",
-      "Lightweight and comfortable for daily wear",
-      "Designed for high-demand youth and streetwear markets"
+      "Premium Cotton Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Regular Fit",
+      "Classic Round Neck Design",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "Suitable for Embroidery & Printing",
+      "Professional Appearance",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
     ],
-    description: "This men's premium cotton round neck T-shirt is built for high-demand retail and export markets, combining comfort, durability, and bold design appeal. The neon lime green base paired with a striking lightning graphic in black and white creates a powerful visual identity, making it highly attractive for youth-focused and fast-moving markets. The high-visibility colour ensures strong shelf presence. Ideal for resellers, distributors, and apparel brands.",
+    description: "Crafted from premium 100% Cotton fabric, this Lavender Plain Round Neck T-Shirt delivers exceptional comfort, durability, and a clean modern appearance. Designed with a classic round neck, half sleeves, and a regular fit, it offers versatile styling suitable for everyday wear and professional environments. Its timeless design makes it an excellent choice for corporate uniforms, promotional campaigns, hospitality teams, retail brands, sports clubs, and custom apparel programs.",
     customizations: [
-      "Graphic size and colour customization",
-      "Chest logo addition (print / embroidery)",
-      "Packaging customization (on request)"
+      "Custom Colors (Black, Royal Blue, White, Olive Green, Grey, Red, Maroon, Mustard, Navy Blue, Lavender)",
+      "Chest logo customization (embroidery / print)",
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
     ],
     industryUse: {
-      clubs: "High-visibility product for youth segment",
-      teams: "Fast-moving trendy design",
-      resellers: "Ideal for Africa & global export markets"
+      clubs: "Ideal for sports clubs, team uniforms, and group wear",
+      teams: "Perfect for corporate, hospitality, and retail branding",
+      resellers: "High-demand plain tee for Africa & global wholesale markets"
     }
   },
   {
-    id: "cotton-round-half-wave",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-half-p3.png",
-    name: "Men's Premium Cotton Round Neck T-Shirt – Flow Wave Design",
-    shortName: "Cotton Round Half – Wave (Sky Blue)",
+    id: "cotton-rn-half-grey",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/rn-half-grey.png",
+    name: "Premium Men's Plain Round Neck T-Shirt – Grey",
+    shortName: "Round Neck Half – Grey",
     category: "cotton",
     subcategory: "casual",
     collar: "round-neck",
     sleeve: "half",
-    material: "100% Combed Cotton",
-    gsm: "180–200 GSM",
+    material: "100% Cotton Fabric",
+    gsm: "180 GSM",
     fit: "Regular Fit",
-    color: "Sky Blue with White & Navy Flow Wave Pattern",
-    moq: 500,
+    color: "Grey",
+    moq: 200,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Retail, Bulk Supply",
+    occasion: "Casual Wear, Corporate, Retail, Sports Clubs",
     features: [
-      "Premium combed cotton fabric with soft, breathable comfort",
-      "Lightweight yet durable fabric suitable for daily wear",
-      "Elegant wave pattern design for a clean and modern look",
-      "Smooth surface ideal for printing and customization",
-      "Colorfast fabric with minimal shrinkage",
-      "Reinforced stitching for long-lasting durability",
-      "Clean neckline finish for everyday versatility",
-      "Designed for high-demand wholesale markets"
+      "Premium Cotton Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Regular Fit",
+      "Classic Round Neck Design",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "Suitable for Embroidery & Printing",
+      "Professional Appearance",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
     ],
-    description: "This men's premium cotton round neck T-shirt is designed for modern export markets, combining comfort, durability, and refined aesthetics. The sky blue base enhanced with subtle white and navy wave patterns creates a smooth, premium visual appeal that stands out while remaining versatile. This design is ideal for buyers looking for a clean yet distinctive product with broad market acceptance. Perfect for resellers, distributors, and apparel brands.",
+    description: "Crafted from premium 100% Cotton fabric, this Grey Plain Round Neck T-Shirt delivers exceptional comfort, durability, and a clean modern appearance. Designed with a classic round neck, half sleeves, and a regular fit, it offers versatile styling suitable for everyday wear and professional environments. Its timeless design makes it an excellent choice for corporate uniforms, promotional campaigns, hospitality teams, retail brands, sports clubs, and custom apparel programs.",
     customizations: [
-      "Chest logo customization (print / embroidery)",
-      "Pattern colour adjustment (bulk orders)",
-      "Packaging customization (on request)"
+      "Custom Colors (Black, Royal Blue, White, Olive Green, Grey, Red, Maroon, Mustard, Navy Blue, Lavender)",
+      "Chest logo customization (embroidery / print)",
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
     ],
     industryUse: {
-      clubs: "Clean premium design with wide appeal",
-      teams: "High-repeat purchase category",
-      resellers: "Ideal for Africa & global export markets"
+      clubs: "Ideal for sports clubs, team uniforms, and group wear",
+      teams: "Perfect for corporate, hospitality, and retail branding",
+      resellers: "High-demand plain tee for Africa & global wholesale markets"
     }
   },
 
   // ─── COTTON ROUND NECK FULL SLEEVE ───────────────────────────────────────
   {
-    id: "cotton-round-full-colorblock",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-full-p1.png",
-    name: "Men's Premium Cotton Round Neck T-Shirt – Colour Block Full Sleeve",
-    shortName: "Cotton Round Full – Colour Block",
+    id: "cotton-rn-full-white",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/rn-full-white.png",
+    name: "Premium Men's Plain Full Sleeve Round Neck T-Shirt – White",
+    shortName: "Round Neck Full – White",
     category: "cotton",
     subcategory: "casual",
     collar: "round-neck",
     sleeve: "full",
-    material: "100% Combed Cotton",
-    gsm: "220 GSM",
+    material: "100% Cotton Fabric",
+    gsm: "180 GSM",
     fit: "Regular Fit",
-    color: "Black & Off-White Dual Tone Colour Block",
-    moq: 500,
+    color: "White",
+    moq: 200,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Retail, Bulk Supply",
+    occasion: "Casual Wear, Corporate, Retail, Sports Clubs",
     features: [
-      "Premium combed cotton fabric with soft and breathable feel",
-      "Heavy GSM fabric ensures durability and premium structure",
-      "Clean horizontal colour block design with strong visual appeal",
-      "Smooth fabric surface ideal for branding and customization",
-      "Colorfast fabric with minimal shrinkage",
-      "Reinforced stitching for long-lasting performance",
-      "Full sleeve design suitable for all-season wear",
-      "Minimal yet premium styling for wide market acceptance"
+      "Premium Cotton Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Regular Fit",
+      "Classic Round Neck Design",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "Suitable for Embroidery & Printing",
+      "Professional Appearance",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
     ],
-    description: "This men's premium cotton full sleeve T-shirt is designed for modern export markets, combining durability, comfort, and timeless design. The black and off-white horizontal colour block design delivers a clean and sophisticated look, making it suitable for a wide range of customers. Its minimal aesthetic ensures versatility across retail segments while maintaining strong shelf appeal. Ideal for resellers, distributors, and apparel brands.",
+    description: "Crafted from premium 100% Cotton fabric, this White Plain Full Sleeve Round Neck T-Shirt delivers exceptional comfort, durability, and a clean modern appearance. Designed with a classic round neck, full sleeves, and a regular fit, it offers versatile styling suitable for everyday wear and professional environments. Its timeless design makes it an excellent choice for corporate uniforms, promotional campaigns, hospitality teams, retail brands, sports clubs, and custom apparel programs.",
     customizations: [
-      "Chest logo customization (print / embroidery)",
-      "Colour block customization (bulk orders)",
-      "Packaging customization (on request)"
+      "Custom Colors (Black, White, Olive Green, Maroon, Navy Blue)",
+      "Chest logo customization (embroidery / print)",
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
     ],
     industryUse: {
-      clubs: "Clean premium design with wide appeal",
-      teams: "High-repeat purchase category",
-      resellers: "Ideal for Africa & global export markets"
+      clubs: "Ideal for team uniforms, sports clubs, and group wear",
+      teams: "Perfect for corporate, hospitality, and retail branding",
+      resellers: "High-demand full sleeve tee for Africa & global wholesale markets"
     }
   },
   {
-    id: "cotton-round-full-texture",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-full-p2.png",
-    name: "Men's Premium Cotton Round Neck T-Shirt – Textured Solid Full Sleeve",
-    shortName: "Cotton Round Full – Textured (Olive)",
+    id: "cotton-rn-full-olive",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/rn-full-olive.png",
+    name: "Premium Men's Plain Full Sleeve Round Neck T-Shirt – Olive Green",
+    shortName: "Round Neck Full – Olive Green",
     category: "cotton",
     subcategory: "casual",
     collar: "round-neck",
     sleeve: "full",
-    material: "100% Combed Cotton",
-    gsm: "220 GSM",
+    material: "100% Cotton Fabric",
+    gsm: "180 GSM",
     fit: "Regular Fit",
-    color: "Olive Green with Subtle Micro Texture Pattern",
-    moq: 500,
+    color: "Olive Green",
+    moq: 200,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Retail, Bulk Supply",
+    occasion: "Casual Wear, Corporate, Retail, Sports Clubs",
     features: [
-      "Premium combed cotton fabric with soft and breathable comfort",
-      "Heavy GSM fabric ensures durability and structured premium feel",
-      "Subtle all-over micro texture adds depth without heavy design",
-      "Clean solid look suitable for wide market acceptance",
-      "Smooth surface suitable for branding and customization",
-      "Colorfast fabric with minimal shrinkage",
-      "Reinforced stitching for long-lasting performance",
-      "Full sleeve design suitable for all-season wear"
+      "Premium Cotton Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Regular Fit",
+      "Classic Round Neck Design",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "Suitable for Embroidery & Printing",
+      "Professional Appearance",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
     ],
-    description: "This men's premium cotton full sleeve T-shirt is designed for modern export markets, offering a perfect combination of comfort, durability, and refined styling. The olive green base enhanced with a subtle micro texture pattern creates a sophisticated and mature look, making it highly suitable for a wide range of customers. The minimal design ensures versatility while maintaining a premium identity in retail and wholesale markets. Ideal for resellers, distributors, and apparel brands.",
+    description: "Crafted from premium 100% Cotton fabric, this Olive Green Plain Full Sleeve Round Neck T-Shirt delivers exceptional comfort, durability, and a clean modern appearance. Designed with a classic round neck, full sleeves, and a regular fit, it offers versatile styling suitable for everyday wear and professional environments. Its timeless design makes it an excellent choice for corporate uniforms, promotional campaigns, hospitality teams, retail brands, sports clubs, and custom apparel programs.",
     customizations: [
-      "Chest logo customization (print / embroidery)",
-      "Texture variation (based on bulk requirements)",
-      "Packaging customization (on request)"
+      "Custom Colors (Black, White, Olive Green, Maroon, Navy Blue)",
+      "Chest logo customization (embroidery / print)",
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
     ],
     industryUse: {
-      clubs: "Premium minimal product with broad appeal",
-      teams: "High-repeat purchase category",
-      resellers: "Ideal for Africa & global export markets"
+      clubs: "Ideal for team uniforms, sports clubs, and group wear",
+      teams: "Perfect for corporate, hospitality, and retail branding",
+      resellers: "High-demand full sleeve tee for Africa & global wholesale markets"
     }
   },
   {
-    id: "cotton-round-full-abstract",
-    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/cotton-round-full-p3.png",
-    name: "Men's Premium Cotton Round Neck T-Shirt – Abstract Flow Full Sleeve",
-    shortName: "Cotton Round Full – Abstract (Teal)",
+    id: "cotton-rn-full-maroon",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/rn-full-maroon.png",
+    name: "Premium Men's Plain Full Sleeve Round Neck T-Shirt – Maroon",
+    shortName: "Round Neck Full – Maroon",
     category: "cotton",
     subcategory: "casual",
     collar: "round-neck",
     sleeve: "full",
-    material: "100% Combed Cotton",
-    gsm: "220 GSM",
+    material: "100% Cotton Fabric",
+    gsm: "180 GSM",
     fit: "Regular Fit",
-    color: "Deep Teal Green with Subtle Flow Pattern",
-    moq: 500,
+    color: "Maroon",
+    moq: 200,
     sizes: ["S", "M", "L", "XL", "XXL"],
-    occasion: "Casual Wear, Retail, Bulk Supply",
+    occasion: "Casual Wear, Corporate, Retail, Sports Clubs",
     features: [
-      "Premium combed cotton fabric with soft and breathable comfort",
-      "Heavy GSM fabric ensures durability and structured premium feel",
-      "Subtle abstract flow design adds depth without heavy printing",
-      "Clean minimal aesthetic with modern premium appeal",
-      "Smooth surface suitable for branding and customization",
-      "Colorfast fabric with minimal shrinkage",
-      "Reinforced stitching for long-lasting performance",
-      "Full sleeve design suitable for all-season wear"
+      "Premium Cotton Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Regular Fit",
+      "Classic Round Neck Design",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "Suitable for Embroidery & Printing",
+      "Professional Appearance",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
     ],
-    description: "This men's premium cotton full sleeve T-shirt is crafted for modern export markets, combining durability, comfort, and refined styling. The deep teal base enhanced with a subtle abstract flow pattern creates a sophisticated and stylish look, making it suitable for both casual and semi-premium segments. The design remains minimal while offering visual depth, ensuring strong shelf appeal. Ideal for resellers, distributors, and apparel brands.",
+    description: "Crafted from premium 100% Cotton fabric, this Maroon Plain Full Sleeve Round Neck T-Shirt delivers exceptional comfort, durability, and a clean modern appearance. Designed with a classic round neck, full sleeves, and a regular fit, it offers versatile styling suitable for everyday wear and professional environments. Its timeless design makes it an excellent choice for corporate uniforms, promotional campaigns, hospitality teams, retail brands, sports clubs, and custom apparel programs.",
     customizations: [
-      "Chest logo customization (print / embroidery)",
-      "Pattern intensity and placement adjustment",
-      "Packaging customization (on request)"
+      "Custom Colors (Black, White, Olive Green, Maroon, Navy Blue)",
+      "Chest logo customization (embroidery / print)",
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
     ],
     industryUse: {
-      clubs: "Premium minimal design with wide appeal",
-      teams: "High-repeat purchase category",
-      resellers: "Ideal for Africa & global export markets"
+      clubs: "Ideal for team uniforms, sports clubs, and group wear",
+      teams: "Perfect for corporate, hospitality, and retail branding",
+      resellers: "High-demand full sleeve tee for Africa & global wholesale markets"
     }
   },
 
-  // ─── SHORTS ───────────────────────────────────────────────────────────────
+  // ─── SHORTS (hidden) ──────────────────────────────────────────────────────
   {
     id: "shorts-gradient",
+    hidden: true,
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/shorts-p1.png",
     name: "Men's Premium Sports Shorts – Gradient Design",
     shortName: "Sports Shorts – Blue Gradient",
@@ -746,6 +787,7 @@ const PRODUCTS = [
   },
   {
     id: "shorts-solid",
+    hidden: true,
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/shorts-p2.png",
     name: "Men's Premium Sports Shorts – Solid Design",
     shortName: "Sports Shorts – Solid (Camel Brown)",
@@ -785,6 +827,7 @@ const PRODUCTS = [
   },
   {
     id: "shorts-panel",
+    hidden: true,
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/shorts-p3.png",
     name: "Men's Premium Sports Shorts – Dynamic Panel Design",
     shortName: "Sports Shorts – Panel (Dark Green)",
@@ -826,6 +869,7 @@ const PRODUCTS = [
   // ─── TROUSERS (hidden from catalog) ──────────────────────────────────────
   {
     id: "trouser-cargo-olive",
+    hidden: true,
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/trousers-p1.png",
     name: "Men's Premium Cargo Jogger Pants – Olive Green",
     shortName: "Cargo Jogger – Olive Green",
@@ -865,6 +909,7 @@ const PRODUCTS = [
   },
   {
     id: "trouser-cargo-grey",
+    hidden: true,
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/trousers-p2.png",
     name: "Men's Premium Cargo Jogger Pants – Light Grey",
     shortName: "Cargo Jogger – Light Grey",
@@ -904,6 +949,7 @@ const PRODUCTS = [
   },
   {
     id: "trouser-cargo-navy",
+    hidden: true,
     image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/trousers-p3.png",
     name: "Men's Premium Cargo Jogger Pants – Navy Blue",
     shortName: "Cargo Jogger – Navy Blue",
@@ -940,7 +986,264 @@ const PRODUCTS = [
       teams: "Easy-to-sell premium jogger",
       resellers: "Ideal for Africa & global markets"
     }
+  },
+
+  // ─── OVERSIZED T-SHIRTS ───────────────────────────────────────────────────
+  {
+    id: "oversized-orange",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/oversized-orange.png",
+    name: "Premium Men's Oversized Round Neck T-Shirt – Orange",
+    shortName: "Oversized Tee – Orange",
+    category: "oversized",
+    subcategory: "plain",
+    collar: "round-neck",
+    sleeve: "half",
+    material: "100% Cotton French Terry Fabric",
+    gsm: "240 GSM",
+    fit: "Oversized Fit",
+    color: "Orange",
+    moq: 200,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Casual Wear, Streetwear, Fashion, Retail",
+    features: [
+      "Premium Cotton French Terry Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Oversized Fit",
+      "Classic Round Neck Design",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "Suitable for Embroidery & Printing",
+      "Professional Appearance",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
+    ],
+    description: "Crafted from premium 100% Cotton French Terry fabric, this Orange Plain Oversized Half Sleeve Round Neck T-Shirt delivers exceptional comfort, durability, and a clean modern appearance. Designed with a classic round neck, half sleeves, and an oversized fit, it offers versatile styling suitable for everyday wear, streetwear fashion, and casual environments. Its timeless design makes it an excellent choice for fashion brands, corporate promotions, retail stores, sports clubs, merchandise collections, and custom apparel programs.",
+    customizations: [
+      "Custom Colors (Black, Off White, Blue, Beige, Smoke Grey, Brown, Orange, Maroon)",
+      "Chest logo customization (embroidery / print)",
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
+    ],
+    industryUse: {
+      clubs: "Ideal for fashion brands, streetwear collections, and merchandise",
+      teams: "Perfect for sports clubs, retail stores, and promotional events",
+      resellers: "High-demand oversized category for global wholesale markets"
+    }
+  },
+  {
+    id: "oversized-dark-maroon",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/oversized-dark-maroon.png",
+    name: "Premium Men's Oversized Round Neck T-Shirt – Maroon",
+    shortName: "Oversized Tee – Maroon",
+    category: "oversized",
+    subcategory: "plain",
+    collar: "round-neck",
+    sleeve: "half",
+    material: "100% Cotton French Terry Fabric",
+    gsm: "240 GSM",
+    fit: "Oversized Fit",
+    color: "Maroon",
+    moq: 200,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Casual Wear, Streetwear, Fashion, Retail",
+    features: [
+      "Premium Cotton French Terry Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Oversized Fit",
+      "Classic Round Neck Design",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "Suitable for Embroidery & Printing",
+      "Professional Appearance",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
+    ],
+    description: "Crafted from premium 100% Cotton French Terry fabric, this Maroon Plain Oversized Half Sleeve Round Neck T-Shirt delivers exceptional comfort, durability, and a clean modern appearance. Designed with a classic round neck, half sleeves, and an oversized fit, it offers versatile styling suitable for everyday wear, streetwear fashion, and casual environments. Its timeless design makes it an excellent choice for fashion brands, corporate promotions, retail stores, sports clubs, merchandise collections, and custom apparel programs.",
+    customizations: [
+      "Custom Colors (Black, Off White, Blue, Beige, Smoke Grey, Brown, Orange, Maroon)",
+      "Chest logo customization (embroidery / print)",
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
+    ],
+    industryUse: {
+      clubs: "Ideal for fashion brands, streetwear collections, and merchandise",
+      teams: "Perfect for sports clubs, retail stores, and promotional events",
+      resellers: "High-demand oversized category for global wholesale markets"
+    }
+  },
+  {
+    id: "oversized-beige",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/oversized-beige.png",
+    name: "Premium Men's Oversized Round Neck T-Shirt – Beige",
+    shortName: "Oversized Tee – Beige",
+    category: "oversized",
+    subcategory: "plain",
+    collar: "round-neck",
+    sleeve: "half",
+    material: "100% Cotton French Terry Fabric",
+    gsm: "240 GSM",
+    fit: "Oversized Fit",
+    color: "Beige",
+    moq: 200,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Casual Wear, Streetwear, Fashion, Retail",
+    features: [
+      "Premium Cotton French Terry Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Oversized Fit",
+      "Classic Round Neck Design",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "Suitable for Embroidery & Printing",
+      "Professional Appearance",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
+    ],
+    description: "Crafted from premium 100% Cotton French Terry fabric, this Beige Plain Oversized Half Sleeve Round Neck T-Shirt delivers exceptional comfort, durability, and a clean modern appearance. Designed with a classic round neck, half sleeves, and an oversized fit, it offers versatile styling suitable for everyday wear, streetwear fashion, and casual environments. Its timeless design makes it an excellent choice for fashion brands, corporate promotions, retail stores, sports clubs, merchandise collections, and custom apparel programs.",
+    customizations: [
+      "Custom Colors (Black, Off White, Blue, Beige, Smoke Grey, Brown, Orange, Maroon)",
+      "Chest logo customization (embroidery / print)",
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
+    ],
+    industryUse: {
+      clubs: "Ideal for fashion brands, streetwear collections, and merchandise",
+      teams: "Perfect for sports clubs, retail stores, and promotional events",
+      resellers: "High-demand oversized category for global wholesale markets"
+    }
+  },
+
+  // ─── TANK TOPS ────────────────────────────────────────────────────────────
+  {
+    id: "tank-top-black",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/tank-top-black.png",
+    name: "Premium Men's Gym Tank Top – Black",
+    shortName: "Gym Tank Top – Black",
+    category: "tanktop",
+    subcategory: "gym",
+    collar: "round-neck",
+    sleeve: null,
+    material: "240 GSM French Terry Fabric",
+    gsm: "240 GSM",
+    fit: "Regular Fit",
+    color: "Black",
+    moq: 200,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Gym, Training, Sports, Active Lifestyle",
+    features: [
+      "Premium 240 GSM French Terry Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Regular Fit",
+      "Sleeveless Athletic Design",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "High-Quality Graphic Print",
+      "Gym & Training Ready",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
+    ],
+    description: "Crafted from premium 240 GSM French Terry fabric, this Black Printed Gym Tank Top delivers superior comfort, durability, and unrestricted movement during workouts. Designed with a classic round neck, sleeveless cut, and regular fit, it provides a modern athletic look suitable for gym sessions, training, sports, and active lifestyles. Featuring a bold motivational front print and performance-focused design, this tank top is ideal for fitness enthusiasts, gym brands, sports teams, promotional merchandise, and custom activewear collections.",
+    customizations: [
+      "Custom Colors (Black, Petro Blue, Coffee Brown, Grey)",
+      "Custom logo / print placement",
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
+    ],
+    industryUse: {
+      clubs: "Ideal for fitness brands, gym collections, and activewear",
+      teams: "Perfect for sports teams, bodybuilding, and training programs",
+      resellers: "High-demand gym wear for global wholesale markets"
+    }
+  },
+  {
+    id: "tank-top-coffee-brown",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/tank-top-coffee-brown.png",
+    name: "Premium Men's Gym Tank Top – Coffee Brown",
+    shortName: "Gym Tank Top – Coffee Brown",
+    category: "tanktop",
+    subcategory: "gym",
+    collar: "round-neck",
+    sleeve: null,
+    material: "240 GSM French Terry Fabric",
+    gsm: "240 GSM",
+    fit: "Regular Fit",
+    color: "Coffee Brown",
+    moq: 200,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Gym, Training, Sports, Active Lifestyle",
+    features: [
+      "Premium 240 GSM French Terry Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Regular Fit",
+      "Sleeveless Athletic Design",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "High-Quality Front & Back Print",
+      "Gym & Training Ready",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
+    ],
+    description: "Crafted from premium 240 GSM French Terry fabric, this Coffee Brown Printed Gym Tank Top delivers superior comfort, durability, and unrestricted movement during workouts. Designed with a classic round neck, sleeveless cut, and regular fit, it provides a modern athletic look suitable for gym sessions, training, sports, and active lifestyles. Featuring a bold warrior-inspired front and back print, this tank top is ideal for fitness enthusiasts, gym brands, sports teams, bodybuilding communities, promotional merchandise, and custom activewear collections.",
+    customizations: [
+      "Custom Colors (Black, Petro Blue, Coffee Brown, Grey)",
+      "Custom logo / print placement",
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
+    ],
+    industryUse: {
+      clubs: "Ideal for fitness brands, gym collections, and activewear",
+      teams: "Perfect for sports teams, bodybuilding, and training programs",
+      resellers: "High-demand gym wear for global wholesale markets"
+    }
+  },
+  {
+    id: "tank-top-petro-blue",
+    image: "https://pub-c157d1d153874174bc99b77d00766615.r2.dev/products/tank-top-petro-blue.png",
+    name: "Premium Men's Gym Tank Top – Petro Blue",
+    shortName: "Gym Tank Top – Petro Blue",
+    category: "tanktop",
+    subcategory: "gym",
+    collar: "round-neck",
+    sleeve: null,
+    material: "240 GSM French Terry Fabric",
+    gsm: "240 GSM",
+    fit: "Regular Fit",
+    color: "Petro Blue",
+    moq: 200,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    occasion: "Gym, Training, Sports, Active Lifestyle",
+    features: [
+      "Premium 240 GSM French Terry Fabric",
+      "Soft & Breathable Material",
+      "Durable Stitching",
+      "Comfortable Regular Fit",
+      "Sleeveless Athletic Design",
+      "Fade Resistant Colors",
+      "Easy Maintenance",
+      "High-Quality Front & Back Print",
+      "Gym & Training Ready",
+      "Lightweight & All-Day Comfort",
+      "Shrinkage Controlled Fabric"
+    ],
+    description: "Crafted from premium 240 GSM French Terry fabric, this Petro Blue Printed Gym Tank Top delivers superior comfort, durability, and unrestricted movement during workouts. Designed with a classic round neck, sleeveless cut, and regular fit, it provides a modern athletic look suitable for gym sessions, strength training, sports, and active lifestyles. Featuring bold motivational front and back prints, this tank top is ideal for fitness enthusiasts, gym brands, bodybuilding communities, sports teams, promotional merchandise, and custom activewear collections.",
+    customizations: [
+      "Custom Colors (Black, Petro Blue, Coffee Brown, Grey)",
+      "Custom logo / print placement",
+      "Custom Sizes & Fabric GSM",
+      "Packaging customization (Individual Polybag / Export Packaging)"
+    ],
+    industryUse: {
+      clubs: "Ideal for fitness brands, gym collections, and activewear",
+      teams: "Perfect for sports teams, bodybuilding, and training programs",
+      resellers: "High-demand gym wear for global wholesale markets"
+    }
   }
+
 ];
 
 // Helper: get product by id
@@ -948,10 +1251,10 @@ function getProductById(id) {
   return PRODUCTS.find(p => p.id === id) || null;
 }
 
-// Helper: get products by category
+// Helper: get products by category (excludes hidden)
 function getProductsByCategory(category) {
-  if (!category || category === 'all') return PRODUCTS;
-  return PRODUCTS.filter(p => p.category === category);
+  if (!category || category === 'all') return PRODUCTS.filter(p => !p.hidden);
+  return PRODUCTS.filter(p => p.category === category && !p.hidden);
 }
 
 // Helper: build enquiry message for product
@@ -964,7 +1267,9 @@ const CATEGORIES = {
   all:       { label: "All Products" },
   polyester: { label: "Polyester Jerseys" },
   cotton:    { label: "Cotton T-Shirts" },
-  shirts:    { label: "Cotton Shirts" },
-  shorts:    { label: "Shorts" },
-  trousers:  { label: "Trousers" }
+  oversized: { label: "Oversized T-Shirts" },
+  tanktop:   { label: "Tank Tops" },
+  shirts:    { label: "Cotton Shirts", hidden: true },
+  shorts:    { label: "Shorts", hidden: true },
+  trousers:  { label: "Trousers", hidden: true }
 };
