@@ -470,15 +470,15 @@
   <script src="js/main.js"></script>
   <script src="js/enquiry.js"></script>
   <script>
-    // Render 6 featured products (one from each category + mix)
+    // Render 6 featured products (one from each active category)
     document.addEventListener('DOMContentLoaded', () => {
       const featured = [
         PRODUCTS.find(p => p.id === 'poly-gym-solid'),
         PRODUCTS.find(p => p.id === 'poly-jersey-multicolour'),
-        PRODUCTS.find(p => p.id === 'cotton-shirt-formal-aqua'),
-        PRODUCTS.find(p => p.id === 'cotton-polo-dual-tone'),
-        PRODUCTS.find(p => p.id === 'cotton-round-half-diagonal'),
-        PRODUCTS.find(p => p.id === 'shorts-gradient'),
+        PRODUCTS.find(p => p.id === 'cotton-polo-black'),
+        PRODUCTS.find(p => p.id === 'cotton-rn-half-mustard'),
+        PRODUCTS.find(p => p.id === 'cotton-rn-full-white'),
+        PRODUCTS.find(p => p.id === 'oversized-orange'),
       ].filter(Boolean);
 
       document.getElementById('featured-grid').innerHTML =
